@@ -21,11 +21,14 @@ public class Add2 {
         System.out.print("첫번째 숫자를 입력하시오: ");
         //System.out 표준입력장치(콘솔:입출력장치)
         x = input.nextInt();
+        //키보드 입력 -> 입력
+        //x 초기화
 
         System.out.print("두번째 숫자를 입력하시오: ");
         y = input.nextInt();
+        //y 초기화
 
-        sum = x + y;
+        sum = x + y;//sum 초기화
         
         System.out.println(sum);
 
