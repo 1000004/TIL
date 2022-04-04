@@ -21,7 +21,7 @@ public class Add2 {
         System.out.print("첫번째 숫자를 입력하시오: ");
         //System.out 표준입력장치(콘솔:입출력장치)
         x = input.nextInt();
-        //키보드 입력 -> 입력
+        //키보드 입력 -> 정수
         //x 초기화
 
         System.out.print("두번째 숫자를 입력하시오: ");
