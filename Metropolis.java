@@ -4,7 +4,7 @@ public class Metropolis {
 
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("수도입니까?(수도:1 수도아님: 0");
+        System.out.print("수도입니까?(수도:1 수도아님: 0)1");
         //수도인경우 -> isCapital : ture, 수도가 아닌경우 -> isCapital : false
         boolean isCapital = (sc.nextInt()==1);
         //boolean isCapital = (Sc.nextInt()==1)? turn : false;
