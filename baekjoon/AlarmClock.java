@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//45분 일찍 울리는 알람시계
+//45분 일찍 울리는 알람시계 2884
 public class AlarmClock {
      public static void main(String[] args){
          Scanner sc = new Scanner(System.in);
