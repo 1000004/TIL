@@ -16,7 +16,7 @@ class Car{
 public class  CarTest {
 	public static void main(String[] args) {
 		//참조형
-		Car myCar = new Car();//객체생성 정의
+		Car myCar = new Car();//참조 변수 선언 = 객체생성
 		myCar.color = "red";//값 정의
 		myCar.speed = 0;
 		myCar.gear = 1;
