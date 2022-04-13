@@ -60,7 +60,7 @@ public class  UseStock  {
 		//s.printAmount();
 		s.decrease(400);
 
-        Stock other = s;//동일한 객체의를 주소로 둔다
+        Stock other = s;//동일한 객체를 주소로 둔다
 
 		other.printAmount();
 
