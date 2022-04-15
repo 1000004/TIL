@@ -5,6 +5,7 @@ public class AlarmClock {
          Scanner sc = new Scanner(System.in);
          int realH = sc.nextInt();//시간입력
          int realM = sc.nextInt();
+         sc.close();
          int gap = 45;//45분 차이
          int visibleH = realH;
          int visibleM = realM - gap;

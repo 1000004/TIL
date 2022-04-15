@@ -16,6 +16,8 @@ public class Metropolis {
         int riches = sc.nextInt();
         //부자(연소득 1억이상인 사람) 수
 
+        sc.close();
+
         //메트로폴리스여부 = 조건1 || 조건2
         boolean isMetro = (isCapital && citizens >= 100)||(riches>=50);
         //수도이고 인구가 100만 이상 or 부자의 수가 50만 이상

@@ -28,6 +28,8 @@ public class Add2 {
         y = input.nextInt();
         //y 초기화
 
+        input.close();
+
         sum = x + y;//sum 초기화
         
         System.out.println(sum);

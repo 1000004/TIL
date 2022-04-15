@@ -6,6 +6,7 @@ public class Weight  {
 		int h = scan.nextInt();
 		System.out.print("체중을 입력하시오(kg): ");
 		int w = scan.nextInt();
+		scan.close();
 		double weight = (h -100)*0.9;
 		String stWeight = "표준";
 		int gap = 5; //표준 범위 설정
