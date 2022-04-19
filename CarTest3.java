@@ -13,7 +13,8 @@ class Car{
 
 		id = ++numberOfCars;
 	}
-
+	//이런 애들은 반드시 static하게 구현해야 한다.
+	//static 변수인 num울 리턴
 	public static int getNumberOfCars(){
 		return numberOfCars;
 	}
