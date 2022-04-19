@@ -1,3 +1,5 @@
+//Car 클래스에서 Engine 클래스를 사용하기 위해 Engine 클래스 이후 위치
+//Car has-a Engine
 class Engine{
 	private int cc;
 	private double weight;
