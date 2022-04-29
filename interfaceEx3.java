@@ -23,7 +23,7 @@ class YourObj extends Other implements ICc, IBb, IAa{//다른 유형이면 imple
 		System.out.println("b");
 	}
 }
-class  interfaceEx2 {
+class  interfaceEx3 {
 	public static void main(String[] args) {
 		YourObj o = new YourObj();
 		Other other = o;
