@@ -5,5 +5,5 @@
 > ##### 02. 객체들의 배열
 > ##### 03. 2차원 배열
 ----------------------
-### Collection와 Fromework
+### 1. Collection와 Fromework
     '가변길이 복수데이터'
