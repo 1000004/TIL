@@ -14,7 +14,7 @@
  >```java
 >public class BootSpringBootApplication {
 >  public static void main(String[] args) {
->    Object[] arr = new Object[3];//Object 최상위 객체 모든 객체는 Object를 상속받는다.
+>    Object[] arr = new Object[3];//모든 객체는 Object(최상의 객체)를 상속받는다.
 >    arr[0] = {"abc", "abc"};
 >    arr[1] = new int[] {1,2,3};
 >    arr[2] = new int[][] {{4,5}, {6,7}, {8,9}};
