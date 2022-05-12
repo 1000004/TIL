@@ -21,7 +21,7 @@
 >  }
 >}
 >```
-> #### 03. 2차원 배열
+> #### 03. 다차원 배열
  >```java
 >interface ISalesConstants {
 >	int AREA_COUNT = 3;
