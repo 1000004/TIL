@@ -4,6 +4,7 @@
 > * 상속 계층 구조
 > * 상속은 중복을 줄인다
 > * 상속은 is-a관계
+> <img src="https://postfiles.pstatic.net/MjAyMjA1MTNfNjEg/MDAxNjUyNDUyMTc2NTk4.0yUQ_2XgQY2-UY5ISPfKEwHoTbif8cr-xlOuGHR30Cog.CZuCTfykpvIYu7Gy5yP0yvBh9K_fuLiER8eIfK6UjJ0g.PNG.forget980/%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2022-05-13_232207.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 >```java
 >class SuperClass {
 >	  private int numPrivate = 2;//private 접근제한자 상속에서 배제
