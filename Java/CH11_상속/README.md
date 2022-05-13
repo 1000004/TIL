@@ -30,3 +30,18 @@
 >```
 > #### Override
 > > 부모클래스에서 정의된 메서드를 재정의한다.
+> ```java
+>  //@... : Annotation : JDK1.5~
+>  class Parent{
+>	  public void todo(String str){
+>		  // todo :: A
+>	  }
+>  }
+> class Child extends Parent{
+>	  //오버라이드 검증 : 컴파일 타임
+>	  @Override
+>	  public void todo(String n){
+>	  	// todo :: B
+> 	}
+>}
+>```
