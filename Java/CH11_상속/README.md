@@ -38,8 +38,7 @@
 >	  }
 >  }
 > class Child extends Parent{
->	  //오버라이드 검증 : 컴파일 타임
->	  @Override
+>	  @Override//오버라이드 검증 : 컴파일 타임
 >	  public void todo(String n){
 >	  	// todo :: B
 > 	}
