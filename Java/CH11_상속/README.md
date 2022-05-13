@@ -1,6 +1,9 @@
 
 ## 1.상속
 > ### 01. 슈퍼 클래스와 서브 클래스
+> * 상속 계층 구조
+> * 상속은 중복을 줄인다
+> * 상속은 is-a관계
 >```java
 >class SuperClass {
 >	  private int numPrivate = 2;//private 접근제한자 상속에서 배제
