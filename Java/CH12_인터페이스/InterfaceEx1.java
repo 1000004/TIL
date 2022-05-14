@@ -33,7 +33,7 @@ class  InterfaceEx1 {
 		Object obj = o;
 		//type을 통해 사용할수 있는 범위를 알수 있다.
 		a.methodAa();
-		//호출시 override되므로 methodAa method 호출 가능
+		//호출시 erride되므로 methodAa method 호출 가능
 
 	}
 }
