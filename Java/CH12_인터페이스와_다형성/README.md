@@ -41,15 +41,11 @@
 >}
 >interface IB{
 >  	void todo();
->  	void methodB();
 >}
 >//다중 구현
 >class MyObj implements IA, IB{
 > 	@Override
 > 	public void todo(){
-> 	}
-> 	@Override 
-> 	public void methodA(){
 > 	}
 > 	@Override
 > 	public void methodB(){
