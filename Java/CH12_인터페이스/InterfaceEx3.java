@@ -35,12 +35,10 @@ class InterfaceEx3  {
 		HomeSrver server = new HomeSrver();
 
 		Tv tv = new Tv();
-
 		server.performTurnOn(tv);
 		server.performTurnOff(tv);
 
 		Phone p = new Phone();
-
 		server.performTurnOn(p);
 		server.performTurnOff(p);
 
