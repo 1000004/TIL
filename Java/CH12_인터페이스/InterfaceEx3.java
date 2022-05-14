@@ -44,6 +44,5 @@ class MachineTest  {
 		server.performTurnOn(p);
 		server.performTurnOff(p);
 
-
 	}
 }
