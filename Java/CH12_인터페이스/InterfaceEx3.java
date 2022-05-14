@@ -30,7 +30,7 @@ class HomeSrver {
 		m.turnOff();
 	}
 }
-class MachineTest  {
+class InterfaceEx3  {
 	public static void main(String[] args) {
 		HomeSrver server = new HomeSrver();
 
