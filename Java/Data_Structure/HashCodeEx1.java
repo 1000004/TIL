@@ -33,7 +33,7 @@ class MyKey{
 	}
 }
 
-class MapEx3 {
+class HashCodeEx1 {
 	public static void main(String[] args) {
 		HashMap<MyKey, String> map = new HashMap<MyKey, String>();
 		map.put(new MyKey(2), "A");
