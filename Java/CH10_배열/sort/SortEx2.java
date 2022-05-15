@@ -64,7 +64,7 @@ class Car implements Comparable<Car>{
 		return getEngine().compareTo(other.getEngine());
 	}
 }
-class SortEx4 {
+class SortEx2 {
 	public static void main(String[] args) {
 		Car[] carList = {
 			new Car("avante", new Engine(1600, 200)),
