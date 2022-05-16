@@ -6,7 +6,7 @@ class TimeFormatting {
 		//현재시간을 가지고 있는 객체
 		Date d = new Date();
 		//특정 시간을 나타내는 Date 객체
-		//setTime(long) long 다입으로 L을 붙인다.
+		//setTime(long) long 타입으로 L을 붙인다.
 		d.setTime(1652681440652L);
 		//2022-05-16(PM 03:06)
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd (a hh:mm - ss)");
