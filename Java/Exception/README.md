@@ -50,4 +50,4 @@ class ExceptionEx {
   * ArrayIndexOutOfCBoundsException(범위를 벗어나는 값 참조)
   * Negative ArraySize Exception(배열을 만들때 길이를 음수로 뒀다)
   * Arithmetic Exception(0으로 나눈 상황)
-  * NumberFormatException (숫자를 바꿀 수 없는 걸 시도) ex) Integer.paseInt("abc");
+  * NumberFormatException (숫자를 바꿀 수 없는 걸 시도) ex) Integer.parseInt("abc");
