@@ -14,10 +14,10 @@ class TimeFormatting {
 		System.out.println(format);
 
 		try{
-				//String format에서 Date 객체 구하기
-				Date other = sdf.parse("2012-05-16 (오후 09:00 - 00)");
-				//Date객체로 시간(long) 구하기
-				System.out.println(other.getTime());
+			//SimpleDateFormat sdf를 가지고 원하는 특정 시간의 Date 객체 구하기
+			Date other = sdf.parse("2012-05-16 (오후 09:00 - 00)");
+			//Date객체로 시간(long) 구하기
+			System.out.println(other.getTime());
 		}catch(ParseException e){
 		}
 	}
