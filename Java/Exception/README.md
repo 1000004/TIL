@@ -24,7 +24,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 class ExceptionEx {
 	public static void divide(int num1, int num2) {
       try{
-            System.out.println("실행") //일부는 실행 가능
+            System.out.println("실행"); //일부는 실행 가능
             int result = num1 / num2; // 예외가 발생할 수 있는 코드 → 예외 없을때 실행/예외가 발생시 catch블록으로 넘어감
             System.out.println(result);
         } catch(ArithmeticException e){
