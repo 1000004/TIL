@@ -1,4 +1,4 @@
-Eclipse 사용방법
+### Eclipse 사용방법
 * 단축키
 	 * ctrl + m : 최대  / 복귀
 	 * ctrl + s : save (compile)
@@ -14,7 +14,7 @@ Eclipse 사용방법
    * 코드이동  : 범위선택(드래그) + alt + 방향키
    * 탭이동 : ctrl + d
    * 새로만들기 : ctrl + n
-eclipse - project - 여러개의 자바파일
-자바파일 한개 작성이 아닌 projcet(프로그램 한개 기준)를 만들고 그 안에서 자바 파일 만들어낸다
-이러한 작업파일들이 디스크상 저장되는 공간 workspace 설정시 (1) 경로상에 공백 없이 (2) 한글을 피하라
-workspace마다 다르게 설정가능한 tool
+* eclipse - project - 여러개의 자바파일
+* 자바파일 한개 작성이 아닌 projcet(프로그램 한개 기준)를 만들고 그 안에서 자바 파일 만들어낸다
+* 이러한 작업파일들이 디스크상 저장되는 공간 workspace 설정시 (1) 경로상에 공백 없이 (2) 한글을 피하라
+* workspace마다 다르게 설정가능한 tool
