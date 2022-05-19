@@ -1,5 +1,3 @@
-### GUI만들기
-#### Swing
  ```java
 public class JFrameEx1 {
 
