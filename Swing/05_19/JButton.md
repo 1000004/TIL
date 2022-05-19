@@ -21,7 +21,7 @@ class MyFrame5 extends JFrame{
 		lblComplex.setHorizontalTextPosition(JLabel.CENTER);//사진을 기준으로 문자를 수평 중심 
 		lblComplex.setVerticalTextPosition(JLabel.TOP);//사진을 기준으로 문자를 수직 위
 		btnClick = new JButton(new ImageIcon("click.png"));
-		//JButton은 Container를 상속 받으며 button을 만들때 label이 올라간 상태로 만들게 된다.
+		//JButton은 Container를 상속 받으며 button을 만들때 label이 올라간 상태로 생성 된다.
 		btnClick.setText("click");
 		btnClick.setHorizontalTextPosition(JLabel.CENTER);
 		btnClick.setVerticalTextPosition(JLabel.TOP);
