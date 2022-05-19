@@ -4,8 +4,8 @@
 * 예외 처리는 햬결이 아니라 상황 대처다.
 * RUNTIME ERROR로 실행 도중 오류 발생시 오류 이후 코드는 실행되지 않고 중단된다. 이를 방지하기 위해 예외 처리는 문제 발생시 어떻게 해야 하는지 알려줌으로써 소스코드는 끝까지 실행 된다.
 > #### 예외처리 방법
-> 01. try-catch
-> 02. throws 
+> 01. try-catch(자체적 해결)
+> 02. throws(보고)
 ### Call Stack 프로그램 동작 원리
 > Stack Last In First Out → L.I.F.O
 > / Queue First In First Out → F.I.F.O
