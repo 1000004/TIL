@@ -1,3 +1,14 @@
+### Layout
+* 배치(Layout)-> 크기 위치 결정
+* Container(component : 화면구성요소 상속 받는다) : Component를 포함 할수 있는(배치) Component(담을수 있다는 개념)
+* Container는 LayoutManager 배치관리자를 가질수있다.
+#### LayoutManager
+* 크기와 위치를 설정 해준다.
+* 가지는 규칙 룰로 크기 위치 결정
+> Border Layout/
+> Flow Layout/
+> Grid Layout
+
  #### BorderLayout
  ```java
 import java.awt.BorderLayout;
