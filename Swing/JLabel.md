@@ -70,7 +70,7 @@ class MyFrame3 extends JFrame{
 		setVisible(true);
 	}
 }
-public class Ex {
+public class Ex1 {
 	public static void main(String[] args) {
 		new MyFrame3();
 	}
@@ -78,3 +78,56 @@ public class Ex {
 }
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA1MTlfMjY0/MDAxNjUyOTU5ODEzMDgw.aAGG_Tn8u3hIt6b8Kz7hPY8itzlymk_7umOYNsV-c0og.3W5PDD10MwcHbQ-Z_s4hzxzDk9VfSAir-PMPoEUkQAkg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+ ```java
+ package kr.ac.green;
+
+import java.awt.BorderLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+class MyFrame4 extends JFrame{
+	private JLabel lblImg1;
+	public MyFrame4(){
+		init();
+		setDisplay();
+		showFrame();
+	}
+	private void init(){
+		//ImageIcon icon = new ImageIcon("choonsik.jpeg");
+		
+		Toolkit kit = Toolkit.getDefaultToolkit();
+		Image img = kit.getImage("choonsik.jpeg");
+		Image newImg = img.getScaledInstance(300,300,Image.SCALE_SMOOTH);
+		//이미지 변환시 사용하는 알고리즘 종류(Image API 문서에서 확인)를 파라미터로 넣는다
+		//SCALE_SMOOTH는 새롭게 생성된 이미지의 품질이 떨어지지 않게한다.
+		lblImg1 = new JLabel(new ImageIcon(newImg));
+		//lblImg1 = new JLabel(icon);
+	}
+	private void setDisplay(){
+		add(lblImg1, BorderLayout.CENTER);
+	}
+	private void showFrame(){
+		setTitle("Image + JLable");
+		//이미지 자체를 수정이 가장 좋다
+		//코드로 수정하고자 하면 창의 크기를 정하고 맞추서 배치 or 창에 배치를 다하고 맞춰서 크기 설정
+		setSize(300,300);
+		//코드로 이미지를 조정하면 손상됨
+		//pack(); // 사진에 맞춰 자동 창 크기
+		setLocation(100,100);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}
+public class Ex2 {
+	public static void main(String[] args) {
+		new MyFrame4();
+	}
+
+}
+ ```
+<img src="https://postfiles.pstatic.net/MjAyMjA1MTlfMjAy/MDAxNjUyOTU5OTk1NjM3.Y-q-bXDIaHhIjU1I2KKZYlhqypP45hRCKGFI_jLYmrkg.SYuuvtPdB2tRS8zQZ_IUnkfV79C_6jpY3XJwiNxC5u8g.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
