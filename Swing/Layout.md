@@ -5,9 +5,16 @@
 #### LayoutManager
 * 크기와 위치를 설정 해준다.
 * 가지는 규칙 룰로 크기 위치 결정
+* 객체를 사이즈를 200,200 정해둬도 JFrame에 배치하는 순간 JFrame의 Layout의 규칙대로 크기 위치 정보 설정
 > Border Layout/
 > Flow Layout/
 > Grid Layout
+#### container
+* 구분 
+	* base- container : 최소한 UI가 만들어지기 위해서는 적어도 하나의 base- container가 있어한다. ex) JFrame (프로그램 창)
+	* 일반 conainer
+* 버튼의 가시성을 위해 base container에 부착되어야한다
+* 최소한 base container가 시각적으로 보이는 상태여야지 버튼도 볼수 있다.
 
  #### BorderLayout
  ```java
