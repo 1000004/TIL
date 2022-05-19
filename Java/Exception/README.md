@@ -69,14 +69,14 @@ class ExceptionEx {
 * 예외 상황 클래스의 최상의 클래스
 * Exception 클래스를 상속받는 RuntimeException 클래스의 하위 클래스는 예외처리 강제되지 않음.
 * Exception 클래스를 직접 상속받는 클래스는 예외처리 강제(compile error) ex) FileNotFound Excption → 코드로 회피 불가능하다. (외부 문제)
-* RuntimeException의 경우 사용 빈도가 높고 코드 내부에서 발생하기 때문에 코드를 이용한 제어가 가능하다 → 사전에 방지가 가능하며 예외처리 외에도 에러 방지하는 방법의 선택이 가능
+* RuntimeException의 경우 사용 빈도가 높고 코드 내부에서 발생하기 때문에 코드를 이용한 제어가 가능하다 → 사전에 방지가 가능하고 예외처리 외에도 예외를 방지하는 방법의 선택이 가능
 * RuntimeExcetion
   * NullPointerException(null 참조 오류)
   * ClassCastExcetion(형변화 실패)
   * ArrayIndexOutOfCBoundsException(범위를 벗어나는 값 참조)
   * Negative ArraySize Exception(배열을 만들때 길이를 음수로 뒀다)
   * Arithmetic Exception(0으로 나눈 상황)
-  * NumberFormatException (숫자를 바꿀 수 없는 걸 시도) ex) Integer.parseInt("abc");
+  * NumberFormatException (숫자로 바꿀 수 없는 걸 시도) ex) Integer.parseInt("abc");
  ### 예외 상황 만들기
 * Exception를 상속 받을시 의무 예외처리
 * RuntimeException를 상속 받을시 예외처리가 의무가 아님
