@@ -36,7 +36,7 @@ class MyFrame5 extends JFrame{
 	private void showFrame(){
 		setTitle("JLabel : text + image");
 		pack();
-		setLocationRelativeTo(null);//사이즈 정하고 위치
+		setLocationRelativeTo(null);//사이즈 정하고 위치 설정
 		setVisible(true);
 		
 	}
