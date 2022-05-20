@@ -172,10 +172,9 @@ class MyFrame1 extends JFrame{
 		setVisible(true);
 	}
 	private void none(){
-		
 			//각 각 Component 수작업으로 관리
 			//무언가가 바뀌었을때 자동적으로 배치가 되지 않고 수작업 필요
-			//절대 좌표 쓰지 않는 것이 좋다
+			//절대 좌표로 사용자 임의 지정 쓰지 않는 것이 좋다
 			setLayout(null);
 			JButton btn = new JButton("!");
 			btn.setSize(200,200);
