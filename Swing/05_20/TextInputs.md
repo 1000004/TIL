@@ -167,3 +167,91 @@ public class Ex2 {
 }
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA1MjBfMjA1/MDAxNjUzMDMyNDYxMjcz.J5mIFz_5QtLsCf039KotmMU1m32c7ws5BCDnX2_btwog.O-VCGufVLboomRuUEA4vYSrXR8ohIVDYfGnk2axIfUEg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+ ```javaimport java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+class InterestCalc extends JFrame{
+	private JLabel InputPrincipal;
+	private JLabel InputInterestRate;
+	private JTextField tfInputPrincipal;
+	private JTextField tfInputInterestRate;
+	private JButton btnCalc;
+	private JTextField tfResult;
+	
+	public InterestCalc(){
+		init();
+		setDisplay();
+		showFrame();
+	}
+	private void init(){
+		InputPrincipal = new JLabel("원금을 입력하시오",JLabel.LEFT);
+		InputInterestRate = new JLabel("이자율을 입력하시오",JLabel.LEFT);
+		tfInputPrincipal = new JTextField(5);
+		tfInputInterestRate = new JTextField(5);
+		btnCalc = new JButton("변환");
+		
+		tfResult = new JTextField(12);
+		tfResult.setEditable(false);
+		tfResult.setBackground(Color.WHITE);
+	}
+	private void setDisplay(){
+		
+		JPanel pnlCenter = new JPanel(new GridLayout(0,1));
+		
+		JPanel pnlMoneyInfo = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pnlMoneyInfo.add(InputPrincipal);
+		pnlCenter.add(pnlMoneyInfo);
+		JPanel pnlRateInfo = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pnlRateInfo.add(InputInterestRate);
+		pnlCenter.add(pnlRateInfo);
+		
+		JPanel pnlEast = new JPanel(new GridLayout(0,1));
+		JPanel pnlMoney = new JPanel();
+		pnlMoney.add(tfInputPrincipal);
+		pnlEast.add(pnlMoney);
+		JPanel pnlRate = new JPanel();
+		pnlRate.add(tfInputInterestRate);
+		pnlEast.add(pnlRate);
+		
+		JPanel pnlSouth = new JPanel(new GridLayout(0,1));
+		JPanel pnlBtn = new JPanel();
+		pnlBtn.add(btnCalc);
+		pnlSouth.add(pnlBtn);
+		JPanel pnlResult = new JPanel();
+		pnlResult.add(tfResult);
+		pnlSouth.add(pnlResult);
+		
+		add(pnlCenter, BorderLayout.CENTER);
+		add(pnlEast, BorderLayout.EAST);
+		add(pnlSouth, BorderLayout.SOUTH);
+		
+	}
+	private void showFrame(){
+		setTitle("이자 계산기");
+		pack();
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
+		setVisible(true);	
+	}
+}
+
+public class test {
+
+	public static void main(String[] args) {
+		new InterestCalc();
+
+	}
+
+}
+```
+<img src="https://postfiles.pstatic.net/MjAyMjA1MjBfMzAg/MDAxNjUzMDM0NjE1ODA3.qcJruRnTgc0YIO9NI2JDOlM1J_Or1TmHROCsEESqBw8g.vVGxL2FtMQsuPjhXHY8wSrIZRcDGrbIg_7iueGum_zkg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
