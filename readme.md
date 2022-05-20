@@ -16,4 +16,5 @@ T I L
     * [CH11 상속](https://github.com/1000004/TLI/tree/main/Java/CH11_%EC%83%81%EC%86%8D)
     * [CH12 인터페이스](https://github.com/1000004/TIL/tree/main/Java/CH12_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)
  ## My Readings
-  * Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)
+  * #### Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)
+      * 데이브 후버, 애디웨일 오시나이 저자
