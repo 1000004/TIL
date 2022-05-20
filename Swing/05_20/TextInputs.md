@@ -98,7 +98,7 @@ class TextInputs extends JFrame{
 		setVisible(true);
 	}
 }
-public class Ex {
+public class Ex1 {
 
 	public static void main(String[] args) {
 		new TextInputs();
@@ -108,3 +108,61 @@ public class Ex {
 }
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA1MjBfNDAg/MDAxNjUzMDMxODI5MzI1.kJCw6dZL4bDjiPKYzK5VwLdFcof-7CwAuD4_jgl9xhIg.cbuoIaQJSF9O3syxd3X5N_3ylthyT9ZExPFaFthF7JAg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+ ```java
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+class MileToKilo extends JFrame{
+	private JLabel lblInput;
+	private JTextField tfInput;
+	private JButton btnCalc;
+	private JTextField tfResult;
+	
+	public MileToKilo(){
+		init();
+		setDisplay();
+		showFrame();
+	}
+	private void init(){
+		lblInput = new JLabel("거리를 마일단위로 입력하시오");
+		tfInput = new JTextField(5);
+		btnCalc = new JButton("변환");
+		tfResult = new JTextField(18);
+	}
+	private void setDisplay(){
+		JPanel pnlNorth = new JPanel();
+		pnlNorth.add(lblInput);
+		pnlNorth.add(tfInput);
+		JPanel pnlCenter = new JPanel();
+		pnlCenter.add(btnCalc);
+		JPanel pnlSouth = new JPanel();
+		pnlSouth.add(tfResult);
+		
+		add(pnlNorth, BorderLayout.NORTH);
+		add(pnlCenter, BorderLayout.CENTER);
+		add(pnlSouth, BorderLayout.SOUTH);
+	}
+	private void showFrame(){
+		setTitle("마일을 킬로미터로 변환");
+		pack();
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}
+
+public class Ex0 {
+
+	public static void main(String[] args) {
+		new MileToKilo();
+
+	}
+
+}
+```
+<img src="https://postfiles.pstatic.net/MjAyMjA1MjBfMjA1/MDAxNjUzMDMyNDYxMjcz.J5mIFz_5QtLsCf039KotmMU1m32c7ws5BCDnX2_btwog.O-VCGufVLboomRuUEA4vYSrXR8ohIVDYfGnk2axIfUEg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
