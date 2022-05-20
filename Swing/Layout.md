@@ -5,7 +5,7 @@
 #### LayoutManager
 * 크기와 위치를 설정 해준다.
 * 가지는 규칙 룰로 크기 위치 결정
-* 객체를 사이즈를 200,200 정해둬도 JFrame에 배치하는 순간 JFrame의 Layout의 규칙대로 크기 위치 정보 설정
+* component를 사이즈를 (200,200) 정해둬도 JFrame에 배치하는 순간 JFrame의 LayoutManager의 규칙대로 크기 위치 정보 설정
 > Border Layout/
 > Flow Layout/
 > Grid Layout
