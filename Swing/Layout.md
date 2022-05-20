@@ -171,18 +171,6 @@ class MyFrame1 extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 	}
-	/*
-	 * 배치 크기는 동일
-	 * 길이 넗이 변화가 모든 Component에 영향(flowLayout은 Component 크기 고정)
-	 * 칸을 나누고 차례대로 들어간다
-	 * 합병 불가능
-	 * 영역 하나에 하나의 Component 넣을 수 있다.
-	 * 가로간격 세로간격 지정가능
-	 * Component를 칸 갯수보다 많이 배치하면 임의로 다르게 변경
-	 * 줄갯수를 0이 아닌 수로 지정하고 캔갯수를 0으로 하면 줄갯수는 보장 
-	 * 줄수를 0으로 칸갯수를 0이아닌 수로 지정하면 칸갯수는 보장
-	 * 몇개 들어가는지 모르겠을때 둘다 0이면 안되며 무조건 0으로 지정된 칸수, 줄수만 변경
-	 */
 	private void none(){
 		
 			//각 각 Component 수작업으로 관리
