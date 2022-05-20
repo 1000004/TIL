@@ -108,6 +108,7 @@ public class Ex1 {
 }
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA1MjBfNDAg/MDAxNjUzMDMxODI5MzI1.kJCw6dZL4bDjiPKYzK5VwLdFcof-7CwAuD4_jgl9xhIg.cbuoIaQJSF9O3syxd3X5N_3ylthyT9ZExPFaFthF7JAg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
  ```java
 import java.awt.BorderLayout;
 
