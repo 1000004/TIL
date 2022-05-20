@@ -156,7 +156,7 @@ class MileToKilo extends JFrame{
 	}
 }
 
-public class Ex0 {
+public class Ex2 {
 
 	public static void main(String[] args) {
 		new MileToKilo();
