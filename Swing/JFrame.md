@@ -17,7 +17,7 @@ public class JFrameEx1 {
 		/*
 		 * EXIT_ON_CLOSE : JVM 종료
 		 * DISPOSE_ON_CLOSE : 해당 창종료
-		 * HIDE_ON_CLOSE : default
+		 * HIDE_ON_CLOSE : setVisible(false),default
 		 * DO_NOTHTING_ON_CLOSE
 		 */
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
