@@ -59,7 +59,7 @@ public class BorderTest extends JFrame {
 			new LineBorder(Color.BLUE,1),
 			"inner-border"
 		);
-		//LineBorder를 가지는 TitledBorder 생성
+		//TitledBorder를 가지는 TitledBorder 생성
 		
 		innerBorder.setTitlePosition(TitledBorder.BOTTOM);
 		//타이틀의 위치 설정
