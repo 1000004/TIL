@@ -28,8 +28,8 @@ class Outer{
 ```
 * static inner Class
   * Outer 객체 생성 없어도 static inner 객체 생성이 가능 하다
-  * -> 따로 생성이 가능하도록 한다는 의미는 다른곳에 사용 가능하도록 한다는 의도를 가질 수 있다.
-  * Inner class 쓰는 이유가 모호해진다. 여러곳에 쓰인다면 외부에서 class 생성해서 쓰는 방법이 있다.
+  * -> 따로 생성이 가능하도록 한다는 의미는 다른 곳에 사용 가능하도록 한다는 의도를 가질 수 있다.
+  * Inner class 쓰는 이유가 모호해진다. 여러 곳에 쓰인다면 외부에서 class 생성해서 쓰는 방법이 있다.
   * static이 없는 Inner Class와 다르게 Outer 객체가 소멸되지 않아도 Inner 객체가 garbage collection이 일어날 수 있다.
 ```java
 class OtherOuter{
