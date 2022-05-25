@@ -6,6 +6,7 @@
 * AdapterPattern : 요구와 제공 사이에서 불일치한 사항을 마춰주는 객체(Atapter)를 만든다 - GoF
 ```java
 abstract class WindowAdapter implements WindowListener{
+	//API가 제공하는 WindowAdapter
 	@Override
 	public void windowOpened(WindowEvent e) {
 	}
@@ -94,6 +95,139 @@ public class MyFrame1 extends JFrame{
 	public static void main(String[] args) {
 		new MyFrame1();
 
+	}
+
+}
+```
+-------------------
+inner class
+```java
+public class MyFrame2 extends JFrame {
+	private JButton btnExit;
+	public static final int NORMAL_EXIT = 0;
+	public MyFrame2(){
+		
+		
+		btnExit = new JButton ("Exit");
+		btnExit.addActionListener(new ExitActionListener());
+		addWindowListener(new InnerWindowListener());
+		add(btnExit, BorderLayout.SOUTH);
+		
+		setTitle("MyFrame2");
+		setSize(400,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		setVisible(true);
+		
+		
+	}
+	private class ExitActionListener implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent ae){
+			close();
+		}
+	} 
+	private class InnerWindowListener extends WindowAdapter {
+		@Override
+		public void windowClosing(WindowEvent we){
+			close();
+			/*
+				public void close(){
+					int choice = JOptionPane.showConfirmDialog(
+						//inner class에서의 this가 아닌 MyFrame2 this가 부모요소 조심 해야한다
+						MyFrame2.this,
+						"종료 하시겠습니까?",
+						"궁금",
+						JOptionPane.YES_NO_OPTION,
+						JOptionPane.QUESTION_MESSAGE
+					);
+					if(choice == JOptionPane.YES_OPTION){
+					System.exit(NORMAL_EXIT);
+					}
+				}
+			*/
+		}
+	}
+	public void close(){
+		int choice = JOptionPane.showConfirmDialog(
+				this,
+				"종료 하시겠습니까?",
+				"궁금",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.QUESTION_MESSAGE
+			);
+		if(choice == JOptionPane.YES_OPTION){
+		System.exit(NORMAL_EXIT);
+		}
+	}
+	
+	public static void main(String[] args){
+		new MyFrame2();
+	}
+}
+
+```
+---------------------------
+anonymous inner class
+```java
+public class MyFrame3 extends JFrame {
+	public static final int NORMAL_EXIT = 0;
+	private JButton btnExit;
+	
+	public MyFrame3(){
+		btnExit = new JButton("Exit");
+		add(btnExit, BorderLayout.SOUTH);
+		
+		// anonymous inner class : 객체 생성을 1번만 할 수 있다.
+		// 많이 사용
+		// 람다식의 기본토대다...
+		// 이름이 없는 클래스
+		// 객체를 한번 생성 가능
+		// ActionListener는 인터페이스기 때문에 (구현한)Override를 한 anonymous inner class 생성
+		btnExit.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent ae){
+				close();
+			}
+		});
+		final int num = 2;
+		//JDK1.8부터도 변경이 불가능한다.
+		//지역변수 호환성을 위해 final를 붙인다
+		//Swing의 경우와 아두이노 버튼 클릭 이벤트와 유사
+		//아두이노는 파라미터로 WindowEvent가 아닌 이벤트 소스
+		WindowListener wListener = new WindowAdapter(){
+			//WindowAdapter를 상속 받는 anonymous inner class 생성
+			//wListener는 객체 이름이지 class이름이 아니다.
+			@Override
+			public void windowClosing(WindowEvent we){
+				close();
+				//JDK1.8~ : 지역변수를 참조할 수 있지만, 값의 변경은 불가능 한다
+				//~JDK1.7 : 지역변수를 참조하는것이 불가능함. 단, 상수(final)는 가능하다.
+				System.out.println(num);//지역변수 사용 가능
+			}
+		};
+		addWindowListener(wListener);
+		setTitle("MyFrame3");
+		setSize(400,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		setVisible(true);
+	}
+	public void close(){
+		int choice = JOptionPane.showConfirmDialog(
+				this,
+				"종료 하시겠습니까?",
+				"궁금",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.QUESTION_MESSAGE
+			);
+		if(choice == JOptionPane.YES_OPTION){
+		System.exit(NORMAL_EXIT);
+		}
+	}
+	
+	public static void main(String[] args) {
+		new MyFrame3();
 	}
 
 }
