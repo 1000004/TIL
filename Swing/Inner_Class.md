@@ -1,13 +1,13 @@
 ## Inner Class
 * Outer 객체가 생성된 이후에 Inner 객체 생성이 가능
-* 다른 형태의 클래스가 필요하지만 다른곳에 사용되지 않는 경우 Inner Class 사용
+* 다른 형태의 클래스가 필요하지만 다른 곳에 사용되지 않는 경우 Inner Class 사용
 * 다른 곳에 사용하지 않고 하나의 객체에만 쓰인다.
 * Outer class 에 완전히 종속되고 Outer class안에서만 사용하는 객체
 * 모든 제한자 사용가능한 class
 * 외부 클래스에 사용하지 않는다.
 * Outer의 멤버변수 메소드를 마음대로 불러 쓸 수 있다.(private 제한자인 경우도 가능)
-* Outer객체가 있는 상태로 Inner객체가 garbage collection에서 쓰레기 객체로 판정되도 삭제 안됨 (메모리 누수로 이어진다)
-* inner class에서의 this가 아닌 MyFrame2 this가 부모요소 조심 해야한다
+* Outer객체가 있는 상태로 Inner객체가 garbage collection에서 쓰레기 객체로 판정 되도 삭제 안됨 (메모리 누수로 이어진다)
+* inner class에서의 this가 아닌 MyFrame2 this가 부모요소를 정할때 조심 해야 한다
 ```java
 class Outer{
 	
