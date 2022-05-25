@@ -59,9 +59,13 @@ public class MyFrame1 extends JFrame{
 		
 		MyWindowListener listener = new MyWindowListener();
 		listener.setUi(this);
-		//다른곳에서 사용 가능하도록 클래스 따로 생성
-		//
-		//set로 가져옴
+		/*
+		*일반적으로 다른곳에서 사용 가능하기위해서는 클래스 따로 생성
+		*하지만 해당 경우는 다른 곳에 객체를 사용하지 않지만
+		*JFrame를 이미 상속중이 때문에 WindowAdapter를 상속받는 다중 상속이 불가능 하기 때문에 클래스 만듬
+		*/
+		
+		//setter로 가져옴
 		addWindowListener(listener);
 		
 		setTitle("MyFrame1");
