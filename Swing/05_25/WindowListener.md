@@ -136,18 +136,17 @@ public class MyFrame2 extends JFrame {
 		public void windowClosing(WindowEvent we){
 			close();
 			/*
-				public void close(){
-					int choice = JOptionPane.showConfirmDialog(
-						//inner class에서의 this가 아닌 MyFrame2 this가 부모요소 조심 해야한다
-						MyFrame2.this,
-						"종료 하시겠습니까?",
-						"궁금",
-						JOptionPane.YES_NO_OPTION,
-						JOptionPane.QUESTION_MESSAGE
-					);
-					if(choice == JOptionPane.YES_OPTION){
-					System.exit(NORMAL_EXIT);
-					}
+				//inner class에서 WindowAdapter 상속 받는 객체 생성
+				int choice = JOptionPane.showConfirmDialog(
+					//inner class에서의 this가 아닌 MyFrame2 this가 부모요소 조심 해야한다
+					MyFrame2.this,
+					"종료 하시겠습니까?",
+					"궁금",
+					JOptionPane.YES_NO_OPTION,
+					JOptionPane.QUESTION_MESSAGE
+				);
+				if(choice == JOptionPane.YES_OPTION){
+				System.exit(NORMAL_EXIT);
 				}
 			*/
 		}
