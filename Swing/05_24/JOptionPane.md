@@ -142,7 +142,7 @@ public class Ex extends JFrame implements ActionListener{
 	}
 	@Override
 	public void actionPerformed(ActionEvent ae){
-		Object src = ae.getSource();
+		Object src = ae.getSource(); //event가 발생하는 버튼을 객체로 가져온다
 		/*
 		 * YES_NO_OPTION
 		 * OK_CANCEL_OPTION
