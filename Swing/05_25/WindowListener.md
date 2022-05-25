@@ -1,7 +1,7 @@
 ## WindowListener
 * API가 제공하는 WindowAdapter
 	* 가전재품 필요전기 10v 전압 필요 전기제공 220v 직압 연결시 고장 위험
-	* Atapter는 요구하는 전압와 제공하는 전압에서 맞춰준다.
+	* Atapter는 요구하는 전압와 제공하는 전압에서 사이에서 맞춰 준다.
 	* Frame에서 1개의 메서드를 이용하지만 windowListener가 제공하는 메서드가 7개인 경우 WindowAdapter가 조절
 * AdapterPattern : 요구와 제공 사이에서 불일치한 사항을 마춰주는 객체(Atapter)를 만든다 - GoF
 ```java
