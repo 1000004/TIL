@@ -1,6 +1,51 @@
 ## WindowListener
-
+* API가 제공하는 WindowAdapter
+	* 가전재품 필요전기 10v 전압 필요 전기제공 220v 직압 연결시 고장 위험
+	* Atapter는 요구하는 전압와 제공하는 전압에서 맞춰준다.
+	* Frame에서 1개의 메서드를 이용하지만 windowListener가 제공하는 메서드가 7개인 경우 WindowAdapter가 조절
+* AdapterPattern : 요구와 제공 사이에서 불일치한 사항을 마춰주는 객체(Atapter)를 만든다 - GoF
 ```java
+abstract class WindowAdapter implements WindowListener{
+	@Override
+	public void windowOpened(WindowEvent e) {
+	}
+	@Override
+	public void windowClosing(WindowEvent e) 
+	}
+	@Override
+	public void windowClosed(WindowEvent e) {
+	}
+	@Override
+	public void windowIconified(WindowEvent e) {
+	}
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+	}
+	@Override
+	public void windowActivated(WindowEvent e) {
+	}
+	@Override
+	public void windowDeactivated(WindowEvent e) {	
+	}
+}
+```
+-------------
+WindowAdapter를 상속받는 외부 클래스 생성
+```java
+public class MyWindowListener extends WindowAdapter {
+	
+	private MyFrame1 ui;
+	
+	public void setUi(MyFrame1 ui){
+		this.ui = ui;
+	}
+	
+	@Override
+	public void windowClosing(WindowEvent we){
+		ui.close();
+	}
+
+}
 public class MyFrame1 extends JFrame{
 	public static final int NORMAL_EXIT = 0;
 	public MyFrame1(){
@@ -51,45 +96,6 @@ public class MyFrame1 extends JFrame{
 
 	}
 
-}
-
-public class MyWindowListener extends WindowAdapter {
-	
-	private MyFrame1 ui;
-	
-	public void setUi(MyFrame1 ui){
-		this.ui = ui;
-	}
-	
-	@Override
-	public void windowClosing(WindowEvent we){
-		ui.close();
-	}
-
-}
-
-abstract class WindowAdapter implements WindowListener{
-	@Override
-	public void windowOpened(WindowEvent e) {
-	}
-	@Override
-	public void windowClosing(WindowEvent e) 
-	}
-	@Override
-	public void windowClosed(WindowEvent e) {
-	}
-	@Override
-	public void windowIconified(WindowEvent e) {
-	}
-	@Override
-	public void windowDeiconified(WindowEvent e) {
-	}
-	@Override
-	public void windowActivated(WindowEvent e) {
-	}
-	@Override
-	public void windowDeactivated(WindowEvent e) {	
-	}
 }
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA1MjVfMjQw/MDAxNjUzNDU2NDg2MTY4.lngu0OuwgAEF9N7df9iVUrJIoxb9R-nvlAeaAs48usIg.BgfVNUGR78_kGL5xasU_ELXnilLi56fK5fiD67oIxH8g.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
