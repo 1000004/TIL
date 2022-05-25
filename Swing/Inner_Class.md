@@ -7,6 +7,7 @@
 * 외부 클래스에 사용하지 않는다.
 * Outer의 멤버변수 메소드를 마음대로 불러 쓸 수 있다.(private 제한자인 경우도 가능)
 * Outer객체가 있는 상태로 Inner객체가 garbage collection에서 쓰레기 객체로 판정되도 삭제 안됨 (메모리 누수로 이어진다)
+* inner class에서의 this가 아닌 MyFrame2 this가 부모요소 조심 해야한다
 ```java
 class Outer{
 	
