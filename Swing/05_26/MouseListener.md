@@ -2,9 +2,9 @@
 * Override 메서드만 일부만 필요한 경우 MouseAdapter
 * Pressed + Released = Clicked
 * 일이 일어나는 순서 Pressed →  Released → Clicked
-* Clicked시 반응이늦기 때문에 일반적으로 Pressed, Released가 쓰임.
+* Clicked시 반응이 늦기 때문에 일반적으로 Pressed, Released가 쓰임.
 * 하지만 getClickCount()를 이용해 더블클릭을 구현할 수 있다.
-* Entered는 요소에 커서가 올라왔는지 Exited 요소에서 커서가 나갔는지
+* Entered는 요소에 커서가 올라왔는지 Exited 요소에서 커서가 나갔는지 동작
 ```java
 abstract class MouseAdapter implements MouseListener{
 //5개 메서드
@@ -105,3 +105,4 @@ public class Ex1 extends JFrame {
 	}
 }
 ```
+<img src="https://postfiles.pstatic.net/MjAyMjA1MjdfMTIg/MDAxNjUzNTgwMDk4ODM0.8dynPHvoJriILtPqBZvWLy5pR909pleu8vw9fEn5EWcg.zVty24RbKie9HX0MS-59suM4_0WO4SYD81aVTEODyMog.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
