@@ -4,7 +4,7 @@
 * 단, JToolBar가 BorderLayout container에 있고 NORTH, WEST, EAST에 배치가 안되어 있는 경우 부착할 수 있다.
 ## JSplitPane
 * 두 개 Component 를 나누는 데 사용
-* 탐색기에서 볼수 있다
+* 탐색기에서 볼 수 있다
  ```java
  public class Ex4 extends JFrame{
 	private JToolBar tBar;
