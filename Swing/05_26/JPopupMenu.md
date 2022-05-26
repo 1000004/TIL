@@ -2,8 +2,8 @@
 * JPopupMenu 팝업 메뉴는 마우스 우클릭으로 볼 수 있다.
 * 팝업 메뉴 보여주는 요청 신호 정의 o/s 결정
 * 운영체제마다 팝업 메뉴 신호가 정해져 있고 다르다
-* mouse Pressed/Released 둘중 하나는 분명
-* 따라서 둘다 처리
+* mouse Pressed/Released 둘 중 하나는 분명
+* 따라서 둘 다 처리
 ```java
 public class Ex3 extends JFrame {
 	/*
