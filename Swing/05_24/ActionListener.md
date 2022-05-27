@@ -2,7 +2,7 @@
 <img src="https://postfiles.pstatic.net/MjAyMjA1MjRfNTQg/MDAxNjUzNDAyMjU1NjU5.AUH7NYWX77MFUtMxCU0yQIxFMfgfK7y2y695-2oGZ1og.7H2y5uG2WsZWQi57WYBaqSaTN_Z2ufL2payio1qeVrog.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 * plus Button을 누르면 Label 숫자 + 1
 * count1,count2,count3,count4 class는 해당 동일한 UI를 보여준다.
-* count1은 내부클래스에 ActionListener를 구현한다.
+* count1은 내부에서 ActionListener를 구현한다.
 * count2,count3,count4는 독립된 ActionListener class를 가진다.
 * ActionListener2 class의 경우 ActionListener2가 count2의 멤버변수를 가져와 event를 처리하기 때문에  count2 멤버변수가 외부 클래스의 영향을 받게 되므로 결합도가 높다.
 * ActionListener3 class의 경우 count2가 event 발생시 할 일을 method로 정의하고 ActionListener3가 method를 호출하기 때문에 count2 멤버변수를 내부에서 처리하여 결합도가 낮다.
@@ -33,7 +33,7 @@ public class Counter1 extends JFrame implements ActionListener{
 		btnPlus.addActionListener(this);//파라미터는 ActionListener
 	}
 	private void showFrame(){
-		setTitle("counter");
+		setTitle("counter");_
 		setSize(300,400);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
