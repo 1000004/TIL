@@ -134,7 +134,7 @@ public class Ex3 extends JFrame {
 		//운영체제가 정의하고 있는 팝업신호가 Pressed인지 Released인지를 확인하고 걸러준다
 		if(me.isPopupTrigger()) {
 			pMenu.show(lblMain, me.getX(), me.getY());
-			//pMenu를 누가 팜업창을 보여주는지와 보여주는 위치를 설정해 팝업창으로 보여준다.
+			//pMenu를 누가 팜업창을 보여주는지와 보여주는 마우스 위치(컨포넌트 내부 좌표)를 설정해 팝업창으로 보여준다.
 		}
 	}
 	private void showFrame() {
