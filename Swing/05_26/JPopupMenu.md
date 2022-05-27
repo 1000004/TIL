@@ -4,6 +4,9 @@
 * 운영체제마다 팝업 메뉴 신호가 정해져 있고 다르다
 * mouse Pressed/Released 둘 중 하나는 호환
 * 따라서 둘 다 처리
+* PopupMenu는 단축키 없다
+* 단축키 설정을 보여줄 수 있지만 Menu에 있는 단축키가 작동
+* Menu에는 없는 단축키거나 다르면 단축키가 작동 안하거나 Menu에 있는 다른 기능 동작
 ```java
 public class Ex3 extends JFrame {
 	/*
@@ -72,7 +75,7 @@ public class Ex3 extends JFrame {
 		miChoonsik_p = new JMenuItem("choonsik");
 		miChoonsik_p.setActionCommand("choonsik");
 		miChoonsik_p.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.ALT_DOWN_MASK));
-		//JPopupMenu 단축키 없이
+		//JPopupMenu 단축키 없다
 		//단축키 설정을 보여주지만 Menu에 있는 단축키가 작동
 		//Menu에는 없는 단축키거나 다르면 단축키가 작동 안하거나 Menu에 있는 다른 기능 동작
 		miRyan_p = new JMenuItem("ryan");
