@@ -22,7 +22,7 @@ event가 결정되면 listener 결정 - 서로의 이름을 알수 있다/규칙
 * button이 Action Event 발생하는지 Action listener가 감시 → 발생시 감지해서 동작
 
 Invoked : 자동 호출되는 메서드 callback메서드
-call : 우리가 호출해야하는 메서드
+/call : 우리가 호출해야하는 메서드
 
 void actionPerformed(ActionEvent e)
 -->callback메서드
