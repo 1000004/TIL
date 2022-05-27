@@ -3,8 +3,10 @@
 * Pressed + Released = Clicked
 * 일이 일어나는 순서 Pressed →  Released → Clicked
 * Clicked시 반응이 늦기 때문에 일반적으로 Pressed, Released가 쓰임.
-* 하지만 getClickCount()를 이용해 더블클릭을 구현할 수 있다.
+* 하지만 getClickCount()를 이용해 더블클릭을 구현할 수 있다.(더블 클릭 속도는 os가 설정)
 * Entered는 요소에 커서가 올라왔는지 Exited 요소에서 커서가 나갔는지 동작
+* 같은 이름의 갖는 컴포넌트가 있을 경우 ex) btnExit, miExit-> if(src == miExit || src == btnExit) 계속 조건 추가됨
+* ae.getSource()를 사용하면 if문 조건이 너무 길어짐 ↑ae.getActionCommand(); 사용 추천
 ```java
 abstract class MouseAdapter implements MouseListener{
 //5개 메서드
