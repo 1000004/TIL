@@ -22,4 +22,4 @@ T I L
       * 데이브 후버, 애디웨일 오시나이 저자
 ## Breakable Toys
  * ### [UML](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/star)
- * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto)
+ * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto) - 수정 중
