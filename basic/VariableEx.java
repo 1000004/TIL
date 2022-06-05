@@ -4,7 +4,7 @@
 	단, 지역변수와 멤버변수는 이름이 같을 수 있다. => 구분가능하다.
 */
 class Foo {
-	int num = 2; //지역변수
+	int num = 2; //멤버변수
 
 	void todo(){
 		int num = 4; //지역변수
@@ -17,7 +17,7 @@ class Foo {
 	*/
 }
 
-public class UseFoo  {
+public class VariableEx  {
 	public static void main(String[] args) {
 		Foo f = new Foo();
 		f.todo();
