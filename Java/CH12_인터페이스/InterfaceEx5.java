@@ -33,7 +33,7 @@ class SomeImpl implements ISome{
 	public void todo(){
 	}
 }
-class  ImterfaceEx5 {
+class  InterfaceEx5 {
 	public static void main(String[] args) {
 		
 
