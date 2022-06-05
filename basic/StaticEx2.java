@@ -20,7 +20,7 @@ class Car{
 	}
 }
 
-class  CarTest3 {
+class  StaticEx2 {
 
 	public static void main(String[] args) {
 		Car c1 = new Car("bule", 100,1);
