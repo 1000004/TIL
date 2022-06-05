@@ -43,7 +43,7 @@ class Human {
 	}
 }
 
-public class  UseHuman {
+public class  GetSetEx {
 	public static void main(String[] args) {
 		Human h = new Human();
 		h.setName("춘식");
