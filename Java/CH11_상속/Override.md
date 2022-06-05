@@ -1,5 +1,5 @@
 ```java
-@Override
+@Override //오버라이드 검증 : 컴파일 타임
 public boolean equals(Object o){
 //Object o에 null이 오거나 Car의 인스턴스가 오지 않는 경우 바로 결과값이 false
 if(o==null || !(o instanceof Car)){
