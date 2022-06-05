@@ -18,4 +18,9 @@ return result1 && result2;
 public String toString(){
 	return str;
 }
+
+@Override
+public int hashCode() {
+	return jumin.hashCode() % 4;
+}
 ```
