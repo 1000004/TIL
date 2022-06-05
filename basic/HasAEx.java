@@ -74,7 +74,7 @@ class Car{
 
 }
 
-class CarTest {
+class HasAEx {
 	public static void main(String[] args) {
 		Engine  e = new Engine(3000,235.2);
 		Car c = new Car("Black",1000,"SM7",e);
