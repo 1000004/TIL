@@ -43,7 +43,8 @@ public class FileEx2 {
 		}
 	}
 }
-
+```
+```java
 public class FileEx2 {
 	public static void main(String[] args) {
 		// c:\\test\\a.txt
@@ -53,7 +54,7 @@ public class FileEx2 {
 		File f2 = new File(dir,"a.txt");
 		
 		File f3 = new File("c:\\text", "a.txt");
-      //f1, f2, f3 동일한 파일 표현
+      		//f1, f2, f3 동일한 파일 표현
 		//경로 나타내는 거지 저장 공간을 가지는게 아님
 	}
 }
