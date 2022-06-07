@@ -24,5 +24,46 @@
 * char단위로 읽는 Reader의 경우도 int 파라미터로 같다
 * byte < char < int < double
 
-#### 파일 끝을 알려주는 E.O.F (end of file)
-* 읽으면  -1를 반환
+#### 파일 끝을 알려주는 E.O.F (end of file) 읽으면  -1를 반환
+> 쓰기 읽기를 이용해 파일 복사 가능
+```java
+public class Copy {
+	public static void copy(String fileName){
+		// cheoonsik_copy.jpeg(복사본 이름)
+		int idx = fileName.lastIndexOf(".");
+		String ext = fileName.substring(idx);//.txt
+		String preName = fileName.substring(0, idx +1);
+		String copyName = preName + "_copy" + ext;
+		//try - resource : JDK1.7~(AutoCloseable 구현체에 한함)
+		//닫을때 해야하는 일이 있으면 쓸수 없다.
+		try(//finally로 안닫아도 된다.
+			FileInputStream fis = new FileInputStream(fileName);
+			FileOutputStream fos = new FileOutputStream(copyName);	
+		){
+			File f = new File(copyName);
+			int data = -1;
+			if(f.exists()){
+				while((data = fis.read()) != -1){
+						fos.write(data);
+				}
+			}
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
+		}//finally{
+//			if(fis != null){
+//				try{
+//					fis.close();
+//				}catch(IOException e){}
+//				try{
+//					fos.close();
+//				}catch(IOException e){}
+//			}
+//		}
+	}
+	public static void main(String[] args) {
+		copy("test.txt");
+	}
+}
+```
