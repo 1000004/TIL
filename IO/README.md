@@ -19,6 +19,11 @@
 * 컴퓨터에서 파일을 관리해주는 file-system = O/S
 * 자바가 운영체제에게 파일을 만들어달라고 요청 
 * 거부하는 경우가 있다 권한이 없다 또는 접근할 수 없는 위치 코드로 해결 불가능 : 강제 예외처리
+#### 경로
+* 절대 경로 표기법(root - 상대적) root부터 경로를 풀어냄
+   * c:\first\a.txt
+   * root의 의미가 다를 수 있다
+* 상대경로 표기법(현재 위치 기준)
 >```java
 >public class FileEx {
 >	public static void main(String[] args) {
