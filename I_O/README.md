@@ -35,7 +35,7 @@ public class FileEx2 {
 				f.createNewFile();//파일 생성
 			}catch(IOException e){//강제 예외처리
 				//file 관리 system o/s 자원관리 요청
-            //코드로 해결 x 외부 문제
+            			//코드로 해결 x 외부 문제
 				e.printStackTrace();
 			}
 		}else{
