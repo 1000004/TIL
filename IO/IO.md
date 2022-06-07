@@ -23,3 +23,6 @@
 * 3을 넣을때 기본 데이터형을 int로 인식 read 파라미터를 byte로 만들면 매번 형변환 필요 int로 받는다(조심)
 * char단위로 읽는 Reader의 경우도 int 파라미터로 같다
 * byte < char < int < double
+
+#### 파일 끝을 알려주는 E.O.F (end of file)
+* 읽으면  -1를 반환
