@@ -20,10 +20,17 @@
 * 자바가 운영체제에게 파일을 만들어달라고 요청 
 * 거부하는 경우가 있다 권한이 없다 또는 접근할 수 없는 위치 코드로 해결 불가능 : 강제 예외처리
 #### 경로
-* 절대 경로 표기법(root - 상대적) root부터 경로를 풀어냄
+* 절대 경로 표기법(root - 상대적)
    * c:\first\a.txt
+   * root부터 경로를 풀어냄
    * root의 의미가 다를 수 있다
 * 상대경로 표기법(현재 위치 기준)
+   * 같은 위치 바로 하위에 있는 경우 사용
+
+><img src="https://postfiles.pstatic.net/MjAyMjA2MDdfMTY5/MDAxNjU0NjA5MzUyNzUz._Vb78WR0Zjs4bfobuQy2uBt2q-eIAb1uRu1Jtj5sV5Ig.ZEUws99DPpGy_lhfEoUjeM5cNsaDOsZTyDiyuOWo8T4g.PNG.forget980/image.png?type=w580" width="50%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+>  현재위치가 변경될 때마다 상대경로가 변경되기 때문에 절대 경로 표기법 사용
+
 >```java
 >public class FileEx {
 >	public static void main(String[] args) {
