@@ -21,11 +21,18 @@
 
 	* br에서 readLine()을 호출시 → isr read() 호출 → is read() 호출
 	* byte -> char -> 줄
-	* BufferedReader는 임시저장소 buffer 가진다 buffer는 성능을 높여주는데 속도 향상이 아닌 다양한 연산 가능 (줄단위로 읽어주는 연산이 가능)
+	* BufferedReader는 임시저장소 buffer 가진다 줄단위로 읽어주는 연산이 가능(여기서 buffer는 속도를 높여주지는 못한다)
+	* buffer는 성능을 높여주는데 속도 향상과 다양한 연산 기능
 	* 한줄로 판단하기 위해서는 읽은 것을 한곳에 모아두는 공간이 필요 엔터가 들어오면 여기까지가 한줄로 판별
 	
 <img src="https://postfiles.pstatic.net/MjAyMjA2MDhfMTcz/MDAxNjU0Njg0ODk4Mjgw.2sr2-_ZTtWZLDQD6BsryR3tqOQPZQBnEWlAF0Fsqb1cg.V8UhnD3t8F6T9a2DUteKukcAoVo-_5XUYJZcM8h5EPsg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 
+	* pw에서 println() 호출시 fw write() 호출
+	* pw fw char 연산
+	* 읽기는 원천소스를 읽는 stream이 먼저 등장 (읽기와 방향이 반대)
+	* flush() 쓰기 연산시 필요 쓰기 또한 buffer를 사용 buffer는 다 채워야 나오지만 buffer가 체워지지 않더라도 강제로 채워 내보낸다
+	* 문자열 복수 char여러개 여러개 모일수 있는 공간이 필요 - 필터는 연산을 위해 대부분 buffer를 가진다.
+	
 > ### buffer
 
    * 읽은 값은 바이트 배열로 들어가 buffer의 크기만큼 들고올수 있다.
