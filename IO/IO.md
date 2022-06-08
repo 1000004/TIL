@@ -1,11 +1,11 @@
 # I/O
-* 특징 - 01 방향(단방향) 02 순차 → stream
-* stream(I/O)
+### stream
+01 방향(단방향) 02 순차
+#### stream(I/O)
   * byte - 읽기 : InputStream - 쓰기 : OutputStream
   * char - 읽기 : Reader - 쓰기 : Writer
 > 입출력 클래스는 대상이 나오거나 어떻게(특징) 읽는지/쓰는지가 나오고 byte단위로 일기/쓰기 char 단위로 읽기/쓰기 인지 나온다.
-#### FileInputStrean - byte 단위로 읽기
-#### BufferedReader - Buffer를 사용해서 char 단위 읽기
+> * #### 클래스 이름으로 유추가능 FileInputStrean - byte 단위로 읽기 / BufferedReader - Buffer를 사용해서 char 단위 읽기
 * char는 나중에 만들어졌다
 * A~Z a~z는 모두 1byte로 표기가 된다
 * (ANSI 33이전 눈에 안보이는 글자 줄바꿈 tap ANSI 33이전 33~255 눈에 보이는 알파벳, 특수문자)
