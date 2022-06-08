@@ -1,0 +1,53 @@
+public class FileChooserEx {
+	public static void main(String[] args) {
+		JFileChooser ch = new JFileChooser("."); //현재 위치부터 시작
+		
+		/*
+		 * JFileChooser.FILES_ONLY(default) 파일만 선택 가능
+		 * JFileChooser.DIRECTORIES_ONLY 경로(폴더)만 선택가능
+		 * JFileChooser.FILES_AND_DIRECTORIES 파일 경로만 선택가능 
+		 */
+		ch.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+		ch.setApproveButtonText("ok");//버튼 이름 설정 가능
+//		ch.setFileFilter(
+//			new FileNameExtensionFilter("압축파일", "zip")//확장자가 zip인 파일만 보이는 필터 설정 확장자만 가능
+//		); //가변길이 인자 확장자를 여러가지 입력 가능 ("이미지", "jpg","png","bmp","gif")
+		//filter를 직접 만들수 있고 있는 걸 쓸 수 있다
+		
+		ch.setFileFilter(new FileFilter(){//오버라이드 필요
+			@Override
+			public boolean accept(File f){//true를 리턴하면 보이고 false를 리턴하면 안보인다
+				if(f.isFile()){
+					String fileName = f.getName();
+					int idx = fileName.lastIndexOf(".");
+					if(idx < 0){
+						return false;
+					}else{
+						String ext = fileName.substring(idx);
+						return ext.equalsIgnoreCase(".java");//윈도우에는 대소문자 안가리지만 자바파일은 구별
+					}
+					//파일 사이즈나 파일 이름 크기에 따라 필터를 만들 수 있다.
+				}else{
+					return true;//파일이 아니면 보인다.
+				}
+				
+			}
+			@Override
+			public String getDescription(){
+				return "java_files";
+			}
+		});
+		ch.setDialogTitle("?");//타이클 이름 설정
+		//int result = ch.showOpenDialog(null); 열기 파라미터 : 부모 요소
+		int result = ch.showSaveDialog(null); // 저장
+		if(result == JFileChooser.APPROVE_OPTION){
+			//APPROVE_OPTION open 파일을 선택 후 열기를 했을때
+			//save 파일이름을 정하고 저장을 했을때
+			File slectedFiled = ch.getSelectedFile();
+			System.out.println(slectedFiled.getPath());
+		}else if(result == JFileChooser.CANCEL_OPTION){
+			//그냥 닫기 or 취소
+			JOptionPane.showMessageDialog(null, "취소되었습니다.");
+		}
+	}
+}
