@@ -18,10 +18,6 @@
 
 <img src="https://postfiles.pstatic.net/MjAyMjA2MDhfMjc4/MDAxNjU0Njc3NDM5Mzky.hIahpsKb5khuWxx0Nt1mZhJkfiQmKQUefhfNU2AlVL4g.UvC1HZ5_xmkHlKl7sT2eisUrNlamKEaYK0rAv5_AXHUg.PNG.forget980/image.png?type=w580" width="40%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 
-   * 환경에 따라 버퍼 크기에 따른 성능 그래프가 달라짐 적당한 크기가 무엇인지 test가 필요
-   
-   * 초반에는 급격하게 성능이 좋아지지만 일정 크기 이상이 되면 완만하게 증가 증가하는 버퍼에 비해 비효율적으로 성능 상승
-
 ```java
 public class IOEx1 {
 	public static void fileCopy(String filePath){
@@ -53,4 +49,6 @@ public class IOEx1 {
 	}
 }
 ```
-
+  	 * 환경에 따라 버퍼 크기에 따른 성능 그래프가 달라짐 적당한 크기가 무엇인지 test가 필요
+   	
+	 * 초반에는 급격하게 성능이 좋아지지만 일정 크기 이상이 되면 완만하게 증가 증가하는 버퍼에 비해 비효율적으로 성능 상승
