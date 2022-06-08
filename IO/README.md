@@ -8,7 +8,25 @@
     * 02 DataBase - file에 비해 데이터 공유 가능하다는 장점
     * 일회성이 아닌 이전 데이터를 이어받는다
     * file을 활용하여 프로그램에서 할수 있는 것들이 많아진다.
-* ### buffer
+## Stream
+* 데코레이터 패턴 - 어떤 스트림을 조립하는지에 따라 다양한 성격을 띄게 된다.
+* 입출력에서 생성자 중요 API에서 가장 먼저 확인
+* 생성자 파라미터가 다른 Stream인 경우(필터) : 독립적 사용 못함 다른 스트림에 의존 무엇을 읽고 쓰는지가 아닌 어떻게 읽고 쓰는지 결정
+* 생성자 파라미터로 원천 소스를 받는 경우 : 독립적 사용 무엇을 읽고 쓰는지 결정하고 간단한 읽고 쓰기 연산 수행
+* 여러 스트림을 다양하게 조합 가능 Ex 키보드를 한줄씩 읽어드이는 스트림
+* 입출력이 프로 그램에서 주기능 담당하는 경우가 많다
+* 어떻게 구성하는지가 프로그램의 performance결정 가장 크게 성능에 영향을 미친다.
+
+<img src="https://postfiles.pstatic.net/MjAyMjA2MDhfNSAg/MDAxNjU0Njg0Mzc1NTY0.1ohc1pSPA6z_8xxMjNhRsjpnvK9HISpO-mHim1IPa5sg.i-m5QAQAIWmWDS-zsdAsGDZoGmNlok8LoOP3Mvypi-Ag.PNG.forget980/image.png?type=w580" width="40%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+	* br에서 readLine()을 호출시 → isr read() 호출 → is read() 호출
+	* byte -> char -> 줄
+	* BufferedReader는 임시저장소 buffer 가진다 buffer는 성능을 높여주는데 속도 향상이 아닌 다양한 연산 가능 (줄단위로 읽어주는 연산이 가능)
+	* 한줄로 판단하기 위해서는 읽은 것을 한곳에 모아두는 공간이 필요 엔터가 들어오면 여기까지가 한줄로 판별
+	
+<img src="https://postfiles.pstatic.net/MjAyMjA2MDhfMTcz/MDAxNjU0Njg0ODk4Mjgw.2sr2-_ZTtWZLDQD6BsryR3tqOQPZQBnEWlAF0Fsqb1cg.V8UhnD3t8F6T9a2DUteKukcAoVo-_5XUYJZcM8h5EPsg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
+> ### buffer
 
    * 읽은 값은 바이트 배열로 들어가 buffer의 크기만큼 들고올수 있다.
    * count는 정확한 정보를 읽고 쓰기 위해 중요
