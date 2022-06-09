@@ -5,7 +5,7 @@ T I L
 #### 자기화(자신의 생각을 덧대어 정리)
 
 ## Java
-  * BEGINNER(초심자)
+  * BEGINNER
     * 객체 지향 프로그래밍
     * [Data Structure](https://github.com/1000004/TIL/tree/main/Java/Data_Structure)
     * [API](https://github.com/1000004/TIL/tree/main/Java/API)
