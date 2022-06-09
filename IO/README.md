@@ -2,6 +2,8 @@
 # I/O
 >### 입력(Input)/출력(Output)
 * #### java.io - 입출력이 없는 프로그램은 없으므로 가장 중요한 패키지일 수 있다. (발전된 패키지 nio)
+* #### 프로그램의 궁극적인 목적이 될 수 있다 입력이 생기고 결과물을 축력한다
+* #### 입출력 연산은 느리기때문에 회수를 줄여야 한다.(파일 사이즈와 갯수 고려 성능 저하로 이어짐)
 * #### 입출력은 프로그램 성능에 영향을 미친다.
 * #### 영속적 저장소( vs 휘발성 저장소)
     * 01 file
@@ -11,11 +13,14 @@
 ## Stream
 * Decorator 패턴 - 어떤 스트림을 조립하는지에 따라 다양한 성격을 띄게 된다.
 * 입출력에서 생성자 중요 API에서 가장 먼저 확인
-* 생성자 파라미터가 다른 Stream인 경우(필터) : 독립적 사용 못함 다른 스트림에 의존 무엇을 읽고 쓰는지가 아닌 어떻게 읽고 쓰는지 결정
+* 생성자 파라미터가 다른 Stream인 경우(필터) : 독립적 사용 못함 다른 스트림에 의존 무엇을 읽고 쓰는지가 아닌 어떻게 읽고 쓰는지 결정 원천 소스를 가공
 * 생성자 파라미터로 원천 소스를 받는 경우 : 독립적 사용 무엇을 읽고 쓰는지 결정하고 간단한 읽고 쓰기 연산 수행
 * 여러 스트림을 다양하게 조합 가능 Ex 키보드를 한줄씩 읽어드이는 스트림
 * 입출력이 프로 그램에서 주기능 담당하는 경우가 많다
 * 어떻게 구성하는지가 프로그램의 performance결정 가장 크게 성능에 영향을 미친다.
+* 읽기 쓰기 방향은 반대
+	* InputStreamReader InputStream(byte)을 Reader(char로 읽는다) (byte -> char)
+	* OuputStreamWriter Writer(char를 쓴다) OuputStream(byte)으로 (char -> byte)
 
 <img src="https://postfiles.pstatic.net/MjAyMjA2MDhfNSAg/MDAxNjU0Njg0Mzc1NTY0.1ohc1pSPA6z_8xxMjNhRsjpnvK9HISpO-mHim1IPa5sg.i-m5QAQAIWmWDS-zsdAsGDZoGmNlok8LoOP3Mvypi-Ag.PNG.forget980/image.png?type=w580" width="40%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 
