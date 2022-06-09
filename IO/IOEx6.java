@@ -55,3 +55,54 @@ public class IOEx2 {
 		read();
 	}
 }
+class Some {
+	private int num;
+	private String str1;
+	private String str2;
+	private double num2;
+	//alt + shift + s -> o
+	public Some(int num, String str1, String str2, double num2) {
+		super();
+		this.num = num;
+		this.str1 = str1;
+		this.str2 = str2;
+		this.num2 = num2;
+	}
+	//alt + shift + s -> r
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public String getStr1() {
+		return str1;
+	}
+
+	public void setStr1(String str1) {
+		this.str1 = str1;
+	}
+
+	public String getStr2() {
+		return str2;
+	}
+
+	public void setStr2(String str2) {
+		this.str2 = str2;
+	}
+
+	public double getNum2() {
+		return num2;
+	}
+
+	public void setNum2(double num2) {
+		this.num2 = num2;
+	}
+	//alt + shift + s -> s
+	@Override
+	public String toString() {
+		return "Some [num=" + num + ", str1=" + str1 + ", str2=" + str2 + ", num2=" + num2 + "]";
+	}
+}
