@@ -36,14 +36,14 @@
 	* pw fw char 연산
 	* 읽기는 원천소스를 읽는 stream이 먼저 등장 (읽기와 방향이 반대)
 	* flush() 쓰기 연산시 필요 쓰기 또한 buffer를 사용 buffer는 다 채워야 나오지만 buffer가 체워지지 않더라도 강제로 채워 내보낸다
-	* 문자열 복수 char여러개 여러개 모일수 있는 공간이 필요 - 필터는 연산을 위해 대부분 buffer를 가진다.
+	* 문자열 복수 char가 여러개 모일수 있는 공간이 필요 - 필터는 연산을 위해 대부분 buffer를 가진다.
 	
 > ### buffer
 
    * 읽은 값은 바이트 배열로 들어가 buffer의 크기만큼 들고올수 있다.
    * count는 정확한 정보를 읽고 쓰기 위해 중요
    * 마지막에 buffer의 크기보다 적은 바이트를 읽을수 있어 count 사용
-   * 입출력 연산이 컴퓨터 연산중 가장 오래 걸리는 연산 여러번 할 수록 오래 걸린다
+   * 입출력 연산이 컴퓨터 연산중 가장 오래 걸린다 횟수가 증가하면 오래 걸린다
    * buffer를 이용하여 입출력 연산을 줄인다.
 
 <img src="https://postfiles.pstatic.net/MjAyMjA2MDhfMjc4/MDAxNjU0Njc3NDM5Mzky.hIahpsKb5khuWxx0Nt1mZhJkfiQmKQUefhfNU2AlVL4g.UvC1HZ5_xmkHlKl7sT2eisUrNlamKEaYK0rAv5_AXHUg.PNG.forget980/image.png?type=w580" width="40%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
