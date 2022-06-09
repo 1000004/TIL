@@ -10,7 +10,7 @@ T I L
     * [Data Structure](https://github.com/1000004/TIL/tree/main/Java/Data_Structure)
     * [API](https://github.com/1000004/TIL/tree/main/Java/API)
     * [Swing](https://github.com/1000004/TIL/tree/main/Swing)
-        * [로그인](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Login)
+        * [로그인](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Login)(I/O)
         * [ImageViewer](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/ImageViewer)
     * [Exception](https://github.com/1000004/TIL/tree/main/Java/Exception)
     * [I/O](https://github.com/1000004/TIL/tree/main/IO#readme)
