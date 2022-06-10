@@ -172,9 +172,9 @@ public class SimplePad extends JFrame{
 			fr = new FileReader(f);
 			char[] buf = new char[100];//
 			int count = -1;
-			StringBuffer sb = new StringBuffer();
+			StringBuffer sb = new StringBuffer();//스트링 버퍼와 비슷
 			while((count = fr.read(buf)) != -1){
-				sb.append(buf,0,count);
+				sb.append(buf,0,count);//인덱스 부터 count(char 갯수)를 꺼내기
 			}
 			taEditor.setText(sb.toString());
 			currentFile = f;
