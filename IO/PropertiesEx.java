@@ -21,8 +21,9 @@ public class PropertiesEx {
 		FileOutputStream fos = null;
 		try {
 			//properties 파일 을 만들 수 있다
-			//이클립스의 기능 한글을 쓰면 유니코드 변경
-			//이클립스에서 properties 파일을 만드는 경우 한글이 가능하지만 다른 프로그램에는 안되므로 쓰지 않는 것 이 좋다
+			//properties 파일에 한글을 사용 가능하지만 쓰지 않는 것 이 좋다
+			//이클립스의 기능 한글을 쓰면 자동으로 유니코드 변경
+			//다른 프로그램에서 properties 파일을 만드는 경우 한글이 유니코드로 변경 되지 않는다.
 			//case : text file
 //			fos = new FileOutputStream("myValue.properties"); //properties 파일 을 만들 수 있다
 //			prop.store(fos, "my comment");
