@@ -25,14 +25,20 @@
 * char단위로 읽는 Reader의 경우도 int 파라미터로 같다
 * byte < char < int < double
 
-* 인코딩 가능한 스트림 InputStreamReader OutputStreamWriter
-* string 인코딩 가능 String(byte[] bytes,...,String charsetName) 바이트 연산만 가능(chr 연산의 경우 인코딩하는 메서드가 없다)
-* Reader InputStream OutputStream과 연관이 없어 보이지만 실질적으로 호출되는 추상 메서드 read(char[] cbuf, int off,int len) 안에서 InputStream을 쓰고 있다
-
-* 파일을 읽을때 byte로만 읽을 수 있는 경우 string으로 만들수 있어야 한다.(fis isr br String vs fr br String)
+### byte → char
+* 파일을 읽을때 byte로만 읽을 수 있는 경우 string으로 만들수 있어야 한다.(fis isr br → String vs fr br → String)
 * char 연산을 해야 하지만 바이트 스트림으로만 제공되는 경우가 있다(메서드를 getInputStream, getOutputStream만 제공 ) ex Socket
 * 영어로만 되어 있는 경우 문제 없지만 byte연산시 글자가 깨진다는 사실을 알고 있지만 여전히 바이트 연산만으로 읽는 경우가 많다.
 * 파일로 저장 시 인코딩하는 경우와 같이 바이트 연산만 가능
+
+#### 인코딩/디코딩
+* 인코딩 가능한 스트림 InputStreamReader OutputStreamWriter
+* string 인코딩 가능 String(byte[] bytes,...,String charsetName) 바이트 연산만 가능(chr 연산의 경우 인코딩하는 메서드가 없다)
+* Reader InputStream OutputStream과 연관이 없어 보이지만 실질적으로 호출되는 추상 메서드 read(char[] cbuf, int off,int len) 안에서 InputStream을 쓰고 있다
+* 인코딩 - 사용자가 입력한 문자나 기호들을 컴퓨터가 이용할 수 있는 신호로 만드는 것
+* 디코딩 - 부호화된 정보를 부호화되기 전으로 되돌리는 처리/처리방식.사용자가 이해할 수 있도록 바꿔 주는 것 바이트 형식을 문자(문자열)로 변환
+* 1byte를 아스키코드는 인코딩할 필요가 없다 2바이트이상의 문자의 경우 필요
+* EUC-KR 한글 인코딩, utf-8 인코딩은 동일한 문자를 인코딩해도 결과가 다르다 맞추기가 어렵다
 
 #### ByteArrayOutputStream 
 * 생성자 파라미터 없다 파일은 외부에서 가져오고 메서드로 바이트 배열을 만들 수 있다.
