@@ -86,7 +86,7 @@ public class IOEx1 {
 * 입출력을 만들때 file를 직접 관리하는 경우 데이터를 어떻게 구분하여 읽고 쓸지 결정이 필요하다.
 * DB는 file을 어떻게 추가하고 읽고 갱신하고 삭제할지 관리를 대신해준다.
 * (Create Read Update Dlete)
-* 단, 모든 데이터를 DB로 관리하는 프로그램은 없고 일부 파일을 이용해 저장_
+* 단, 모든 데이터를 DB로 관리하는 프로그램은 없고 일부 파일을 이용해 저장
 > ### Properties
 * properties는 간단한 데이터를 저장 할때도 쓰이지만 설정을 properties로 저장 할때 많이 쓰인다
 * 저장 파일 유형 text, [XML](https://github.com/1000004/TIL/blob/main/XML.md)
