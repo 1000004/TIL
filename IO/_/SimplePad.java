@@ -145,6 +145,11 @@ public class SimplePad extends JFrame{
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		setVisible(true);
 	}
+	/*
+		1.하는일
+		2.파라미터
+		3.리턴
+	*/
 	private File getFile(int mode){
 		int choice = -1;
 		if(mode == OPEN){
