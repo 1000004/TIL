@@ -1,6 +1,6 @@
 ### XML
-* ...ML로 끝나는 언어 (Markup Lanage : <tag>로 구성된 언어)
-* SGML에서 파생된 MathML, XML, HTML
+* ...ML로 끝나는 언어 (Markup Lanage : < tag >로 구성된 언어)
+* MathML, XML, HTML SGML에서 파생
 * c,java,javascript가 XML에 접근하는 방법은 SAX, DOM으로 동일
 * 자바로 만든 프로그램을 C언어로 만들어진 프로그램 정보를 주고 받을때 XML이용
 * XML문서 DTD,schema로 구조 정의
