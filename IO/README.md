@@ -89,7 +89,7 @@ public class IOEx1 {
 	 * count는 정확한 정보를 읽고 쓰기 위해 중요
 > ### DataBase
 * 입출력을 만들때 file를 직접 관리하는 경우 데이터를 어떻게 구분하여 읽고 쓸지 결정이 필요하다.
-* DB는 file을 어떻게 추가하고 읽고 갱신하고 삭제할지 관리를 대신해준다.
+* DB는 file을 어떻게 추가하고 읽고 갱신하고 삭제할지 결정을 대신해준다.
 * (Create Read Update Dlete)
 * 모든 데이터를 DB로 관리하는 프로그램은 없다 일부 파일을 이용해 저장
 > ### Properties
