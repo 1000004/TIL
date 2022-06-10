@@ -39,6 +39,15 @@
 	* 문자열 복수 char가 여러개 모일수 있는 공간이 필요 - 필터는 연산을 위해 대부분 buffer를 가진다.
 	
 > ### buffer
+
+   * 읽은 값은 바이트 배열로 들어가 buffer의 크기만큼 들고올수 있다.
+   * 입출력 연산이 컴퓨터 연산중 가장 오래 걸린다 횟수가 증가하면 오래 걸린다 buffer를 이용하여 입출력 연산을 줄인다.
+   * 환경에 따라 버퍼 크기에 따른 성능 그래프가 달라짐 적당한 크기가 무엇인지 test가 필요
+   * 초반에는 급격하게 성능이 좋아지지만 일정 크기 이상이 되면 완만하게 증가 
+   * 증가하는 버퍼에 비해 비효율적으로 성능 상승
+
+<img src="https://postfiles.pstatic.net/MjAyMjA2MDhfMjc4/MDAxNjU0Njc3NDM5Mzky.hIahpsKb5khuWxx0Nt1mZhJkfiQmKQUefhfNU2AlVL4g.UvC1HZ5_xmkHlKl7sT2eisUrNlamKEaYK0rAv5_AXHUg.PNG.forget980/image.png?type=w580" width="40%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
 ```java
 public class IOEx1 {
 	public static void fileCopy(String filePath){
@@ -70,16 +79,9 @@ public class IOEx1 {
 	}
 }
 ```
-   * 읽은 값은 바이트 배열로 들어가 buffer의 크기만큼 들고올수 있다.
-   * count는 정확한 정보를 읽고 쓰기 위해 중요
-   * 마지막에 buffer의 크기보다 적은 바이트를 읽을수 있어 count 사용
-   * 입출력 연산이 컴퓨터 연산중 가장 오래 걸린다 횟수가 증가하면 오래 걸린다
-   * buffer를 이용하여 입출력 연산을 줄인다.
-
-<img src="https://postfiles.pstatic.net/MjAyMjA2MDhfMjc4/MDAxNjU0Njc3NDM5Mzky.hIahpsKb5khuWxx0Nt1mZhJkfiQmKQUefhfNU2AlVL4g.UvC1HZ5_xmkHlKl7sT2eisUrNlamKEaYK0rAv5_AXHUg.PNG.forget980/image.png?type=w580" width="40%" height="40%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
-  	 * 환경에 따라 버퍼 크기에 따른 성능 그래프가 달라짐 적당한 크기가 무엇인지 test가 필요
+  	 * 마지막에 buffer의 크기보다 적은 바이트를 읽을수 있도록 count 사용
    	
-	 * 초반에는 급격하게 성능이 좋아지지만 일정 크기 이상이 되면 완만하게 증가 증가하는 버퍼에 비해 비효율적으로 성능 상승
+	 * count는 정확한 정보를 읽고 쓰기 위해 중요
 > ### DataBase
 * 입출력을 만들때 file를 직접 관리하는 경우 데이터를 어떻게 구분하여 읽고 쓸지 결정이 필요하다.
 * DB는 file을 어떻게 추가하고 읽고 갱신하고 삭제할지 관리를 대신해준다.
