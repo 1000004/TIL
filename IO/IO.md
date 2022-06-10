@@ -25,6 +25,17 @@
 * char단위로 읽는 Reader의 경우도 int 파라미터로 같다
 * byte < char < int < double
 
+* 인코딩 가능한 스트림 InputStreamReader OutputStreamWriter
+* string 인코딩 가능 String(byte[] bytes,...,String charsetName) 바이트 연산만 가능(chr 연산의 경우 인코딩하는 메서드가 없다)
+* Reader 
+
+* 파일을 읽을때 byte로만 읽을 수 있는 경우 string으로 만들수 있어야 한다.(fis isr br String vs fr br String)
+* char 연산을 해야 하지만 바이트 스트림으로만 제공되는 경우가 있다(메서드를 getInputStream, getOutputStream만 제공 ) ex Socket
+* 영어로만 되어 있는 경우 문제 없지만 byte연산시 글자가 깨진다는 사실을 알고 있지만 여전히 바이트 연산만으로 읽는 경우가 많다.
+* 파일로 저장 시 인코딩하는 경우와 같이 바이트 연산만 가능
+
+
+
 #### 파일 끝을 알려주는 E.O.F (end of file) 읽으면  -1를 반환
 > 쓰기 읽기를 이용해 파일 복사 가능
 ```java
