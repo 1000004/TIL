@@ -26,3 +26,4 @@ T I L
  * ### [UML](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/star)
  * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto)
 ### 기초 컴퓨터공학 지식
+------------------------
