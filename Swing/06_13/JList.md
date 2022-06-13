@@ -1,6 +1,6 @@
 ```java
 public class ListStep1 extends JFrame{
-	private JList<String> list;
+	private JList<String> list;//Jlist 메소드는 보여주기 위한 메서드
 	private JLabel lbl;
 	
 	public ListStep1(){
