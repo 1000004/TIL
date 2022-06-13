@@ -7,7 +7,7 @@ public class Human implements Serializable{
 	*/
 	//private static final long serialVersionUID = 1L; serialVersionUID를 사용자가 지정
 	private String name;
-	private  transient int age;//직렬화에서 소거
+	private  transient int age;//직렬화에서 소거 직렬화를 넣고 싶지 않은 정보를 뺄 수 있다 transient를 멤버변수 타입 앞에 붙인다 0으로 나온다
 	private boolean gender;
 	private OptionalInfo info;
 	
