@@ -1,5 +1,10 @@
 public class Human implements Serializable{
-	
+	/*
+		heap에는 멤버변수들만 올라간다
+		Class 파일을 가지고 만든 Class 객체가 있다 형태 정보 1개로 유지(생성자 메서드 멤버변수 종류 객수 공통)
+		메서드 호출시 참조
+		Class 객체를 1개 가지고 나머지는 참조된다 (생성자 메서드 공통타입) 
+	*/
 	//private static final long serialVersionUID = 1L; serialVersionUID를 사용자가 지정
 	private String name;
 	private  transient int age;//직렬화에서 소거
