@@ -323,3 +323,127 @@ public class ListUsingMouse extends JFrame{
 
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA2MTNfMjkw/MDAxNjU1MTMwNjU0Mjg0.YuzYj-ehTR3xhERMcR6DLB1K4wRZMutkjzbHTQn5-cwg.5UGIwR1nwzvJfv1mSPPuhKtuqxwu8sny7lupZWukoMQg.PNG.forget980/image.png?type=w580" width="30%" height="20%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+```java
+public class MyList extends JFrame {
+	
+	private JList<Human> list;
+	
+	public MyList(){
+		list = new JList<Human>(new Human[]{
+			new Human("A", 15, false),
+			new Human("B", 16, true),
+			new Human("C", 18, false),
+			new Human("D", 17, true)
+		});
+		
+		list.setPrototypeCellValue(new Human("aaaaaaaaaaaaaaaaaa",100,true));
+		list.setVisibleRowCount(3);
+		
+		add(new JScrollPane(list));
+		
+		list.setCellRenderer(new DefaultListCellRenderer(){
+			@Override
+			public Component getListCellRendererComponent(
+				JList list,
+				Object value,
+				int idx,
+				boolean isSelected,
+				boolean cellHasFocus
+			){
+				JPanel pnl = new JPanel();
+				
+				Human h = (Human)value;
+				JLabel lblIcon = new JLabel();
+				ImageIcon icon;
+				if(h.isGender()){
+					icon = new ImageIcon("Male-icon.png");
+				}else{
+					icon = new ImageIcon("Female-icon.png");
+				}
+				lblIcon.setIcon(icon);
+				JLabel lblInfo = new JLabel(h.getName() + "("+h.getAge()+")");
+				pnl.add(lblIcon);
+				pnl.add(lblInfo);
+				
+				if(isSelected){
+					pnl.setBackground(Color.GREEN);
+				}
+				if(cellHasFocus){
+					pnl.setBackground(Color.YELLOW);
+				}
+				
+				return pnl;
+			}
+		});
+		
+		setTitle("MyList");
+		pack();
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new MyList();
+	}
+}
+
+public class Human{
+	private String name;
+	private  transient int age;//직렬화에서 소거
+	private boolean gender;
+	private OptionalInfo info;
+	
+
+	public Human(String name, int age, boolean gender, OptionalInfo info) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.info = info;
+	}
+
+	public Human(String name, int age, boolean gender) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public boolean isGender() {
+		return gender;
+	}
+	public void setGender(boolean gender) {
+		this.gender = gender;
+	}
+	public OptionalInfo getInfo() {
+		return info;
+	}
+	
+	public void setInfo(OptionalInfo info) {
+		this.info = info;
+	}
+
+	@Override
+	public String toString() {
+		return "Human [name=" + name + ", age=" + age + ", gender=" + gender + ", info=" + info + "]";
+	}
+
+	
+	
+}
+
+```
+<img src="https://postfiles.pstatic.net/MjAyMjA2MTNfMTgg/MDAxNjU1MTMwODg3MjUz.vWTWvA-N1ILR2HNmTGq4-Gy1MDiDxnMUC2Nr4nPH424g.907RM7av1CUwd0by3ZGS3_XwwF7GUoX6fWPp3RkM41Ig.PNG.forget980/image.png?type=w580" width="30%" height="20%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
