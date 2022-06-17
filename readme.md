@@ -25,5 +25,5 @@ T I L
 ## Breakable Toys
  * ### [UML](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/star)
  * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto)
-## 기초 컴퓨터공학 공부
+## 컴퓨터공학
  * #### [컴퓨터 구조와 원리](https://github.com/1000004/TIL/blob/main/computer_architectur.md)
