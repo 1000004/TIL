@@ -21,11 +21,11 @@ T I L
  ## My Readings
   * #### [Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)](https://github.com/1000004/TIL/blob/main/ApprenticeshipPatterns.md)
   * #### [Miracle Mornning](https://github.com/1000004/TIL/blob/main/MIRACLE_MORNNING.md)
-  * #### [Operrating System and Information Technology Principles](https://github.com/1000004/TIL/tree/main/OperatingSystem/ositp)
+  * #### [Operrating System and Information Technology Principles](https://github.com/1000004/TIL/tree/main/OS/ositp)
 ## Breakable Toys
  * ### [UML](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/star)
  * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto)
 ## 컴퓨터공학
  * #### [컴퓨터 구조와 원리](https://github.com/1000004/TIL/blob/main/computer_architectur.md)
- * #### [운영체제](https://github.com/1000004/TIL/tree/main/OperatingSystem)
+ * #### [운영체제](https://github.com/1000004/TIL/tree/main/OS)
    * 운영체제와 정보기술의 원리
