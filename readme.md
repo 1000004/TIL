@@ -22,7 +22,8 @@ T I L
   * #### [Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)](https://github.com/1000004/TIL/blob/main/ApprenticeshipPatterns.md)
       * 데이브 후버, 애디웨일 오시나이 저자
   * #### [Miracle Mornning](https://github.com/1000004/TIL/blob/main/MIRACLE_MORNNING.md)
-  * #### [운영체제와 정보기술의 원리](https://github.com/1000004/TIL/tree/main/OperatingSystem/ositp)
+  * #### [Operrating System and Information Technology Principles](https://github.com/1000004/TIL/tree/main/OperatingSystem/ositp)
+     * (운영체제와 정보기술의 원리) 반호경 저자
 ## Breakable Toys
  * ### [UML](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/star)
  * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto)
