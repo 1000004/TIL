@@ -1,4 +1,4 @@
-public class ThreadJoinTest {
+public class ThreadJoinEx1 {
 	public static void main(String[] args) {
 		//스레드 생성
 		Thread t = new Thread(){
