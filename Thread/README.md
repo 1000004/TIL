@@ -15,3 +15,10 @@
 * 여러 스레드의 동작으로 문제점을 알고 극복
 
 여러 스레드로 이루어진 프로세스를 여러개만들어 네트워크로 통신이 가능해진다
+#### API Thread.State
+> ##### New 스레드가 만들어진 상태  
+> ##### RUNNABLE 대기열, 실행 상태  
+> ##### BLOCKED 입출력 대기  
+> ##### WAITING 무작정 기다리는 상태  
+> ##### TIMED_WAITING sleep()  
+> ##### TERMINATED run 종료 소멸된 상태
