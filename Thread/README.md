@@ -22,3 +22,4 @@
 > ##### WAITING 무작정 기다리는 상태  
 > ##### TIMED_WAITING sleep()  
 > ##### TERMINATED run 종료 소멸된 상태
+> ##### 모든 스레드가 Not Runnable인 상태 -> DeadLock
