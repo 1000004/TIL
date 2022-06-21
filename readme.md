@@ -7,6 +7,7 @@ T I L
 ## Java
   * Beginner(초심자)
     * 객체 지향 프로그래밍
+    * [Thread](https://github.com/1000004/TIL/tree/main/Thread)
     * [Data Structure](https://github.com/1000004/TIL/tree/main/Java/Data_Structure)
     * [API](https://github.com/1000004/TIL/tree/main/Java/API)
     * [Swing](https://github.com/1000004/TIL/tree/main/Swing)
