@@ -25,6 +25,10 @@ public class PriorityEx {
 // 		t2.setPriority(Thread.NORM_PRIORITY); //5
 //		t3.setPriority(Thread.MAX_PRIORITY); //10
 		
+		// 우선순위를 설정하지 않는것이 좋다
+		// 스케줄링으로 소외받지 않고 공평하게 기회
+		// 기아 방지 스케줄링은 건들이지 않는다
+		
 		System.out.println(t1.getPriority());
 		System.out.println(t2.getPriority());
 		System.out.println(t3.getPriority());
