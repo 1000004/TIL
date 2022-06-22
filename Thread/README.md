@@ -25,7 +25,7 @@
 > ##### 모든 스레드가 Not Runnable인 상태 -> DeadLock
 <img src="https://postfiles.pstatic.net/MjAyMjA2MjJfMzAw/MDAxNjU1ODc2NTM2NjE3.xMqVOHllS6tQptCp-XHK-9Yh-3rdptWqNs0dgFiR81Yg.mIC18CDqmcSDplu8spF54f6V1ttKyxlLxftBQI-rqZkg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 > #### Not Runable 상태로 넘어가는 method sleep join은 InteruptedException이 발생
-> #### 우선순위 설정은 대기열에서 가상머신에게 뽑힐 확률 높인다 (Max,Min,Normal) (우선순위가 2인 스레드가 만든 스레드의 우선순위는 2다)
+> ##### 우선순위 설정은 대기열에서 가상머신에게 뽑힐 확률 높인다 (Max,Min,Normal) (우선순위가 2인 스레드가 만든 스레드의 우선순위는 2다)
 
 > ##### **일반 스레드** - 주기능 ex 한글 문서작성  
 > ##### **데몬 스레드** - 백그라운 보조작업 (일반쓰레드 전부 죽으면 자동 소멸) ex 한글 자동저장 자바 g.c
