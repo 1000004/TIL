@@ -1,3 +1,4 @@
+//join 독립적으로 진행하다 합류를 기다린다(t1 t2가 끝나고 t3가 종료->스레드 t3에 스레드 t1,t2를 join한다)
 class ThreadEx13_1 extends Thread{
 	public void run(){
 		for(int i=0; i<300;i++){
