@@ -23,6 +23,6 @@
 > ##### TIMED_WAITING sleep()  
 > ##### TERMINATED run 종료 소멸된 상태
 > ##### 모든 스레드가 Not Runnable인 상태 -> DeadLock
-
+<img src="https://postfiles.pstatic.net/MjAyMjA2MjJfMTAy/MDAxNjU1ODc2Mzk4NjE4.h67yYN8ylVz9XU8jw7St4MWcliW3XxDmBE44q5nHE5Qg.Cp2ucTRS35z7xS6MjsDRECE94_Crg2m1sdth9gMO05Yg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 > ##### **일반 스레드** - 주기능 ex 한글 문서작성  
 > ##### **데몬 스레드** - 백그라운 보조작업 (일반쓰레드 전부 죽으면 자동 소멸) ex 한글 자동저장 자바 g.c
