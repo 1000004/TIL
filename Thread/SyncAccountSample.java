@@ -18,6 +18,11 @@ class SyncAccount{
 	//공유 하고있는 자원에 있어
 	//* account lock이 없으면 account의 synchronized 메서드를 못쓴다
 	
+	//reordering 성능을 위해 컴파일시(독립적인 연산임을 판단 후) 최적화를 위해 자바코드 순서를 변경 바이트 코드 순서가 다를 수 있다
+	//(단일 스레드 상황에서 문제 x 공유자원의 임계 영역을 이용하는 경우 문제)
+	//공유자원에 두 스레드 동시에 존재할 수 있는 구간(임계영역)이 존재 -> (thread - safe 하지 않다) 캐시가 가지고 있는 값과 실제 값이 다르다/연산 전에 교대 발생
+
+	
 	// lock검사 대상 객체 this로 고정
 	public synchronized void deposit(int val){
 		balance += val;
