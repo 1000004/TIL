@@ -9,7 +9,7 @@ class Dummy{
 		}
 	}
 }
-public class InterruptEx {
+public class InterruptEx3 {
 	public static void main(String[] args) {
 		final Dummy d = new Dummy();
 		Thread t1 = new Thread(){
