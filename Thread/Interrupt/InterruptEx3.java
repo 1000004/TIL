@@ -27,7 +27,7 @@ public class InterruptEx {
 		//미리 interrupt() 설정해놔도 기억하기 때문에 InterruptedException 발생 미리 설정이 가능한 이유 시점을 정확히 맞출 수 없기 때문이다.
 		//isInterrupted ture 유지 
 		//-> InterruptedException가 발생하는 메서드를 분기로 확인하는 try - catch로 예외 확인시
-		//메서드는 실행되지 않고 catch 블럭으로 넘어간다 interrupt() 받은 기억 초기화
+		//메서드는 실행되지 않고 Not Runalble에서 Runable로 바로간다 다시 실행시 예외처리로 catch 블럭으로 넘어가면서 interrupt() 받은 기억은 초기화(isInterrupted()=false)된다.
 		
 		//interrupt 받을때 예외가 발생시킨다는 의미보다는 InterruptedException시 할 동작을 설정으로 기억
 		
