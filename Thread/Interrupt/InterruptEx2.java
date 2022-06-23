@@ -1,4 +1,4 @@
-public class InterruptTest2 {
+public class InterruptEx2 {
 	public static void main(String[] args) {
 		Thread t = new Thread(){
 			public void run(){
