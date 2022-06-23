@@ -17,11 +17,9 @@ class MyPrinter{
 		System.out.println("start printing");
 		isStart = !isStart;
 		notify();
-		if(isStart){
-			try {
-				wait();
-			} catch (InterruptedException e) {}
-		}
+		try {
+			wait();
+		} catch (InterruptedException e) {}
 		System.out.println("end printing");
 	}
 }
