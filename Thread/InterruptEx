@@ -29,6 +29,8 @@ public class InterruptEx {
 		//-> InterruptedException가 발생하는 메서드를 분기로 확인하는 try - catch로 예외 확인시
 		//메서드는 실행되지 않고 catch 블럭으로 넘어간다 interrupt() 받은 기억 초기화
 		
+		//interrupt 받을때 예외가 발생시킨다는 의미보다는 InterruptedException시 할 동작을 설정으로 기억
+		
 		System.out.println("t1(main) : "+t1.isInterrupted());
 	}
 }
