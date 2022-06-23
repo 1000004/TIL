@@ -1,4 +1,4 @@
-public class InterruptEx2 {
+public class InterruptEx5 {
 	public static void main(String[] args) {
 		Thread t1 = new Thread(){
 			@Override
