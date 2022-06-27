@@ -6,6 +6,7 @@ public class EchoThreadServer {
 			//ServerSocket 접속을 받아주는 역활 -> 서버에서만 일어난다.
 			ServerSocket server = new ServerSocket(10001);
 			//10001 port 번호 (프로세스 식별자 port)
+			//10001 port로 받겠다
 			System.out.println("접속을 기달립니다.");
 			while (true) {//*접속 대기 하나여서 하나만 접속 가능 -> 반복문
 				//client 정보를 담긴 소켓
