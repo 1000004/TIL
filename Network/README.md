@@ -9,6 +9,8 @@
 * 서버와 클라이언트 양방향 연결이 이루어지는 통신
 * Client와 Server가 서로를 추상화하여 Socket으로 정보를 가지고 있어 테이터를 송수신
 * 소켓은 읽고 쓸수 있다(역활)
+### EchoClientServer
+<img src="https://i.ibb.co/M2TrBz1/2022-06-27-204312.png" width="70%" height="60%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 #### 도메인
 * 도메인은 인터넷에 연결된 컴퓨터를 사람이 쉽게 기억하고 입력할 수 있도록 문자(영문, 한글 등)로 만든 인터넷주소
 * 도메인 Ip가 변경되는 경우 DNS에서 변경(도메인은 변경x)
@@ -40,4 +42,3 @@ public class NSLookup {
 	}
 }
 ```
-### EchoClientServer
