@@ -39,6 +39,7 @@ public class EchoClient {
 				pw.flush();
 				//2. 서버로 부터 전송 대기
 				String echo = br.readLine();
+				System.out.println("서버로부터 전달받은 문자열 :"+echo);
 			}
 		}catch(Exception e){
 			System.out.println(e);
