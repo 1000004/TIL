@@ -7,7 +7,7 @@ public class EchoThreadServer {
 			ServerSocket server = new ServerSocket(10001);
 			//10001 port 번호 (프로세스 식별자 port)
 			//10001 port로 받겠다
-			System.out.println("접속을 기달립니다.");
+			System.out.println("접속을 기다립니다.");
 			while (true) {//*접속 대기 하나여서 하나만 접속 가능(bindException 주소를 이미 사용중 (port)) -> 반복문 여러 client 접속
 				//client 정보를 담긴 소켓
 				Socket sock = server.accept();//*통신하고 있는 대상의 정보는 소켓이가지고 있다
