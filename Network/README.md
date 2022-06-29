@@ -9,6 +9,8 @@
 * 서버와 클라이언트 양방향 연결이 이루어지는 통신
 * Client와 Server가 서로를 추상화하여 Socket으로 정보를 가지고 있어 테이터를 송수신
 * 소켓은 읽고 쓸수 있다(역활)
+### Client - Server
+* client에 상태변경에는 서버의 허가가 필요
 ### EchoClientServer
 <img src="https://i.ibb.co/M2TrBz1/2022-06-27-204312.png" width="70%" height="60%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>  
   [TCP 통신을 하는 프로그램 기본 틀]->웹 어떻게 읽고 어떻게 전송하는지만 바뀐다
