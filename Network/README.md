@@ -44,7 +44,7 @@ public class NSLookup {
 }
 ```
 #### OSI 7 Layers
-* 통식 방식을 표현하는 표준 네트워킹이 가능한 장비 혹은 장비위에 올라가는 소프트웨어는 OSI 7 Layers 규칙대로 통신
+* 통식 방식을 표현하는 표준. 네트워킹이 가능한 장비 혹은 장비위에 올라가는 소프트웨어는 OSI 7 Layers 규칙대로 통신
 * 통신할때 일반적으로 7단계 과정을 거친다
 * (S/W(Shocket)이 하는 일 7:Application Layer 6: Presentation Layr 5: Session Layer 4: Transport Layr)
 * (H/W가 하는 일 3:Network Layer 2: Datalink Layr 1: Plysical Layer)
