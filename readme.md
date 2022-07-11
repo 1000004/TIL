@@ -20,6 +20,8 @@ T I L
     * [CH10 배열](https://github.com/1000004/TLI/tree/main/Java/CH10_%EB%B0%B0%EC%97%B4)
     * [CH11 상속](https://github.com/1000004/TLI/tree/main/Java/CH11_%EC%83%81%EC%86%8D)
     * [CH12 인터페이스](https://github.com/1000004/TIL/tree/main/Java/CH12_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)
+ ## 웹
+  * [웹 프로그래밍 기초](https://github.com/yeRim650/TIL/blob/main/web/web_basic.md)
  ## My Readings
   * #### [Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)](https://github.com/1000004/TIL/blob/main/ApprenticeshipPatterns.md)
   * #### [Miracle Mornning](https://github.com/1000004/TIL/blob/main/MIRACLE_MORNNING.md)
