@@ -30,11 +30,11 @@
 * URL(Uniform Resource Locator) : 위치기반으로 자원을 구분
 * URI : 자원을 구별하는 식별자
 * URL을 입력하면 브라우저에서 서버로 요청이 갔다
-> https://book.naver.com/bookdb/book_detail.naver?bid=22502844
-> https 프로토콜
-> book.naver.com 서버 이름
-> bookdb/book_detail.naver 경로
-> bid=22502844 질의 표시된 경로로 해당 값를 전달
+> https://book.naver.com/bookdb/book_detail.naver?bid=22502844  
+> https 프로토콜    
+> book.naver.com 서버 이름  
+> bookdb/book_detail.naver 경로  
+> bid=22502844 질의 표시된 경로로 해당 값를 전달  
 * 똑같은 경로의 페이지 디자인 HTML, JS
 * 값만 변경 code에 따른 변경
 * 보여주는 일을 하는 클라이언트, 채우는 값은 서버(JSP/Servlet)에서 가져온다
