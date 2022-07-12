@@ -75,6 +75,7 @@
 	</body>
 </html>
 ```
+<img src="https://postfiles.pstatic.net/MjAyMjA3MTJfMjc5/MDAxNjU3NjE2NjcyNjI2.oEExC-268ADrRZyq0_onHCR6vBF-0DVWPpKO36-BkXkg.fHW-92Nyr-1JMnAbfHY8-8ltbe6H0B2pN4Ax_bTFWbcg.PNG.forget980/image.png?type=w580" width="70%" height="60%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
 ```HTML5
 table {
 	border-collapse: collapse;
@@ -100,9 +101,9 @@ tbody tr:hover{
 ```
 * 마우스가 올라갔을때 색
 #### CCS
-selector {  
-&nbsp;&nbsp;(css 문법) 속성 : 값;  
-}
+> selector {  
+> &nbsp;&nbsp;(css 문법) 속성 : 값;  
+> }
 * ex) padding : 10px; 간격 죽기 / border-radius : 25px; 모서리 반지름 결정
 * css에서는 단어 연결시 대시를 쓴다
 * 일반적으로 대시 수를 보고 어떤것이 합쳐졌는지 알수 있다
