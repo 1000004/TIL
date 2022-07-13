@@ -167,3 +167,4 @@ space(공백) &nbsp;
 * &lt;BODY&gt;&lt;/BODY&gt; 테그 (사용 안함)
   * (link 방문안함/vlink 방문함/alink 누를때)
   * 그림보다 배경이 우선
+* &lt;link&gt; : href 속성 외부 css파일을 불러온다
