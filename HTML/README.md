@@ -5,7 +5,7 @@
 > 클라이언트 에서 실행하는 언어 : HTML, JS, CSS → 브라우저에서 실행  
 > 서버에서 실행하는 언어 : JSP(Java Server Page)/Serblet + java 
 * Markup 검증 서비스 사이트를 통해 맞는 문법인지 확인할 수 있지만 HTML은 문법이 느슨해 엄격하게 지키지 않아도 수용 가능하다
-* 모든 HTML 문서는 선언으로 시작<!DOCTYPE>
+* HTML 문서의 버전을 알려준다<!DOCTYPE html> (XML 문법) 문서 제일 위에 표기, 대문자로 표기
 * Hyper Text
   * 비선형 문서(하이퍼 링크)(디지털) <-> 선형 문서(책)(아날로그)
 * Markup Language
