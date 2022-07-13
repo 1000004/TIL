@@ -137,7 +137,7 @@ tbody tr:hover{
 		<idv class="javaP">this is a div</div>
 		<script>
 			function clickP() {//listner
-				alert("click");//클릭시 경고창
+				alert(document.getElementById("firstP").innerHTML);//클릭시 경고창
 			}
 		</script>
 	</body>
