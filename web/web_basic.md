@@ -24,7 +24,7 @@
   * MVC 구조에 대한 기초
   * JSP와 DB를 연동한 게시판 개발
 * HTML, JS (클라이언트 언어) 표준이 있지만 브라우저에서 해석이 다르다
-* 사용자의 브라우저, 브라우저 버전을 알 수 없다 -> 브라우저와 관계없이 똑같이 동작하고 똑간이 보여주는 **Cross Browsing**
+* 사용자의 브라우저, 브라우저 버전을 알 수 없다 -> 브라우저와 관계없이 똑같이 동작하고 똑같이 보여주는 **Cross Browsing**
 * 데이터 베이스 SQL에도 표준이 있지만 데이터 베이스 브랜드에 따라 다르다
 * **표준을 잘 알아야 한다** 표준을 바탕으로 다른점을 안다
 * URL(Uniform Resource Locator) : 위치기반으로 자원을 구분
@@ -47,3 +47,20 @@
 * localhost 내 컴퓨터 IP를 나타내는 도메인
 * 8080 tompcate 기본 포트
 * HTTP(프로토콜) - W3C 웹 표준을 정의한 단체
+#### 정적 자원과 동적 자원
+* 정적 자원 - 고정된 결과를 출력되는 자원
+* 동적 자원 - 시간이나 특정 조건에 따라 응답 데이터가 달라지는 자원(연산이 필요하다)
+* JSP를 비롯해서 PHP, ASP.net 등 많은 웹 관련 기술들이 바로 동적 페이즈를 만드는데 사용되는 프로그래밍 기술
+* 서버 사이드 스크립트 언어(server-side script) : 서버 사이드에서 실행되는 스크립트 언어(JSP 등)
+#### 웹 프로그래밍과 JSP
+* 웹 프로그램밍을 하기 위해서는 네트워크 처리, HTTP 헤더, 파일 입출력 처리 등에 대해서 알아야 할 필요는 없다 하지만 인과관계를 알아야 변화에 취약해지지 않을 수 있다
+* JSP(JavaServer Pages) 동적 페이지를 작성하는데 사용되는 자바의 표준 기술
+  * **HTML 응답을 생성하는 목적으로 JSP 사용**
+  * 페이지는 동적으로 변경된다
+* JSP을 이용해서 만든 프로그램을 실행하려면 Apache tomcat(아파치 톰켓), Jetty(제티), JBoss EAP와 같은 서버 프로그램이 필요
+  * 이러한 서버 프로그램을 **WAS(Web Application Server)**
+* **WAS**
+  * JSP/Java를 동작 환경을 만들어준다
+  * 단순 웹 서버는 정적 HTML 파일이나 이미지를 제공하는 것과 달리 어플리케이션을 구현하는데 필요한 기능을 제공
+  * 클라이언트의 요청이 오면, 알맞는 프로그램을 실행해서 응답을 생성
+<img src="https://postfiles.pstatic.net/MjAyMjA3MTRfMjEy/MDAxNjU3Nzg4MzQ2MDUw.jy46dFfWHTwgKoJ-igWRjlVj44N3X5WQDBthOfjZulkg.hJY117iB1T8n8XTgIuJ20EYslXEhlxtZKlbksta6lEYg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
