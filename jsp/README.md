@@ -178,4 +178,39 @@
 * jsp 변경시 다시 컴파일 여부는 100% 보장해주지 않는다
 * 다시 컴파일이 안되면 Servlet class 파일을 없애고 JSP파일이 처음 요청 전으로 상태로 만들어준다 
 ##### JSP 오류가 발생한 경우
-* JSP 파일에서 확인이 어려우면 [Servlet 파일](https://github.com/yeRim650/TIL/blob/main/eclipse/Eclipse_jsp.md)을 확인
+* JSP 파일에서 확인이 어려우면 Servlet 파일을 확인
+> %workspace%\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost 
+* Servlet 클래스를 확인 할 수 있는 경로 이다
+* eclipse가 관리하는 경로
+* 실제 생성되는 경로는 톰켓 폴더에 work\Catalina\localhost
+* 개발자의 컴푸터에서 개발된 프로그램을 실제로 실행 시킬 서버 컴퓨터에 옮겨야 한다
+* A-was에서 개발시 다른 컴퓨터에도 실행되려면 A-was가 깔려있어야 한다
+* 배포하는 경우 실행할 컴퓨터에 tomcat work폴더에 자바 파일이 생긴다
+#### JSP class 사용
+```java
+
+```
+```JSP
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+<%
+	String[] fruits = {"apple","banana","grape","kiwi"};
+	for(int i=0; i<fruits.length;i++){
+%>
+	<tr>
+		<td><%= fruits[i] %></td>
+	</tr>	
+<%		
+	}
+%>
+</table>
+</body>
+</html>
