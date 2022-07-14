@@ -175,5 +175,7 @@
 ```
 #### JSP 처리 과정
 <img src="https://postfiles.pstatic.net/MjAyMjA3MTRfMTA1/MDAxNjU3ODAyNTM1NzI1.dW1VdsIEVTVVkW-SYUWrkRI9rtuVpS7dR77JvPk2OuYg.I26Ci5hP8W7z7twmFBt3EmmtYtrdl5t0znAt_V14lBkg.PNG.forget980/image.png?type=w580" width="60%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+* jsp 변경시 다시 컴파일 여부는 100% 보장해주지 않는다
+* 다시 컴파일이 안되면 Servlet class 파일을 없애고 JSP파일이 처음으로 요청이 되지 않은 상태로 만들어준다 
 ##### JSP 오류가 발생한 경우
 * JSP 파일에서 확인이 어려우면 [Servlet 파일](https://github.com/yeRim650/TIL/blob/main/eclipse/Eclipse_jsp.md)을 확인
