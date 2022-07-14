@@ -188,11 +188,38 @@
 * 배포하는 경우 실행할 컴퓨터에 tomcat work폴더에 자바 파일이 생긴다
 #### JSP class 사용
 ```java
+package kr.ac.green;
 
+public class Cat {
+	private String name;
+	private int age;
+	public Cat(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Cat [name=" + name + ", age=" + age + "]";
+	}
+}
 ```
 ```JSP
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page import="kr.ac.green.Cat" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -200,17 +227,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table border="1">
 <%
-	String[] fruits = {"apple","banana","grape","kiwi"};
-	for(int i=0; i<fruits.length;i++){
+	Cat cat = new Cat("로시", 4);
 %>
-	<tr>
-		<td><%= fruits[i] %></td>
-	</tr>	
-<%		
-	}
-%>
-</table>
+<%= cat %>
 </body>
 </html>
+```
+#### requset 기본 객체
+* request 기본 책체는 JSP 페이지에서 가장 많이 사용하는 기본 객체
+* 서버에 요청을 해야 응답을 받을 수 있다
