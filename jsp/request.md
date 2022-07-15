@@ -114,7 +114,7 @@ address 파라미터= <%= request.getParameter("address") %>
 	String[] nameParam = (String[])parameterMap.get("name");
 	if(nameParam != null){
 %>
-name = <%= nameParam[0] %>
+	name = <%= nameParam[0] %>
 <%
 	}
 %>
@@ -122,3 +122,8 @@ name = <%= nameParam[0] %>
 </html>
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA3MTVfNjYg/MDAxNjU3ODY1MTc4OTI0.gPDHR7TiTQo_SEQ8RRfphsv4MGuXa4GkuBKibBfA0x4g.o-fj1YHWsz_rtEfkrfaCCCTjRtmjihxNyXfzZG4CVDsg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+* 전송을 누르면 viewParameter.jsp를 파라미터 목록을 가지고 실행하도록 요청(name = A address = 서울 pet = dog pet = cat name속성 = value속성)전달
+* 사용자가 요청하는 행위 자체 추상화한 것이 request 객체
+* request.getParameterMap()
+	* Map key는 string value는 String[] (값이 한개가 아닌 것들이 있을 수 있다)
+* Enumeration = String Tokenizer
