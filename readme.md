@@ -32,6 +32,7 @@ T I L
  * ### [UML](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/star)
  * ### [Lotto](https://github.com/1000004/PERSONAL-PROJECTS/tree/project/Lotto)
  * ### [MovieReview(I/O)](https://github.com/yeRim650/PERSONAL-PROJECTS/tree/project/MovieReview)
+ * ### [Chat]
 ## 컴퓨터공학
  * #### [컴퓨터 구조와 원리](https://github.com/1000004/TIL/blob/main/computer_architectur.md)
  * #### [운영체제](https://github.com/1000004/TIL/tree/main/OS)
