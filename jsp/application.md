@@ -197,3 +197,196 @@
 </body>
 </html>
 ```
+* write.jsp가 list.jsp로 가는 경우 (2)->(3)와 <form>으로 글작성하여 가는 경우(1)->(2)->(3) 2가지
+* list.jsp가 하는 일
+	(1)글 등록/파일에 쓰기 (2)목록 뽑기/파일 읽기 (3)보여주기
+* 2가지 경우를 구분하기 위해 hidden을 이용
+* hidden의 value를 확인해고 null이면 쓰기를 수행하고 아니면 수행하지 않는다
+* ex &lt;input type="hidden" name="cmd" value=""&gt;
+* 하지만 list.jsp에서 (1)글쓰기를 처리하면 새로고침시 직전 작업을 수행하면서 글이 반복적으로 추가된다
+* 이를 막기위해 hidden보다는 글쓰기를 하는 jsp파일을 생성하여 response.sendRedirect 메서드를 추가하여 글쓰기가 반복되는 것을 막는다
+* xml로 목록 저장경로 설정
+```xml
+<context-param>
+  	<param-name>filePath</param-name>
+  	<param-value>/message/data.dat</param-value>
+</context-param>
+```
+* write.jsp
+```JSP
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="list.jsp">목록으로</a>
+	<form action="doWrite.jsp" method="post">
+		한마디 : <input type="text" name="words"/>
+		<br>
+		작성자 : <input type="text" name="writer"/>
+		<br>
+		<input type="submit" />
+		<input type="hidden" name="cmd" value="">
+	</form>
+</body>
+</html>
+```
+* doWrite.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="java.io.*" %>
+<%@ page import="java.util.*"%>
+<%@ page import="kr.ac.green.*" %>
+<%!
+	private void closeAll(Closeable...c){
+		for(Closeable temp : c){	
+			try{
+				temp.close();
+			}catch(Exception e){}
+		}
+	}
+
+	private Vector<Doc> readList(String filePath){//읽기
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		
+		Vector<Doc> docList = null;
+		try{
+			fis=new FileInputStream(filePath);
+			ois = new ObjectInputStream(fis);
+			docList = (Vector<Doc>)ois.readObject();
+		}catch(IOException e){
+			e.printStackTrace();
+			docList = new Vector<Doc>();
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}finally{
+			closeAll(ois, fis);
+		}
+		return docList;
+	}
+%>
+<%		
+		//쓰기
+		request.setCharacterEncoding("euc_kr");
+		String filePath = application.getRealPath(application.getInitParameter("filePath"));
+		String words = request.getParameter("words");
+		String writer = request.getParameter("writer");
+		Doc doc = new Doc(words, writer);
+		
+		Vector<Doc> docList = readList(filePath);//읽기
+		docList.add(doc);
+		
+		FileOutputStream fos = null;
+		ObjectOutputStream oos = null;
+		try{
+			fos = new FileOutputStream(filePath);
+			oos = new ObjectOutputStream(fos);
+			oos.writeObject(docList);
+			oos.flush();
+			oos.reset();
+		}catch(IOException e){
+			e.printStackTrace();
+		}finally{
+			closeAll(oos, fos);
+		}
+		response.sendRedirect("list.jsp");
+%>
+```
+* list.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="java.io.*" %>
+<%@ page import="java.util.*"%>
+<%@ page import="kr.ac.green.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>list.jsp</title>
+</head>
+<%!
+	private void closeAll(Closeable...c){
+		for(Closeable temp : c){	
+			try{
+				temp.close();
+			}catch(Exception e){}
+		}
+	}
+
+	private Vector<Doc> readList(String filePath){//읽기
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		
+		Vector<Doc> docList = null;
+		try{
+			fis=new FileInputStream(filePath);
+			ois = new ObjectInputStream(fis);
+			docList = (Vector<Doc>)ois.readObject();
+		}catch(IOException e){
+			e.printStackTrace();
+			docList = new Vector<Doc>();
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}finally{
+			closeAll(ois, fis);
+		}
+		return docList;
+	}
+%>
+<%
+
+	String filePath = application.getRealPath(application.getInitParameter("filePath"));
+	
+	Vector<Doc> docList = readList(filePath);//읽기
+%>
+<body>
+	<a href="write.jsp">글등록</a>
+	<table>
+		<caption>글목록</caption>
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>내용</th>
+				<th>작성자</th>
+				<th>작성일</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th colspan="4"><%=docList.size() %>개 글 등록됨</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<%
+				if(docList.size()==0){
+			%>
+			<tr>
+				<td colspan="4">Empty</td>
+			</tr>
+			<%
+				}else{
+					for(int idx=docList.size()-1;idx>=0;idx--){
+						Doc temp = docList.get(idx);
+			%>
+			<tr>
+				<td><%= idx + 1 %></td>
+				<td><%= temp.getWords() %></td>
+				<td><%= temp.getWrider() %></td>
+				<td><%= temp.getDate() %></td>
+			</tr>
+			<%
+					}
+				}
+			%>
+		</tbody>
+	</table>
+</body>
+</html>
+```
