@@ -29,8 +29,8 @@
 ```
 * print()/println()/newLine()
 #### out 기본 객체와 [버퍼](https://github.com/yeRim650/TIL/blob/main/jsp/buffer.md)의 관계
-  *<%@ page buffer = "16kb" %>
-  *<%@ page autoFlush = "false" %>
+  * <%@ page buffer = "16kb" %>
+  * <%@ page autoFlush = "false" %>
   * out 기본 객체의 버퍼의 관련 메서드
     * getBufferSize() 버퍼의 크기
     * getRemaining() 현재 남은 버퍼 크기
