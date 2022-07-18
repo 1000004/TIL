@@ -3,7 +3,7 @@
   * 실제 타입 : javax.servlet.http.HttpServletRequest (클라이언트의 요청 정보를 저장한다)
 * **response** 
   * 실제 타입 : javax.servlet.http.HttpServletResponse (응답 정보를 저장한다)
-* **pageContext** 
+* [**pageContext**](https://github.com/yeRim650/TIL/blob/main/jsp/pageContext.md) 
   * 실제 타입 : javax.servlet.jsp.PageContext (JSP 페이지에 대한 정볼르 저장한다)
 * **session** 
   * 실제 타입 : javax.servlet.http.Hitp.HitpSession (HTTP 세션 정보를 저장한다)
