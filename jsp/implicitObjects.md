@@ -7,7 +7,7 @@
   * 실제 타입 : javax.servlet.jsp.PageContext (JSP 페이지에 대한 정볼르 저장한다)
 * **session** 
   * 실제 타입 : javax.servlet.http.Hitp.HitpSession (HTTP 세션 정보를 저장한다)
-* **[application](https://github.com/yeRim650/TIL/tree/main/jsp)** 
+* **[application](https://github.com/yeRim650/TIL/blob/main/jsp/application.md)** 
   * 실제 타입 : javax.servlet.ServletContext (웹 어플리케이션에 대한 정보를 저장한다.)
 * [out](https://github.com/yeRim650/TIL/blob/main/jsp/out.md) 실제 타입 : javax.servlet.jsp.JspWriter (JSP 페이지가 생성하는 결과를 출력할 때 사용하는 출력 스트림이다)
 * config (JSP 페이지에 대한 설정 정보를 저장)
