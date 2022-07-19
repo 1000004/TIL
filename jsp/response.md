@@ -1,5 +1,7 @@
 ### response 기본 객체
 * was가 만들어 준다 추가 메서드 addxx() 변경 메서드 setxx() 존재(직접 만드는것이 아니기 때문에 관리하는 메서드 존재)
+* was가 reqponse에 정보를 넣는 일들을 알아서 해준다
+* 실제 많이 사용하는 기본 객체이지만 직접 건들이는 일이 많지 않다
 #### 웹 브라우저 캐시 제어를 위한 응답 헤더 입력
 * 캐시는 동일한 데이터를 중복해서 로딩하기 않도록 할때 사용
 * 페이지를 로드하는데 필요한 이미지, JS, CSS를 다시 로드하지 않고 저장해 놓은 캐시를 불러와 동적인 taxt만 로드하기 때문에 응답속도가 빨라진다
@@ -21,7 +23,7 @@
 	   	response.setDateHeader("Expires",1L);
 	 %>	
 ```
-### 리다이렉트를 이요해서 페이지 이동하기
+### 리다이렉트를 이용해서 페이지 이동하기
 ```JSP
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
