@@ -9,7 +9,7 @@
 * http://localhost:8080
 
 > localhost : 8080 / myApp / data / sub / sone.jsp - url로 요청시  
-> localhos - 도메인 DNS에서 IP로 변경  
+> localhost - 도메인 DNS에서 IP로 변경  
 > 8080 port(프로세스 식별자) 톸켓 프로세스에 접근하기위해 톰켓의 port인 8080 사용  
 > / root 설정  
 > 서버PC - 톰캣 위치 \ webapps \ myApp \ data \ sub \ some.jsp
