@@ -26,3 +26,4 @@ request 기본 객체와 pageContext.getRequest()의 동일여부:
 <%= request == httpRequest %>
 ```
 * pageContext.getRequest()로 리턴한 ServletRequest를 HttpServletRequest로 **강제 형변환**하면 기존 request와 주소가 같으므로 request == httpRequest는 true가 된다
+* (주소 비교시 형변환이 필요 없다)
