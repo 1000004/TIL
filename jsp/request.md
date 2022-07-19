@@ -136,12 +136,14 @@ address 파라미터= <%= request.getParameter("address") %>
 	* 쿼리문자열(Query String) ?가 구분자 URL의 뒤에 입력 데이터를 함께 제공하는 가장 단순한 데이터 전달 방법
 	* 파라미터를 지우면 목적으로하는 결과를 볼 수 없다
 	* 동일한 작업을 많이 해도 변경이되지 않는다
+	* request line으로 전달
 * POST : 수정, 삭제, 생성 -> 서버측 데이터가 변경이 일어난다.
 	* http://localhost:8080/07_15/viewParameter.jsp
 	* post -> 파라미터 정보 -> 바디에 포함
 	* url로 확인 할 수 없다
 	* 수정, 삭제, 생성을 GET할때 사용하면 허용되지 않은 사용자가 허가되지 않은 연산(데이터 변경)이 가능해질 수 있다
 	* 보이면 안된는 파라미터 있는 경우 사용 (id, pw) 
+	* request body로 전달
 * **request.setCharacterEncoding("euc_kr");**
 	* 해당 메서드는 파라미터 값을 사용하기 전에 실행해주어야 한다
 	* 브라우저가 EU-KR로 보내지 않는다
