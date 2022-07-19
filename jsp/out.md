@@ -2,6 +2,7 @@
 * JSP 페이지가 생성하는 모든 내용은 out 기본 객체를 통해 전송
 * JSP가 servlet으로 변경되면 문자열로 처리 ex out.println("<html>");
 * 브라우저에 write 해주는 객체
+* (response 데이터에 body에 wite)
 ```jsp
   <%
      out.println("1) 안녕하세요.");
