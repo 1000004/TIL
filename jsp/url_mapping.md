@@ -4,7 +4,7 @@
 * 웹 어플리케이션 폴더는 war 구조
 * WEB-INF - web.xml (프로젝트에 대한 설정 파일)
   * <welcome-file>index.jsp</welcome-file> : index.jsp를 만들면 첫 페이지/ 홈페이지 대문이 된다(어플리케이션 root로 들어올때 보여주는 페이지) (없으면 404)
-  * 편집 가능 : index.jsp jsp 이름 변경 가능 (변경시 서버를 restart 필요)
+  * 편집 가능 : index.jsp - jsp 이름 변경 가능 (변경시 서버를 restart 필요)
   * (index.jsp요청 했지만 redirect시 url은 변경)
   * 이 외에도 설정할 수 있는 정보가 있다
 * WEB-INF\classes : 웹 어플리케이션 설정 정보를 담고 있는 web.xml 파일 위치
