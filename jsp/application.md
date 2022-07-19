@@ -1,5 +1,8 @@
 ### application 기본 객체
 #### 웹 어플리케이션 초기화 파라미터 읽어오기
+* application 기본 객체의 웹 어플리케이션 초기화 파라미터 관련 메서드
+	* getInitParameter(String name)
+	* getInitParameterNames()
 * 서블릿 규약은 웹 어플리케이션 전테에  걸쳐서 사용할 수 있는 초기화 파라미터를 정의
 * 웹 어플리케이션에서 사용 할 수있는 초기화 파라미터는 WEB-INF\web.xml파일에 <conntext-param>테그를 사용하여 추가
 * web.xml파일에는 해당 프로젝트의 설정이 있다
