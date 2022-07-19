@@ -60,8 +60,8 @@
 * JSP을 이용해서 만든 프로그램을 실행하려면 Apache tomcat(아파치 톰켓), Jetty(제티), JBoss EAP와 같은 서버 프로그램이 필요
   * 이러한 서버 프로그램을 **WAS(Web Application Server)**
 * **WAS**
-  * JSP/Java를 동작 환경을 만들어준다
+  * JSP/Java 동작 환경을 만들어준다
   * 단순 웹 서버는 정적 HTML 파일이나 이미지를 제공하는 것과 달리 어플리케이션을 구현하는데 필요한 기능을 제공
   * 클라이언트의 요청이 오면, 알맞는 프로그램을 실행해서 응답을 생성
 <img src="https://postfiles.pstatic.net/MjAyMjA3MTRfMjEy/MDAxNjU3Nzg4MzQ2MDUw.jy46dFfWHTwgKoJ-igWRjlVj44N3X5WQDBthOfjZulkg.hJY117iB1T8n8XTgIuJ20EYslXEhlxtZKlbksta6lEYg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
-  * was가 자바 프로그램에 request 객체를 주면 프로그램은 respons 객체를 결과로 준다
+  * was가 프로그램에 request 객체를 주면 프로그램은 respons 객체를 결과로 준다
