@@ -1,5 +1,5 @@
 ### 페이지 모듈화와 요청 흐름 제어
-* &lt; jsp : 로 시작하는 엑션 태그(action tag)
+* '&lt; jsp : '로 시작하는 액션 태그(action tag)
 * &lt;jsp:include&gt; 
 #### &lt;jsp:include&gt; 액션 태그를 이용한 공통 영역 작성
 * 출력 버퍼를 공유
@@ -124,4 +124,10 @@ sub.jsp에서 생성된 내용.
 <h2>contents A</h2>
 ```
 <img src="https://postfiles.pstatic.net/MjAyMjA3MjBfMTEy/MDAxNjU4MzExMjI3ODk0.7zjIvrDYaCqmi2xSJN-GwYnB2_7Y1MkWDSom4NTu4esg.Qh5tiKMndVJw0EpztH1fpbtpo2LnILUTAkE7meAVFLEg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
-* main.jsp가 실행되때 include로 sub.jsp가 실행되고 두 jsp에서 동일한 request 객체를 가진다
+#### &lt;jsp:param&gt;으로 포함할 페이지에 파라미터 추가
+* include로 다른 jsp가 실행되어도 **동일한 request 객체**가 유지된다
+* include할때 파라미터를 추가 가능
+* include 할때 추가된 파라미터는 include로 넘어간 페이지에만 적용된다
+* 중복 include가 일어날때 이전 include할때 param으로 추가된 파라미터도 가지고 include 페이지로 넘어간다
+* param action tag의 value는 코드 작성자가 넣는 값이므로 인코딩의 편의를 위해 한글은 피한다
+* request.senCaraterEncoding 설정은 param action tag로 만들어진 파라미터에도 적용이 된다
