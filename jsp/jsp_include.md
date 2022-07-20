@@ -131,3 +131,70 @@ sub.jsp에서 생성된 내용.
 * 중복 include가 일어날때 이전 include할때 param으로 추가된 파라미터도 가지고 include 페이지로 넘어간다
 * param action tag의 value는 코드 작성자가 넣는 값이므로 인코딩의 편의를 위해 한글은 피한다
 * request.senCaraterEncoding 설정은 param action tag로 만들어진 파라미터에도 적용이 된다
+* param action tag로 동일한 name의 파라미터 추가가 가능하다
+	* 단, 동일하느 name을 가진 value를 모두 꺼내기 위해서는 request객체의 getParameterValues 매서드를 이용해야 한다
+* **first.jsp** 
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>first.jsp</title>
+</head>
+<body>
+	<a href="second.jsp?cmd=test">go second</a>
+</body>
+</html>
+```
+* **second.jsp**
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>second.jsp</title>
+</head>
+<body>
+	second(cmd) : <%= request.getParameter("cmd") %>
+	
+	<jsp:include page="third.jsp">
+		<jsp:param value="hey~" name="other"/>
+		<jsp:param value="hello" name="cmd"/>
+	</jsp:include>
+	
+	second(other) : <%= request.getParameter("other") %>
+</body>
+</html>
+```
+* **third.jsp**
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<fieldset>
+	<legend>third</legend>
+	<%
+		String[] params = request.getParameterValues("cmd");
+	%>
+	cmd : <%= java.util.Arrays.toString(params) %>
+	<br>
+	other : <%= request.getParameter("other") %>
+	<br>
+	<jsp:include page="fourth.jsp"/>
+</fieldset>
+```
+* **fourth.jsp**
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<fieldset>
+	<legend>fourth</legend>
+	cmd : <%= request.getParameter("cmd") %>
+	<br>
+	other : <%= request.getParameter("other") %>
+</fieldset>
+```
+<img src="https://postfiles.pstatic.net/MjAyMjA3MjBfMTIg/MDAxNjU4MzEyODQ2Mzk2.GWAD5ECoHkNvYlKrnPyiflP-PG0iC5cJ-FJDCAKDPCog.z3Vht5AsEGY_C4ALOiHVQAmsN8EAmM_ltZbnIV8G6OEg.PNG.forget980/image.png?type=w580" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
