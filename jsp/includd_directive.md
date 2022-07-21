@@ -56,6 +56,10 @@ includer.jsp에서 저장한 번호: <%= number %>
 %>
 ```
 #### 코드 조각 자동 포함 가능
+* HTML 태그가 존재해야 하는 범위 밖에 존재하면 좋지 않기 때문에 안쓰는 것을 추천한다
+* 자동 포함 기능을 여러개 넣을 수 있다 코드를 쓴 순서가 우선 적용된다
+*  &lt;jsp:jsp-property-group&gt; 테그를 쓰는 곳이 많아지면 어디서 선언, 정의, 사용됬는지 추적하기 어렵다(변수가 많은경우)
+*  include 위치를 마은대로 지정할 수 없다(처음과 끝으로 동일)
 ```xml
 <jsp-config>
   	<jsp-property-group>
@@ -102,3 +106,4 @@ jsp```
 	java.util.Date CURRENT_TIME = new java.util.Date();
 %>
 ```
+#### &lt;jsp:include&gt; 엑션 태그와 태그와 include 디렉티브의 비교
