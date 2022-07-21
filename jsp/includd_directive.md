@@ -98,7 +98,7 @@ includer.jsp에서 저장한 번호: <%= number %>
 %>
 ```
 * /common/footer.jspf
-jsp```
+```jsp
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!-- start -->
@@ -106,4 +106,21 @@ jsp```
 	java.util.Date CURRENT_TIME = new java.util.Date();
 %>
 ```
-#### &lt;jsp:include&gt; 엑션 태그와 태그와 include 디렉티브의 비교
+#### &lt;jsp:include&gt; 액션 태그와 태그와 include 디렉티브의 비교
+* &lt;jsp:include&gt; 액션 태그와 Include 디렉티브의 차이
+	*  &lt;jsp:include&gt; 액션 태그 ↔ include 디렉티브
+	*  처리시간(포함 되는 시기) : 요청시간에 처리 ↔ 현재 파일에 삽입시킴
+	*  기능(어떤 방식으로) : 별도의 파일로 요청 처리 흐름을 이동(class가 따로 실행 제어권이 넘어가면서 include 메서드와 유사)
+	*  ↔ 현재 파일에 삽입시킴(한개의 Servlet 생성)
+	*  데이터 전달 방법 : **reqest 기본 객체나 &lt;jsp:param&gt;을 이용한 파라미터 전달**
+	*  ↔ 페이지 내의 변수를 선언한 후, 변수에 값 저장
+	*  용도 : 화면의 레이아웃의 일부분을 모듈화할 때 주로 사용(중복되는 HTML 코드 제거)
+	*  ↔ 다수의 JSP 페이지에서 공통으로 사용되는 변수를 지정하는 코드나 저작권과 같은 문장을 포함(값,연산 중복시 사용)
+* **&lt;jsp:include&gt; 액션 태그에서 데이터를 전달 방법은 &lt;jsp:param&gt;을 이용한 파라미터 전달과 reqest 기본 객체를 이용한 attribute 전달 방법이 있다**
+	* &lt;jsp:param&gt;을 이용하는 방법보다는 reqest 기본 객체의 attribute을 이용하는 방법을 쓰는 것이 좋다
+	* 파라미터는 일반적으로 사용자가 입력하는 것으로 수정 삭제가 불가능한다(get만 할 수 있다 값이 보존된다)
+	* 또한 include한 페이지에만 적용되는 파라미터다 태그를 쓴 페이지에서는 파라미터 추가가 안된다
+	* 속성을 이용하면 inclue한 페이지에서 데이터를 가져올 수 있다
+	* 속성은 수정,삭제가 가능하다
+	* &lt;jsp:param&gt;을 쓰는 경우는 차등성을 부여해야 하는 경우(특정 페이지에서만 쓸 수 있게)
+		* 값이 보존되므로 삭제나 수정의 위험이 적다
