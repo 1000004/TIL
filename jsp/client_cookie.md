@@ -93,3 +93,89 @@
 </body>
 </html>
 ```
+#### 쿠키 사용하는 예시
+* Redirect를 사용하는 경우 url을 노출되기 때문에 일정한 과정을 거쳐 페이지에 도달하는 것이 아닌 url을 통해 페이지에 도달할 가능성이 있다
+* 이러한 과정없이 페이지에 도달하는 것을 막기 위해 쿠키를 통해 확인 후 결과 페이지를 보여줄 수 있다
+* 쿠키는 사용자가 의도한대로 과정을 거쳐서 왔는지 아니면 안 거치고 왔는지 **클라이언트 상태**를 확인하는 것에 쿠키를 이용
+* 메일함을 이용할 때 로그인이 되어 있는지 확인하기 위해 웹 브라우저에 로그인 상태로 쿠키가 심어져 있는지 확인하면 된다
+* test.jsp (Redirect시 이동하는 페이지에서 쿠키를 확인한 예시)
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>test.jsp</title>
+</head>
+<body>
+	<%
+		String msg = request.getParameter("msg");
+		if(msg == null){
+			msg = "wellcome~~!!";
+		}
+	%>
+	<h1><%= msg %></h1>
+	<hr>
+	<form action="process.jsp" method="post">
+		당신의 혈액형은?
+		<br>
+		<input type="radio" name="bloodType" value="A"/>A
+		<input type="radio" name="bloodType" value="B"/>B
+		<input type="radio" name="bloodType" value="O"/>O
+		<input type="radio" name="bloodType" value="AB"/>AB
+		<br>
+		<input type="submit"/>
+	</form>
+</body>
+</html>
+```
+* process.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	String bloodType = request.getParameter("bloodType");
+	//특정연산한다...
+	Cookie c = new Cookie("bloodType", bloodType);
+	response.addCookie(c);
+	
+	response.sendRedirect("result.jsp");
+%>
+```
+* result.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>result.jsp</title>
+</head>
+<body>
+	<h1>테스트 완료~</h1>
+	<hr>
+	<%
+		boolean checked = false;
+		Cookie[] arr = request.getCookies();
+		if(arr != null){
+			for(Cookie temp : arr){
+				if(temp.getName().equals("bloodType")){
+					out.println("당신의 혈액형 : " + temp.getValue());
+					checked = true;
+				}
+			}
+		}
+		if(!checked){
+		//쿠키가 존재하지 않는 경우 forword로 페이지 이동
+	%>
+	<jsp:forward page = "test.jsp">
+		<jsp:param value="access denied" name="msg"/>
+	</jsp:forward>
+	<%
+		}
+	%>
+</body>
+</html>
+```
