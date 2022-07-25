@@ -231,7 +231,7 @@ h.getName(name)과 동일 jsp:getProperty 태그로 변환시킴
 	<table border="1" cellpadding="0" cellspacing="0">
 	<tr>
 		<td>아이디</td>
-		<td colspan="3"><input type=="text" name="id" size="10"></td>
+		<td colspan="3"><input type="text" name="id" size="10"></td>
 	</tr>
 	<tr>
 		<td>이름</td>
@@ -254,7 +254,7 @@ h.getName(name)과 동일 jsp:getProperty 태그로 변환시킴
     pageEncoding="EUC-KR"%>
 <jsp:useBean id="memberInfo" class="kr.ac.green.MemberInfo"/>
 <jsp:setProperty name="memberInfo" property="*" />
-<<jsp:setProperty name="memberInfo" property="password" 
+<jsp:setProperty name="memberInfo" property="password" 
 	value="<%= memberInfo.getId() %>" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
