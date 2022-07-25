@@ -216,8 +216,72 @@ h.getName(name)과 동일 jsp:getProperty 태그로 변환시킴
 </body>
 </html>
 ```
+* getProperty, setProperty 사용예
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>회원가입 입력 폼</title>
+</head>
+<body>
+<form action="processJoining.jsp" method="post">
+	<table border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>아이디</td>
+		<td colspan="3"><input type=="text" name="id" size="10"></td>
+	</tr>
+	<tr>
+		<td>이름</td>
+		<td><input type="text" name="name" size="10"></td>
+		<td>이메일</td>
+		<td><input type="text" name="email" size="10"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center">
+		<input type="submit" value="회원가입">
+		</td>
+	</tr>
+	</table>
+</form>
+</body>
+</html>
+```
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<jsp:useBean id="memberInfo" class="kr.ac.green.MemberInfo"/>
+<jsp:setProperty name="memberInfo" property="*" />
+<<jsp:setProperty name="memberInfo" property="password" 
+	value="<%= memberInfo.getId() %>" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>가입</title>
+</head>
+<body>
+<table width="400" border="1" cellpadding="0" cellspacing="0">
+<tr>
+	<td>아이디</td>
+	<td><jsp:getProperty property="id" name="memberInfo"/></td>
+	<td>암호</td>
+	<td><jsp:getProperty property="password" name="memberInfo"/></td>
+</tr>
+<tr>
+	<td>이름</td>
+	<td><jsp:getProperty property="name" name="memberInfo"/></td>
+	<td>이메일</td>
+	<td><jsp:getProperty property="email" name="memberInfo"/></td>
+</tr>
+</table>
+</body>
+</html>
+```
 #### &lt;jsp:useBean&gt; 액션 태그를 못 쓰는 경우(단점)
-	* HTML 뵤여주는 용도
+	* HTML 보여주는 용도
 #### 자바빈 프로퍼티 타입에 따른 값 매핑
 * 프로퍼티 타입에 따라서 알맞게 값을 처리 (값이 ""이면 기본값 적용)
 * 프로퍼티의 타입에 맞게 변환하여 저장
