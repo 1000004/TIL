@@ -31,6 +31,7 @@ if(info==null){
   * request : request 기본 객체
   * session : session 기본 객체
   * application : application 기본 객체
+  * 생략시 page (forward를 사용해서 request를 사용하는 경우가 아니고 한 페이지에서 사용시 생략)
 * class 속성 대신 type 속성 사용 가능
   * 지정한 scope에 이미 객체가 존개한다고 가정
   * 객체가 없으면(null이면) 객체를 새로 만드는 것이 아닌 에러 발생
