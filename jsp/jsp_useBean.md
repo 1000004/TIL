@@ -110,7 +110,7 @@ public class MemberInfo {
 * scope 속성의 기본값은 page
 * &lt;jsp:setProperty&gt; 액션 태그를 이용 name을 설정 (MemberInfo객체에 name 멤버변수와 nameSetter가 존재해야 한다)
   * member.setName("지우");
-  * value 속성값으로 표현식(<%= 값 %>)이나 EL(${값})가능
+  * value 속성값으로 표현식(<%= 값 %>)이나 EL(${값})가능(getProperty 사용 불가)
 ```jsp
 <jsp:setProperty name="member" property="id" param="memberId"/>
 ```
@@ -128,3 +128,104 @@ menber.setId(id);
 ```
 * property 속성의 값을 "*"로 지정하면 각 프로퍼티의 값을 같은 이름을 갖는 파라미터에 값으로 설정
 * 객체의 멤버변수에 멤버변수와 이름 같은 request 파라미터 값을 가져와 저장한다
+```java
+package kr.ac.green;
+
+public class Human {
+	private String name;
+	private int age;
+	private String addr;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getAddr() {
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	@Override
+	public String toString() {
+		return "Human [name=" + name + ", age=" + age + ", addr=" + addr + "]";
+	}
+}
+```
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>input.jsp</title>
+</head>
+<body>
+	<form action="humanInfo.jsp" method="post">
+		name : <input type="text" name="name"/>
+		<br>
+		age : <input type="text" name="age"/>
+		<br>
+		address : <input type="text" name="addr"/>
+		<br>
+		<input type="submit" />
+	</form>
+</body>
+</html>
+```
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%--
+<%@ page import="kr.ac.green.Human" %>
+--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>humanInfo.jsp</title>
+</head>
+<body>
+<jsp:useBean id="h" class="kr.ac.green.Human"/>
+<jsp:setProperty property="*" name="h"/>
+<%
+	/*
+	String name = request.getParameter("name");
+	int age = Integer.parseInt(request.getParameter("age"));
+	String addr = request.getParameter("addr");
+	
+	Human h = new Human();
+	h.setName(name);
+	h.setAge(age);
+	h.setAddr(addr);
+	*/
+%>
+<jsp:getProperty property="name" name="h"/>
+<%--
+h.getName(name)과 동일 jsp:getProperty 태그로 변환시킴
+<%=h %>
+--%>
+</body>
+</html>
+```
+#### &lt;jsp:useBean&gt; 액션 태그를 못 쓰는 경우(단점)
+	* HTML 뵤여주는 용도
+#### 자바빈 프로퍼티 타입에 따른 값 매핑
+* 프로퍼티 타입에 따라서 알맞게 값을 처리 (값이 ""이면 기본값 적용)
+* 프로퍼티의 타입에 맞게 변환하여 저장
+* (매핑 mapping이란 하나의 값을 다른 값으로 대응시키는 것을 말한다)
+* &lt;jsp:useBean&gt; 액션 태그 사용 감소 이유
+	* 사용자에게 보여주는 HTML을 Servlet으로 만드는게 힘들어서 JSP를 사용하여 만든다
+	* JSP를 만드는 이유는 사용자에게 보여주는 UI를 만들기 위함이다
+	* 사용자에게 노출되는 부분만 JSP로 만들고 그 밖에 연산 일어나는 문에 보이지 않는 페이지는 자바class로 만든다
+	* useBean 액션태그로 변경가능 하지만 사용자에게 보일 부분이 아니라면 액션 태그로 표현할 필요 없다.
+	* 또한 사용자에게 보여줘야하는 경우 useBean, getProperty, setProperty 액션태그보다 표현 언어(Expression Language)로 표현
+	* JSP 2.0 버전부터 추가된 표현 언어
