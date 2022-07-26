@@ -217,3 +217,178 @@
 #### 쿠키와 헤더
 * 쿠키이름=쿠키값; Domain=도메인값; path=경로값; Expires=GMT형식의만료일시
 * 쿠키는 출력 버퍼를 플러시하기 전에 추가해야 한다
+#### 쿠키를 이용한 로그인 상태 유지
+1. 로그인에 성공하면 특정 이름을 갖는 쿠키를 생성
+2. 해당 쿠키가 존재하면 로그인한 상태라고 판단
+3. 로그아웃하면 해당 쿠키를 삭제
+```java
+package kr.ac.green;
+
+import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.Map;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
+public class Cookies {
+	private Map<String, Cookie> cookieMap = new java.util.HashMap<String, Cookie>();
+
+	public Cookies(HttpServletRequest reqest) {
+		Cookie[] cookies = reqest.getCookies();
+		if (cookies != null) {
+			for (int i = 0; i < cookies.length; i++) {
+				cookieMap.put(cookies[i].getName(), cookies[i]);
+			}
+		}
+	}
+
+	public Cookie getCookie(String name) {
+		return cookieMap.get(name);
+	}
+
+	public String getValue(String name) throws IOException {
+		Cookie cookie = cookieMap.get(name);
+		if (cookie == null) {
+			return null;
+		}
+		return URLDecoder.decode(cookie.getValue(), "euc-kr");
+	}
+
+	public boolean exits(String name) {
+		return cookieMap.get(name) != null;
+	}
+
+	public static Cookie createCookie(String name, String value) throws IOException {
+		return new Cookie(name, URLEncoder.encode(value, "utf-8"));
+	}
+
+	public static Cookie createCookie(String name, String value, String path, int maxAge) throws IOException {
+		Cookie cookie = new Cookie(name, URLEncoder.encode(value, "utf-8"));
+		cookie.setPath(path);
+		cookie.setMaxAge(maxAge);
+		return cookie;
+	}
+
+	public static Cookie createCookie(String name, String value, String domain, String path, int maxAge)
+			throws IOException {
+		Cookie cookie = new Cookie(name, URLEncoder.encode(value, "utf-8"));
+		cookie.setDomain(domain);
+		cookie.setPath(path);
+		cookie.setMaxAge(maxAge);
+		return cookie;
+	}
+}
+```
+* loginForm.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>로그인폼</title>
+</head>
+<body>
+<form action="<%=request.getContextPath()%>/login.jsp"
+	method="post">
+아이디 <input type="text" name="id" size="10">
+암호 <input type="password" name="password" size="10">
+<input type="submit" value="로그인">
+</form>
+</body>
+</html>
+```
+* login.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import = "kr.ac.green.Cookies" %>
+<%
+	String id = request.getParameter("id");
+	String password = request.getParameter("password");
+	
+	if(id.equals(password)){
+		//ID와 암호가 같으면 로그인에 성공한 것으로 판다.
+		response.addCookie(
+			Cookies.createCookie("AUTH", id, "/", -1)	
+		);
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+로그인에 성공했습니다
+</body>
+</html>
+<%
+	}else{//로그인 실패시
+%>
+<script>
+alert("로그인에 실패하였습니다.");
+history.go(-1);
+</script>
+<%
+	}
+%>
+```
+* &lt;script&gt; 태그 안에는 자바스크립트 언어가 들어간다
+* alert("로그인에 실패하였습니다."); 메시지 알림을 띄운다
+* history.go(-1); 브라우저 방문기록에서 뒤로가기(이전 페이지로 돌아간다)
+* loginCheck.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import = "kr.ac.green.Cookies" %>
+<%
+	Cookies cookies = new Cookies(request);
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>로그인여부 검사</title>
+</head>
+<body>
+<%
+	if(cookies.exists("AUTH")){
+%>
+아이디 "<%= cookies.getValue("AUTH") %>"로 로그인 한 상태
+<%
+	}else{
+%>
+로그인하지 않은 상태
+<%
+	}
+%>
+</body>
+</html>
+```
+*logout.jsp
+```jsp
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import = "kr.ac.green.Cookies"%>
+<%
+	response.addCookie(
+		Cookies.createCookie("AUTH", "","/",0)//유효시간 0으로 (쿠키를 삭제하는 메서드는 없다)
+	);
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>로그아웃</title>
+</head>
+<body>
+
+로그아웃하였습니다.
+
+</body>
+</html>
+```
