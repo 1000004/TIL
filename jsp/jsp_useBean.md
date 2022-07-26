@@ -3,6 +3,7 @@
 * Java Beaan, VO(value object 값을 나타내기 위한 객체), DTO(data transfer object 값을 전달할 때 쓰는 객체), POJO(상속 구현 없이 단독으로 사용하는 객체)
 * 자바빈은 속성(데이터), 변경 이벤트, 객체 직렬화를 위한 표준이다
 * JSP에서는 속성을 표현하기 위한 용도로 사용
+* useBean 태그를 이용하기 위해서는 기본생성자가 필요하다
 * 자바 빈의 규약
   * 멤버 변수 : private
   * getter/setter
@@ -104,6 +105,7 @@ public class MemberInfo {
 <jsp:forward page="/useObject.jsp"/>
 ```
 #### &lt;jsp:setProperty&gt; 액션 태그와 &lt;jsp:getProperty&gt; 액션 태그
+* setProperty/getProperty 태그 이용을 위해 setter/getter가 있어야 한다
 ```jsp
 <jsp:useBean id="member" class="kr.ac.green.MemberInfo"/>
 <jsp:setProperty name="member" property="name" value="지우">
@@ -129,6 +131,7 @@ menber.setId(id);
 ```
 * property 속성의 값을 "*"로 지정하면 각 프로퍼티의 값을 같은 이름을 갖는 파라미터에 값으로 설정
 * 객체의 멤버변수에 멤버변수와 이름 같은 request 파라미터 값을 가져와 저장한다
+* 멤버변수 중 파라미터와 이름이 같으면 멤버변수에 파라미터 대입(setter를 이용)
 ```java
 package kr.ac.green;
 
