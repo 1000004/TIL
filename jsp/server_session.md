@@ -219,7 +219,7 @@ method="post">
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
-	String memberId = (String)session.getAttribute("MEMBERID");
+	String memberId = (String)session.getAttribute("MEMBERID");//일치하는 점만 확인할시 형변환할 필요가 없다.
 	boolean login = memberId == null ? false:true;
 %>
 <html>
@@ -237,3 +237,13 @@ method="post">
 	}
 %>
 ```
+* session.invliate() 메서드를 호출하지 않고, 다음과 같이 로그인 상태로 보관할 때 사용한 session 기본 객체를 모두 삭제해도 로그아웃한 효과를 낼 수 있다
+* ex session.removeAttribute("MEMBERRID");
+* 하지만, 로그인할 때 session 기본 객체에 추가하는 속성이 늘어나면 로그아웃 코드도 함계 변경해야 하므로, session.invalidate()메서들 사용하는 것이 좋다
+#### 연관된 정보 저장을 위한 클래스 작성
+* 대이터베이스에서 데이터를 빼올때 자주사용하는 정보를 같이 빼와 세션에 추가
+* 세션에 여러 속성을 사용해서 연관 정보들을 저장할 때 발생할 수 있는 문제점을 줄이는 방법은 클래스를 사용하는 것이다.
+* 연관된 정보를 클래스로 묶어서 저장하면 각 정보를 개별 속성으로 저장하지 않고 한개의 속성을 이요해서 저장할 수 있게 된다.
+#### 서블릿 컨택스트(어플리케이션)의 세션
+* 서로 다른 웹 어플리케이션이 세션을 공유하지 않음
+* 다른 프로그램 다른 세션
