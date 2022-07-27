@@ -1,5 +1,3 @@
-package kr.ac.green;
-
 import java.util.Vector;
 
 import javax.servlet.ServletContext;
