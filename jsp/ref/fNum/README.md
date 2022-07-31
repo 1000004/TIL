@@ -1,0 +1,1 @@
+<img src="https://postfiles.pstatic.net/MjAyMjA3MzFfMTc2/MDAxNjU5MjcwMzM0NzE1.D3B8A0CE0HC8OBbKVdctXah2EC0iuXZnodYkC3aL0oEg.Tyf9tugRZzB04Ve6mj0X9lhKeFme6H_zIKSUCi6zhuYg.PNG.forget980/image.png?type=w580" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
