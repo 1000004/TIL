@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<div id="menus">
+<p>Menu</p>
+<a class="menuStyle" href="<%= request.getContextPath() %>/main.jsp?contentPage=list">
+학생리스트</a>
+<a class="menuStyle" href="<%=request.getContextPath() %>/main.jsp?contentPage=input">
+학생정보 입력</a>
+<a class="menuStyle" 
+href="<%= request.getContextPath() %>/main.jsp?contentPage=find&forWhat=modify">
+학생정보 수정</a>
+<a class="menuStyle" 
+href="<%= request.getContextPath() %>/main.jsp?contentPage=find&forWhat=delete">
+학생정보 삭제</a>
+</div>
