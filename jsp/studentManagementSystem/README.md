@@ -16,7 +16,7 @@
 	document.getElementById("onBtn").onclick = functiton(){
 		lightControl("in");
 	}
-	document.getElementById("onBtn").onclick = functiton(){//다시 쓰지 않는 메서드 ()
+	document.getElementById("onBtn").onclick = functiton(){//다시 쓰지 않는 메서드 () anonymous inner class
 		lightControl("off");
 	}
 function lightControl(state){
