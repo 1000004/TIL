@@ -7,12 +7,6 @@
 
 * 자바 스크립트는 오류를 찾기가 어렵다 → 브라우저 화면에서 f12(브라우저의 개발자 모드) 틀린부분을 알려준다
 * 디버그를 할때 자바에서는 sysout을 이용했지만 console.log()를 이용해 console에서 확인할 출력할 수 있다.
-* js document 메서드
-  *  document.getElementById(id) = new html content
-  * document.getElementsByTagName(name)
-  * element.innerHTML
-  * element.attribute = new value
-  * dldment.style.property = new style
 ```jsp
 <h2>What Can JavaSript Do?</h2>
 <p>JavaScript can chage HTML attribute values.</p>
