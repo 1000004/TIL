@@ -7,7 +7,7 @@
 // * 아스테리스크
 // '' 코테이션
 	MovieReviewDAO.init(application);
-
+	request.setCharacterEncoding("euc-kr");
 	String cmd = request.getParameter("cmd");
 	if(cmd == null){
 		cmd="getAll";
