@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="org.login.bean.*"%>
+<%
+	Member member = (Member)session.getAttribute("loginMember");
+
+	if(member == null){
+%>
+	<jsp:forward page="/">
+		<jsp:param value="wrongRequest" name="cmd"/>
+	</jsp:forward>
+<%
+	}
+%>
