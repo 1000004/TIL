@@ -24,6 +24,7 @@ T I L
   * [웹 프로그래밍](https://github.com/yeRim650/TIL/blob/main/web/web_basic.md)
   * [HTML](https://github.com/yeRim650/TIL/tree/main/HTML)
   * [JSP](https://github.com/yeRim650/TIL/tree/main/jsp)
+  * [Servlet](https://github.com/yeRim650/TIL/tree/main/servlet)
  ## My Readings
   * #### [Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)](https://github.com/1000004/TIL/blob/main/ApprenticeshipPatterns.md)
   * #### [Miracle Mornning](https://github.com/1000004/TIL/blob/main/MIRACLE_MORNNING.md)
