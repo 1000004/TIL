@@ -47,3 +47,4 @@
 * init은 첫번째 요청이 있어야 호출이 되지만 비용이 많이드는 동작인 경우 servlet tag 안에 load-on-startup tag를 명시
 * load-on-startup tag를 명시하면 서버 실행할때  미리 서블릿 (객체)를 만든다 초기화작업을 사용자 요청전에 만든다
 * (초기화 작업 순번 표시 낮은 번호순으로 초기화 같은면 서술된 순서)(넣어주는게 이득이 크다)
+* [동물 도감](https://github.com/yeRim650/TIL/tree/main/servlet/animalbook)(url를 이용해 cmd 할일 구분)
