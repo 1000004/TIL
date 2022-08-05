@@ -1,4 +1,4 @@
-package kr.ac.green;
+package kr.ac.green.beans;
 
 public class Animal {
 	private int a_num;
