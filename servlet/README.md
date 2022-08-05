@@ -20,7 +20,7 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 ```
-*  **url-pattern tag에서 *.do는 웹어플리케이션에서 do로 끝나는 경우 servlet-name tag로 지정한 서블릿으로 보내겠다.**
+*  **url-pattern tag에서 '*.do'는 웹어플리케이션에서 do로 끝나는 경우 servlet-name tag로 지정한 서블릿으로 보내겠다.**
 *  url에 do가 끝에 붙는 경우 무조건 FirstServlet로 감으로써 do 앞에는 무엇이든 명시가 가능하다 따라서 웹 어플리케이션 구조 예측이 어려워 원치않는 접근을 막을 수 있다.
 *  기존에는 <%= request.getContextPath() %>/some/other...로 복잡하게 url을 표시했다면 url-pattern tag를 이용하여 go.do로 do만 붙이면 서블릿으로 이동 가능하다.
 *  do 앞에 의미를 담을 수 있다 (할일을 구별 가능)
