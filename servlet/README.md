@@ -26,7 +26,7 @@
 *  do 앞에 의미를 담을 수 있다 (할일을 구별 가능)
 * servlet tag에서 init-param tag에 있는 name과 value는 해당 servlet에서만  사용 가능(getIntiParameter("myKey")) jsp에서 사용 불가
 ```xml
-<!-- application으로 접근 : 모든 jsp에서 활용가능 -->
+<!-- application으로 접근 : 모든 jsp에서 활용가능 (파일 경로가 들어간다)-->
   <context-param>
   	<param-name>yourKey</param-name>
   	<param-value>yourValue</param-value>
@@ -47,4 +47,8 @@
 * init은 첫번째 요청이 있어야 호출이 되지만 비용이 많이드는 동작인 경우 servlet tag 안에 load-on-startup tag를 명시
 * load-on-startup tag를 명시하면 서버 실행할때  미리 서블릿 (객체)를 만든다 초기화작업을 사용자 요청전에 만든다
 * (초기화 작업 순번 표시 낮은 번호순으로 초기화 같은면 서술된 순서)(넣어주는게 이득이 크다)
-* [동물 도감](https://github.com/yeRim650/TIL/tree/main/servlet/animalbook)(url를 이용해 cmd 할일 구분)
+* [동물 도감](https://github.com/yeRim650/TIL/tree/main/servlet/animalbook)(url를 이용해 cmd 할일 구분 + 기능을 구현하는 객체 분리(CmdFactory))
+* 기능을 담당하는 객체를 만들어 controller의 복잡도를 줄인다
+* 기능을 구현하는 객체들을 제어하는 객체(CmdFactory)를 따로두어 종속관계를 낮췄다
+* 서블릿이 정형화되어 고정(spring은 자동으로 만들어준다)
+* 서블릿은 기능 추가가 되더라도 수정할 필요가 없다 
