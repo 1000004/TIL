@@ -10,6 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.ac.green.cmds.CmdFactory;
+import kr.ac.green.cmds.GoInsertCmd;
+import kr.ac.green.cmds.GoListCmd;
+import kr.ac.green.cmds.ICmd;
+import kr.ac.green.cmds.InsertCmd;
+import kr.ac.green.dao.AnimalDAO;
+
 public class FirstServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -17,6 +24,7 @@ public class FirstServlet extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
     	ServletContext application = config.getServletContext();
     	AnimalDAO.init(application);
+    	CmdFactory.init();
 //		System.out.println("init");
 	}
     /*
@@ -32,6 +40,7 @@ public class FirstServlet extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		System.out.println("POST");
+		request.setCharacterEncoding("euc-kr");
 		doAction(request, response);
 	}
 	private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -47,28 +56,17 @@ public class FirstServlet extends HttpServlet {
 		//if(cmd == null){
 		//	cmd= "goList";
 		//}
-		String nextPage = "list.jsp";
-		boolean isRedirect = false;
-		if(cmd.equals("/goList.do")){
-			request.setAttribute("list", AnimalDAO.getList());
-		}else if(cmd.equals("/goInsert.do")){
-			nextPage = "input.jsp";
-		}else if(cmd.equals("/insert.do")){
-			String a_name = request.getParameter("a_name");
-			int a_lifespan=Integer.parseInt(request.getParameter("a_lifespan"));
-			String a_habitat = request.getParameter("a_habitat");
-			String a_feature =  request.getParameter("a_feature");
-			
-			Animal animal = new Animal();
-			animal.setA_name(a_name);
-			animal.setA_lifespan(a_lifespan);
-			animal.setA_habitat(a_habitat);
-			animal.setA_feature(a_feature);
-			
-			AnimalDAO.addAnimal(animal);
-			isRedirect = true;
-		}
-		if(isRedirect){
+//		boolean isRedirect = false;
+		ICmd cmdObj = null;
+//		if(cmd.equals("/goList.do")){
+//			cmdObj = new GoListCmd();
+//		}else if(cmd.equals("/goInsert.do")){
+//			cmdObj = new GoInsertCmd();
+//		}else if(cmd.equals("/insert.do")){
+//			cmdObj = new InsertCmd();
+//		}
+		String nextPage = CmdFactory.searchAndDo(cmd, request, response);
+		if(request.getAttribute("isRedirect") != null){
 			response.sendRedirect(request.getContextPath());
 		}else{
 			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
