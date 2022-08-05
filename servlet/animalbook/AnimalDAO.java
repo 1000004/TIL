@@ -1,10 +1,12 @@
-package kr.ac.green;
+package kr.ac.green.dao;
 
 import java.util.Vector;
 
 import javax.servlet.ServletContext;
 
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
+import kr.ac.green.beans.Animal;
 
 public class AnimalDAO {
 	private static ServletContext application;
