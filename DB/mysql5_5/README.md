@@ -1,4 +1,6 @@
 * mysql 설정
+* 명령 프롬프트
+  * netstat -ano 사용중인 port 번호와 PID를 확인
 * show databases; (존재하는 DB 확인)
 * information_schema,mysql,performance_schema(MySQL 동작시 필요)(3개는 건들이면 안된다)
 * mysql> use test;
