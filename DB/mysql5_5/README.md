@@ -7,3 +7,5 @@
 * Database changed
 * mysql> show tables;
 * Empty set (0.00 sec) 테이블이 비어있다
+* 이클립스에서 mysal 사용시 연결되어 있어야 한다
+ * Data Source Explorer에서 연결
