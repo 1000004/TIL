@@ -14,7 +14,7 @@
 * XP(eXtreme Programming) 실용성을 최대한 끌어올린 개발 방법 중 하나
   * XP에서 제시한 테스트 주도 개발 방식 **TDD**
   * **짝프로그래밍** 버그와 오류를 줄일 수 있다
-#### JUnit
+### JUnit
 ```java
 @BeforClass
 전체테스트 수행전 1번만 실행
