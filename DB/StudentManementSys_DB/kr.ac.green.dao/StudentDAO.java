@@ -70,7 +70,7 @@ public class StudentDAO {
 		//질의날리는 객체
 		Statement stmt = null;
 		String sql = "INSERT INTO student (s_id, s_name, s_age, s_class, s_gender) VALUES ('%s', '%s', %d, '%s', '%s')";
-		sql = String.format(sql, s.getS_id(), s.getS_name(), s.getS_age(), s.getS_class(), s.getS_gender());
+		sql = String.format(sql, s.getS_id(), DBEncoding.toEn(s.getS_name()), s.getS_age(), s.getS_class(), s.getS_gender());
 		
 		try {
 			stmt = con.createStatement();
@@ -110,7 +110,7 @@ public class StudentDAO {
 	public int updateById(Connection con, Student s){
 		int result = 0;
 		String sql = "UPDATE student SET s_id='%s', s_name ='%s', s_age=%d, s_class ='%s', s_gender ='%s' WHERE s_id ='%s'";
-		sql = String.format(sql, s.getS_id(), s.getS_name(), s.getS_age(), s.getS_class(), s.getS_gender(), s.getS_id());
+		sql = String.format(sql, s.getS_id(), DBEncoding.toEn(s.getS_name()), s.getS_age(), s.getS_class(), s.getS_gender(), s.getS_id());
 		Statement stmt = null;
 		try{
 			stmt = con.createStatement();
@@ -176,7 +176,7 @@ public class StudentDAO {
 	}
 	private Student rowMopping(ResultSet rs) throws SQLException {
 		String s_id = rs.getString("s_id");//geString 문자열로 가져온다
-		String s_name = rs.getString("s_name");
+		String s_name = DBEncoding.toKor(rs.getString("s_name");
 		int s_age = rs.getInt("s_age");//geInt 정수로 가져온다
 		String s_class = rs.getString("s_class");
 		String s_gender = rs.getString("s_gender");
