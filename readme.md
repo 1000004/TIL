@@ -26,6 +26,7 @@ T I L
   * [JSP](https://github.com/yeRim650/TIL/tree/main/jsp)
   * [Servlet](https://github.com/yeRim650/TIL/tree/main/servlet)
   * [DataBase](https://github.com/yeRim650/TIL/tree/main/DB)
+    * [SQL](https://github.com/yeRim650/TIL/tree/main/DB/SQL)
     * [DAO](https://github.com/yeRim650/TIL/tree/main/DB/DAO) - TDD
  ## My Readings
   * #### [Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)](https://github.com/1000004/TIL/blob/main/ApprenticeshipPatterns.md)
