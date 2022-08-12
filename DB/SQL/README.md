@@ -8,7 +8,8 @@
    * LEFT/RIGHT OUTHER JOIN
     * left table OUTER JOIN right tabel
     * LEFT/RIGHT OUTHER JOIN인가에 따른 두 테이블에 존재하지 않더라도 테이블에 포함된다  
-    (ex LEFT OUTER JOIN울 하면 left 테이블 데이터가 다 표함되며 right 테이블에 없으면 NULL로 포함된다)
+    (ex LEFT OUTER JOIN울 하면 left 테이블 데이터가 다 표함되며 right 테이블에 없으면 NULL로 포함된다)  
+    (customers LEFT OUTER JOIN orders 와 oders RIGHT OUTER JOIN cusomers 는 같은 표현 이다)
    * CROSS JOIN은 연산의 목적이 아닌 성능 테스트를 목적으로 사용
    * **물리적 분할 되어 있는 table을 논리적으로 합치기 위해 Join을 사용**  
   (역정규화 발생 - 3차 정규화에 어긋나는 이행적 함수 종속이 발생될 가능성 있있다)
