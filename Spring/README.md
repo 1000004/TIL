@@ -91,3 +91,6 @@ ex /WEB-INF/views/home.jsp
 * pom.xml 파일에 사용할 라이블러리 추가
 * 실제 라이블러리 위치
   * C:\.m2\repository\mysql\mysql-connector-java\5.1.35
+#### Encoding
+![image](https://user-images.githubusercontent.com/102463200/185103233-9c9f0387-7bb8-41db-a40b-ac695043f025.png)
+* CharacterEncodingFilter를 Spring에서 제공
