@@ -76,7 +76,7 @@ ex /WEB-INF/views/home.jsp
 ```xml
 <annotation-driven />
 ```
-* 해당 tag 없으면 오노테이션이 역활 못한다
+* 해당 tag 없으면 어노테이션이 역활 못한다
 ```xml
 <context:component-scan base-package="org.green.first" />
 ```
