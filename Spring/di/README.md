@@ -32,6 +32,24 @@
   * 단, 알아서 자동으로 넣어 주는 것이 더 나은방법
 * **따라서 @Autowired시 변수명과 id를 생각해 신경 써주어야 한다**
 * 클래스 멤버변수 값을 **@Value**를 이용해 넣어 줄 수 있다
+```java
+package org.green.di;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyArmy {
+	@Autowired
+	private IUnit myZealot;
+	@Autowired
+	private IUnit mutal;
+	@Override
+	public String toString() {
+		return "MyArmy [myZealot=" + myZealot + ", mutal=" + mutal + "]";
+	}
+}
+```
 ### DI 사용 목적
 * 의존성이 존재하는 객체 관계에서 기존에는 우리가 원하는 의존성을 가지는 대상을 직접 만들고 직접 관계 설정을 해줬던 것에 반에
 * Spring에서는 객체생성도 직접하지 않아도 되고 의존성을 주입해주기 때문에 직접 대입하지 않아도 된다 Spring이 해준다.
