@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="memberOther" class="org.green.di.Other">
+		<constructor-arg value="18"/>
+	</bean>
+	<bean id="some" class="org.green.di.Some"/>
+	<!-- 생성자 이용 -->
+	<bean id="some2" class="org.green.di.Some">
+		<constructor-arg value="i'm a some2"/>
+		<constructor-arg ref="memberOther"/>
+	</bean>
+	<!-- setter -->
+	<bean id = "some3" class="org.green.di.Some">
+		<property name="data" value="using setter"/>
+		<property name="other" ref="memberOther"/>
+	</bean>
+	<bean id="ball1" class="org.green.di.Ball">
+		<property name="num" value="1"/>
+	</bean>
+	<bean id="ball2" class="org.green.di.Ball">
+		<property name="num" value="2"/>
+	</bean>
+	<bean id="ball3" class="org.green.di.Ball">
+		<property name="num" value="3"/>
+	</bean>
+	
+	<bean id="myBasket" class="org.green.di.BallBasket">
+		<!-- 배열, List -->
+		<property name="list">
+			<list>
+				<ref bean="ball1"/>
+				<ref bean="ball2"/>
+				<ref bean="ball3"/>
+			</list>
+		</property>
+		<!-- 
+			<set>
+				<ref bean="ball1"/>
+				<ref bean="ball2"/>
+				<ref bean="ball3"/>
+			</set>
+		 -->
+	</bean>
+	
+	<bean id="myBox" class = "org.green.di.BallBox">
+		<property name="table">
+			<map>
+				<entry key="first" value-ref="ball1"/>
+				<entry key="second" value-ref="ball2"/>
+				<entry key="third" value-ref="ball3"/>
+			</map>
+		</property>
+	</bean>
+</beans>
