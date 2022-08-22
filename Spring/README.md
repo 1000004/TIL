@@ -9,6 +9,7 @@
 * Spring은 포조를 기반으로 동작한다(어노테이션을 이용해 자유를 구현)
 #### framework vs library
 * IoC(Inversion of Control) 패턴 제어의 역전
+	* 제어 흐름에 대한 주도권이 누구에게 있느냐?
 * library는 기능을 제공해주고 어떻게 상용할지는 개발자가 결정
 * framework는 기능을 제공할때 사용하는데 규칙, 룰, 순서로 코드를 작성하면 기능을 알아서 수행
 * **프로그래밍의 제어, 코드 흐름 제어를 framework에서 결정**  
