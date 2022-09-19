@@ -29,7 +29,7 @@ ex Spring MVC는 정해진 규칙대로 코드를 작성해 주면 알아서 MVC
   * 궁극적인 목적은 같다 DAO 코드를 줄이고 SQL문을 밖으로 빼준다
   * (framework마다 설정이 다르다)
 ### Spring MVC
-* **sts 경**
+* **sts**
 * 스프링이 서브릿 제공 - org.springframework.web.servlet.DispatcherServlet
 * top-level package 이름이 root이름이 된다  
 ex org.green.first -> http://localhost:8080/first/
