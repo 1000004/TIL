@@ -23,6 +23,7 @@ T I L
  ## Web
   * [웹 프로그래밍](https://github.com/yeRim650/TIL/tree/main/web)
      * [용어](https://github.com/yeRim650/TIL/tree/main/web/term)
+     * [HTTP](https://github.com/yeRim650/TIL/blob/main/web/http.md)
   * [HTML](https://github.com/yeRim650/TIL/tree/main/HTML)
   * [JSP](https://github.com/yeRim650/TIL/tree/main/jsp)
   * [Servlet](https://github.com/yeRim650/TIL/tree/main/servlet)
