@@ -9,5 +9,24 @@
 *  (POP3에 비해 통신 트래픽이 높은 단점)
 *  LDAP : 디렉터리 서비스에 등록된 자원들을 찾는 통신 규약
 *  IRC : 실시간 채팅을 위해 만든 통신 규약
+#### GET/POST 문제점
+* GET 메서드와 마찬가지로 POST도 데이터를 전달할 때 '이름=값&이름=값' 형태를 사용
+* 문자 데이터를 보낼 때는 문제 없지만, 이미지나 동영상과 같은 바이너리 데이터를 보낼 때는 문제 발생
+* 바이널리 데이터 안에 '='이나 '&'의 문자 코드를 포함하여 잘못 해석 될 문제 발생
+#### 멀티파트 방식의 POST 요청 프로토콜 분석
+```html
+<form action="FileUploadServiet" method="post" enctype="multipart/form-data">
+사진 : <input type="file" name="photo"></bar>
+설명 : <textarea name="description" cols="50" rows="3"></textarea><br>
+<input type="submit" value="추가"><br>
+</form>
+```
+* 데이터에 파일을 첨부할 때는 매개변수를 정확히 구분하기 위해 특별한 구분자를 사용
+* Content-Type 헤더의 boundary 값이 바로 각각의 매개변수 값을 분리할 때 사용할 구분자를 정의
+* Content-Type : multipart/form-data; boundary=---Web ... Pyz
+* 파트 구분자 다음 라인을 보면 매개변수 정보가 나온다.
+* 만약 매개변수의 데이터가 파일인 경우 첨부 파일의 이름과 콘텐츠 유형 정보가 추가
+* 자바 웹 프로그래밍에서도 일반적인 형식과 멀티 파트 형식을 구분하여 데이터를 처리
+* 웹 서버에 파일을 첨부하여 보낼 경우에는 멀티 파트 인코딩이라는 아주 특별한 형식을 사용
 #### SOAP
 #### REST
