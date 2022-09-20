@@ -22,6 +22,7 @@ T I L
     * [CH12 인터페이스](https://github.com/1000004/TIL/tree/main/Java/CH12_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)
  ## Web
   * [웹 프로그래밍](https://github.com/yeRim650/TIL/tree/main/web)
+     * [용어](https://github.com/yeRim650/TIL/tree/main/web/term)
   * [HTML](https://github.com/yeRim650/TIL/tree/main/HTML)
   * [JSP](https://github.com/yeRim650/TIL/tree/main/jsp)
   * [Servlet](https://github.com/yeRim650/TIL/tree/main/servlet)
