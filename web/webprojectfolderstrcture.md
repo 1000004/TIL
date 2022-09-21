@@ -18,7 +18,7 @@
 * 톰캣 홈 폴더에 있는 webapps는 웹 애플리케이션을 배치하는 폴더
 * interface Servlet 과 abstract GenericServlet
 #### ServletRequest ServletResponse
-* ServeltRequest : 클라이언트 요청 정보를 다룰 때 사용
+* ServeltRequest : 클라이언트 요청 정보를 다룰 때 사용(getParameter(), getCharacterEncoding())
 * ServletResponse
     * 객체는 응답과 관련된 기능 제공
     * 클라이언트에게 출력하는 데이터의 인코딩 타입 설정, 문자집합을 지정, 출력 데이터를 임시 보관하는 버퍼의 크기 조정
