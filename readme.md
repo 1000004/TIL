@@ -30,6 +30,7 @@ T I L
   * [DataBase](https://github.com/yeRim650/TIL/tree/main/DB)
     * [SQL](https://github.com/yeRim650/TIL/tree/main/DB/SQL)
     * [DAO - TDD](https://github.com/yeRim650/TIL/tree/main/DB/DAO)
+    * [DTO VS VO](https://github.com/yeRim650/TIL/blob/main/DB/DTO_VO.md)
   * [Spring](https://github.com/yeRim650/TIL/tree/main/Spring)
     * [SpringMVC](https://github.com/yeRim650/TIL/tree/main/Spring/SpringMVC)
   * [Ajax](https://github.com/yeRim650/TIL/tree/main/Ajax)/[Json](https://github.com/yeRim650/TIL/tree/main/json)
