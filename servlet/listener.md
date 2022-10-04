@@ -6,3 +6,4 @@
 * HttpServltRequest에 특정한 작업에 대한 감시와 처리
 * **ServletContextListener**
   * 스프링 프레임워크를 웹 프로젝트에서 미리 로딩하는 작업을 처리할 때 ServletContextListener를 이용
+* **세션 관련 리스너**
