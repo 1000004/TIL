@@ -23,3 +23,4 @@ mvc:annotation-driven conversion-service="conversionService"
 * https://velog.io/@park2348190/Lombok-Builder%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC
 * https://devfunny.tistory.com/423
 * 디자인 패턴
+* 자바스크립트에서 백틱('')을 이용하면 문자열 결합에 '+'를 이용해야 하는 불편함을 줄일 수 있습니다. 대신에 JSP의 EL이 아니라는 것을 표시하기 위해서 '\${}'로 처리해야 한다
