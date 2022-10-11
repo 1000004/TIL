@@ -25,3 +25,5 @@ mvc:annotation-driven conversion-service="conversionService"
 * 디자인 패턴
 * 자바스크립트에서 백틱('')을 이용하면 문자열 결합에 '+'를 이용해야 하는 불편함을 줄일 수 있습니다. 대신에 JSP의 EL이 아니라는 것을 표시하기 위해서 '\${}'로 처리해야 한다
 * ModelMapper 설정
+* 클래스에는 의존성 주입 외에도 @Transactional 어노테이션을 적용
+* @Transactional을 적용하면 스프링은 해당 객체를 감싸는 별도의 클래스를 생성해 내는데 간혹 여러번의 데이터베이스 연결이 있을 수도 있으므로 트랜잭션 처리는 기본을 적용해 두는 것이 좋다
