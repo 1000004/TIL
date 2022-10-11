@@ -37,6 +37,7 @@ T I L
     * [SpringMVC](https://github.com/yeRim650/TIL/tree/main/Spring/SpringMVC)
   * [Ajax](https://github.com/yeRim650/TIL/tree/main/Ajax)/[Json](https://github.com/yeRim650/TIL/tree/main/json)
   * [JQuery](https://github.com/yeRim650/TIL/tree/main/jquery)
+  * [JPA](https://github.com/yeRim650/TIL/tree/main/JPA)
  ## My Readings
   * #### [Apprenticeship Patterns(프로그래머의 길, 멘토에게 묻다)](https://github.com/1000004/TIL/blob/main/ApprenticeshipPatterns.md)
   * #### [Miracle Mornning](https://github.com/1000004/TIL/blob/main/MIRACLE_MORNNING.md)
