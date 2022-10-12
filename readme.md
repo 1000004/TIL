@@ -35,7 +35,7 @@ T I L
     * [DTO VS VO](https://github.com/yeRim650/TIL/blob/main/DB/DTO_VO.md)
   * [Spring](https://github.com/yeRim650/TIL/tree/main/Spring)
     * [SpringMVC](https://github.com/yeRim650/TIL/tree/main/Spring/SpringMVC)
-  * [Ajax](https://github.com/yeRim650/TIL/tree/main/Ajax)/[Json](https://github.com/yeRim650/TIL/tree/main/json)
+  * [Ajax](https://github.com/yeRim650/TIL/tree/main/ajax)/[Json](https://github.com/yeRim650/TIL/tree/main/json)
   * [JQuery](https://github.com/yeRim650/TIL/tree/main/jquery)
   * [JPA](https://github.com/yeRim650/TIL/tree/main/JPA)
  ## My Readings
