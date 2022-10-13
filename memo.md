@@ -71,3 +71,5 @@ public class UTF8Filter implements Filter{
 }
 ```
 * 에러페이지
+* th:inline
+	* 상황에 따라서 동일한 데이터를 다르게 출력해 주는 인라인 기능운 자바스크립트를 사용할 때 편리한 기능
