@@ -29,3 +29,44 @@ mvc:annotation-driven conversion-service="conversionService"
 * @Transactional을 적용하면 스프링은 해당 객체를 감싸는 별도의 클래스를 생성해 내는데 간혹 여러번의 데이터베이스 연결이 있을 수도 있으므로 트랜잭션 처리는 기본을 적용해 두는 것이 좋다
 * spring boot로 CURD
 * @Valid
+* UTF-8 필터 처리
+```java
+package com.test.mybatis.filter;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+
+import lombok.extern.log4j.Log4j;
+
+@WebFilter
+@Log4j
+public class UTF8Filter implements Filter{
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response, 
+			FilterChain chain) throws IOException, ServletException {
+		log.info("Login check filter...");
+		HttpServletRequest req = (HttpServletRequest)request;
+		
+		req.setCharacterEncoding("UTF-8");
+		
+		chain.doFilter(request, response);
+	}
+
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+	}
+
+	@Override
+	public void destroy() {
+	}
+	
+}
+```
