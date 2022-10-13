@@ -73,3 +73,5 @@ public class UTF8Filter implements Filter{
 * 에러페이지
 * th:inline
 	* 상황에 따라서 동일한 데이터를 다르게 출력해 주는 인라인 기능운 자바스크립트를 사용할 때 편리한 기능
+* JPA의 상위 개념은 ORM(Object Relational Mapping)이라는 패러다임으로 이루어지는데 이는 '객체지향'으로 구서한 시스템을 '관계형 데이터베이스'에 매핑하는 패러다임
+* Spring Data JPA를 활용할 때 보다 적은 양의 코드로 많은 기능을 활용할 수 있다는 장점
