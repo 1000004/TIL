@@ -77,3 +77,5 @@ public class UTF8Filter implements Filter{
 * Spring Data JPA를 활용할 때 보다 적은 양의 코드로 많은 기능을 활용할 수 있다는 장점
 * 매핑하는 정보가 Class로 명시 되었기 때문에 ERD를 보는 의존도를 낮출 수 있고 유지보수 및 리팩토링에 유리
 * AuditingEntityListener를 활성화 시키기 위해서는 프로젝트의 설정에 @EnableJpaAuditing을 추가해 주어야만 한다
+* Querydsl을 이용한 동적 쿼리 처리
+	* JPA나 JPQL을 이요하면 SQL을 작성하거나 퀄리를 처리하는 소스 부분이 줄어들기 때문에 무척 편리하지만 어노테이션을 이용해서 지정하기 때문에 고정된 형태라는 단점
