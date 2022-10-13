@@ -21,6 +21,7 @@
   * JPA를 이용할 때는 테이블과 SQL을 다루는 것이 아니라 데이터에 해당하는 객체를 엔티티 객체라는 것으로 다루고 JSA로 이를 데이터베이스와 연동해서 관리
 * Pageable을 활용한 페이징
 * ModelMapper 설정
+  * 이처럼 ModelMapper 에서는 map(source, destination) 메소드가 호출되면 source 와 destination 의 타입을 분석하여 매칭 전략 및 기타 설정값에 따라 일치하는 속성을 결정
 * CURD 작업 처리
 * bootstrap 탬플릿으로 화면 구성
 * @Valid의 에러 메시지 처리
