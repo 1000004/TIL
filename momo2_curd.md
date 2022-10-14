@@ -9,7 +9,7 @@
    * DAO는 DB를 사용해 데이터를 조화하거나 조작하는 기능을 전담하도록 만든 객체
    * @Repository DAO와 같은 객체를 위한 어노테이션
 * DTO 검증 @Valid
-* 패이징,검색
+* 페이징,검색
   * PageRequestDTO, PageResponseDTO
 * bootstrap을 활용하여 jsp 구성
 ### Spring Boot
