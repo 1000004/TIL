@@ -79,3 +79,4 @@ public class UTF8Filter implements Filter{
 * AuditingEntityListener를 활성화 시키기 위해서는 프로젝트의 설정에 @EnableJpaAuditing을 추가해 주어야만 한다
 * Querydsl을 이용한 동적 쿼리 처리
 	* JPA나 JPQL을 이요하면 SQL을 작성하거나 퀄리를 처리하는 소스 부분이 줄어들기 때문에 무척 편리하지만 어노테이션을 이용해서 지정하기 때문에 고정된 형태라는 단점
+* 특정한 댓글을 눌렀을 때 모달창을 보여주도록 replyList에 이벤트 처리를 추가
