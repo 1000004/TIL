@@ -83,3 +83,4 @@ public class UTF8Filter implements Filter{
 * @OneToMany 게시물과 첨부파일의 관계 처리
 * @ManyToOne은 다른 엔티티 객체의 참조로 FK를 가지는 쪽에서 하는 방식
 * @OneToMany는 PK를 가진 쪽에서 사용
+* N+1문제가 발생할수 있다
