@@ -85,3 +85,4 @@ public class UTF8Filter implements Filter{
 * @OneToMany는 PK를 가진 쪽에서 사용
 * N+1문제가 발생할수 있다
 * 영속성의 전의
+* @OneToMany 구조를 사용하는 경우에 얻을 수 있는 장점 중에 하나가 바로 이러한 하위 엔티티의 처리입니다.
