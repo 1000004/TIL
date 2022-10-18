@@ -84,3 +84,4 @@ public class UTF8Filter implements Filter{
 * @ManyToOne은 다른 엔티티 객체의 참조로 FK를 가지는 쪽에서 하는 방식
 * @OneToMany는 PK를 가진 쪽에서 사용
 * N+1문제가 발생할수 있다
+* 영속성의 전의
