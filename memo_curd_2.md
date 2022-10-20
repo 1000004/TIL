@@ -1,5 +1,5 @@
-#### AJAX와 JSON
-**REST 방식**
+### AJAX와 JSON
+### **REST 방식**
 * URL - 하나는 하나의 자원을 식별할 수 있는 고유한 값 (자원)
 * GET/POST/PUT/DELETE - URL에 대한 작업
 * @RestController
@@ -10,10 +10,18 @@
 	* conumes 속성은 해당 메소드를 받아서 소비하는 데이터가 어떤 종류인지 명시
 	* MediaType.APPLICATION_JSON_VALUE (JSON 타입의 데이터를 처리하는 메소드)
 * @Valid 과정에서 문제가 있는 필드들과 메시지를 JSON 문자열로 전송  
-**JPA**
+### **JPA**
 * JPA에서 엔티티 간의 관계를 한쪽에서만 참조하는 '단방향'방식으로 구현
 	* Many ToOne 연관관계 - Reply
 	* 
-* BoardListReplyCountDTO - 목록에 댓글 수 표시
-**Axios**
-* 자바스크립트에서 Promise라는 개념을 도입해서 비동기 호출을 동기화된 방식으로 작성할 수 있도록 하는 문법적 장치
+* BoardListReplyCountDTO - 목록에 댓글 수 표시  
+### **Ajax**
+* **Axios** 
+	* 자바스크립트에서 Promise라는 개념을 도입해서 비동기 호출을 동기화된 방식으로 작성할 수 있도록 하는 문법적 장치
+		* Promise : 프로미스가 생성된 시점에는 알려지지 않았을 수도 있는 값을 위한 대리자
+	* async/await - 동기 처리를 동기화된 코드처럼 작성
+		* async는 함수 선언 시에 사용하는데 해당 함수가 비동기 처리를 위한 함수라는 것을 명시하기 위해서 사용
+		* await는 async 함수 내에서 비동기 호출하는 부분에 사용
+* 비동기 처리 방식
+	* Promise 반환
+	* html에서 then()과 catch()를 활용 
