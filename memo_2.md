@@ -29,3 +29,12 @@ Axios - 액시오스
 * CSRF 토큰은 사용자가 사이트를 이용할 때 매번 변겨되는 문자열을 생성하고 이를 요청 시에 검증하는 방식
 * 문자열이 변경되기 때문에 해당 문자열을 알지 못하면 A에서는 요청을 처리하지 않도록 한다
 * http.formLogin().loginPage("/member/login");와 같이 지정하면 POST 방식 처리 역시 같은 경로로 스프링 시큐리티 내부에서 처리
+* persistentTokenRepository()라는 메소드를 이용해 처리
+ * remember-me 쿠키를 생성할 때는 쿠키의 값을 인코딩하기 위한 키(key)값과 필요한 정보를 저장하는 tokenRepository를 지정
+* Thymeleaf Extras Springsecurity5 라이브러리 추가
+ * Thymeleaf에서 인증 정보를 처리하기 위해서는 Thymeleaf에서 스프링 시큐리티를 사용하기 위한 라이브러리를 이용
+ * 게시물 조회 BoardController에서 로그인한 사용자만 조회할 수 있도록 수정 - @PreAuthorize("isAuthenicated()")
+ * 인증 정보를 통해 본인이 작성한 게시글만 Modify button 존재
+ * @PreAuthorize("isAuthenicated()")인 경우 사용자 로그인이 안 되었다면 302 메시지와 함께 호긍니 경로로 이동하지만 403 에러는 앞의 그림과 같이 에러가 발생
+  * 403 사용자 권한이 없는경우/특정 조건이 맞지 않는 경우
+ * ????????/Handler
