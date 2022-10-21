@@ -11,8 +11,7 @@
 	* MediaType.APPLICATION_JSON_VALUE (JSON 타입의 데이터를 처리하는 메소드)
 ### **JPA**
 * JPA에서 엔티티 간의 관계를 한쪽에서만 참조하는 '단방향'방식으로 구현
-	* Many ToOne 연관관계 - Reply
-	* 
+	* Many To One 연관관계 - Reply
 * BoardListReplyCountDTO - 목록에 댓글 수 표시  
 ### **Ajax**
 * **Axios** 
