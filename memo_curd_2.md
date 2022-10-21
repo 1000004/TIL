@@ -33,4 +33,6 @@
 	* loadUserByUsername() - 로그인 처리 과정에서 호출 (UserDetails 인터페이스 타입 반환)
 		* UserDetails는 사용자 인증(Authentication)과 관련된 정보들을 저장하는 역할
 		* 스프링 시큐리티는 내부적으로 UserDetails 타입의 객체를 이용해 패스워드를 검사하고, 사용자 권한을 확인
-* CSRF 토튼 비활성화
+* 자동 로그인 - remember-me 쿠키 생성
+### 소셜 로그인 처리
+* OAuth2
