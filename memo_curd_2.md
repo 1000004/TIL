@@ -24,4 +24,14 @@
 		* await는 async 함수 내에서 비동기 호출하는 부분에 사용
 * 비동기 처리 방식
 	* Promise 반환
-	* html에서 then()과 catch()를 활용 
+	* then()과 catch()를 활용 
+### **스프링 시큐리티**
+> 인증 인가
+* CustomSecurityConfig
+	* filterChain() - 메소드 설정으로 모든 사용자가 모든 경로로 접근 가능
+	* webSecurityCustomizer() - 정적 자원은 스피링 시큐리티 적용 제외
+	* passwordEncoder() - PasswordEncoder 타입 반환 (패스워드 암호화)
+* CustomUserDetailsService
+	* loadUserByUsername() - 로그인 처리 과정에서 호출 (UserDetails 인터페이스 타입 반환)
+		* UserDetails는 사용자 인증(Authentication)과 관련된 정보들을 저장하는 역할
+		* 스프링 시큐리티는 내부적으로 UserDetails 타입의 객체를 이용해 패스워드를 검사하고, 사용자 권한을 확인
