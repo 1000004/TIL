@@ -38,3 +38,5 @@ Axios - 액시오스
  * @PreAuthorize("isAuthenicated()")인 경우 사용자 로그인이 안 되었다면 302 메시지와 함께 호긍니 경로로 이동하지만 403 에러는 앞의 그림과 같이 에러가 발생
   * 403 사용자 권한이 없는경우/특정 조건이 맞지 않는 경우
  * ????????/Handler
+* REST API를 사용한 로그인 구현
+* AuthenticationSucessHandler
