@@ -35,4 +35,5 @@
 		* 스프링 시큐리티는 내부적으로 UserDetails 타입의 객체를 이용해 패스워드를 검사하고, 사용자 권한을 확인
 * 자동 로그인 - remember-me 쿠키 생성
 ### 소셜 로그인 처리
-* OAuth2
+* OAuth2 - REST API를 사용한 로그인 구현
+* 로그인된 후에 전달되는 정보가 OAuth2User 타입을 처리하는 OAuth2UserService 인터페이스 구현
