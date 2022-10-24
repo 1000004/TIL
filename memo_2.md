@@ -40,3 +40,5 @@ Axios - 액시오스
  * ????????/Handler
 * REST API를 사용한 로그인 구현
 * AuthenticationSucessHandler
+* 브라우저에 필요한 화면의 모든 코드(HTML)를 서버에서 만들어 전송하는 방식을 **서버 사이드 렌더링(Server Side Rendering 이하 SSP)**
+* API 서버는 화면 구성은 별도의 클라이언트 프로그램에서 처리하고 서버에서는 순수한 데이터만 전송하게 됩니다. 이러한 구성을 '클라이언트 사이트 렌더링'이라고 합니다
