@@ -26,7 +26,7 @@
 ### **스프링 시큐리티**
 > 인증 인가
 * CustomSecurityConfig
-	* filterChain() - 메소드 설정으로 모든 사용자가 모든 경로로 접근 가능
+	* filterChain() - 메소드 설정으로 모든 사용자가 모든 경로로 접근 가능?
 	* webSecurityCustomizer() - 정적 자원은 스피링 시큐리티 적용 제외
 	* @EnableGlobalMethodSecurity의 prePostEnabled 속성은 사전 혹은 권?을 체크할 수 있습니다.
 * CustomUserDetailsService
