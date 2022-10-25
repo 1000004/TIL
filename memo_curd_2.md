@@ -9,6 +9,8 @@
 * @-Mapping 
 	* conumes 속성은 해당 메소드를 받아서 소비하는 데이터가 어떤 종류인지 명시
 	* MediaType.APPLICATION_JSON_VALUE (JSON 타입의 데이터를 처리하는 메소드)
+### **JSON**
+* javascript 객체 ← 브릿지 역활 → java 객체
 ### **JPA**
 * JPA에서 엔티티 간의 관계를 한쪽에서만 참조하는 '단방향'방식으로 구현
 	* Many To One 연관관계 - Reply
