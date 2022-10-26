@@ -30,7 +30,7 @@
 * CustomSecurityConfig
 	* SecurityFilterChain을 반환하는 method filterChain의 내부 코드를 통해 최소한의 설정으로 필요한 자원의 접근을 제어
 	* webSecurityCustomizer() - 정적 자원은 스피링 시큐리티 적용 제외
-	* @EnableGlobalMethodSecurity의 prePostEnabled 속성은 사전 혹은 권?을 체크할 수 있습니다.
+	* @EnableGlobalMethodSecurity의 prePostEnabled 속성은 원하는 곳에 사전 혹은 사후에 권한을 체크할 수 있습니다.
 * CustomUserDetailsService
 	* loadUserByUsername() - 로그인 처리 과정에서 호출 (UserDetails 인터페이스 타입 반환)
 		* UserDetails는 사용자 인증(Authentication)과 관련된 정보들을 저장하는 역할
