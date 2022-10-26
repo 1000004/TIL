@@ -7,7 +7,7 @@
 * @RequestBody
 	* JSON 문자열을 ReplyDTO로 변환하기 위해서 표시
 * @-Mapping 
-	* conumes 속성은 해당 메소드를 받아서 소비하는 데이터가 어떤 종류인지 명시
+	* consumes 속성은 해당 메소드를 받아서 소비하는 데이터가 어떤 종류인지 명시
 	* MediaType.APPLICATION_JSON_VALUE (JSON 타입의 데이터를 처리하는 메소드)
 ### **JSON**
 * javascript 객체 ← 브릿지 역할 → java 객체
