@@ -38,6 +38,7 @@
 * 자동 로그인 - remember-me 쿠키 생성
 ### 소셜 로그인 처리
 * OAuth2 - REST API를 사용한 로그인 구현
+	* 인가 코드 받기 → 토큰 받기 → 사용자 로그인 처리
 * 로그인된 후에 전달되는 정보는 OAuth2User 타입 
 * OAuth2User 타입을 처리하는 OAuth2UserService 인터페이스 구현
 ----------------
