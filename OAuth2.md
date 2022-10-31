@@ -44,15 +44,24 @@
 ![image](https://user-images.githubusercontent.com/102463200/198912837-168d58e5-c504-45f2-9f67-ea37a3a151a6.png)
 
 > Outh 2.0 참여자
-* Resurce Server : OAuth2.0 서비스를 제공하고, 자원을 관리하는 서버 (보통 gogle, naver 같은 다른 사이트)
-* Resurce Owner : 자원 소유 Resource Server의 계정을 소유하고 있는 사용자
+* Resurce Server(자원 서버) : OAuth2.0 서비스를 제공하고, 자원을 관리하는 서버 (보통 gogle, naver 같은 다른 사이트)
+* Resurce Owner(자원 소유자) : 자원 소유 Resource Server의 계정을 소유하고 있는 사용자
 * Client : Resource Server의 API를 사용하여 데이터를 가져오려고 하는 사이트 (개발 사이트)
-* Authorization Server : Client가 Resource Server의 서비스를 사용할 수 있게 인증하고 토큰을 발생해주는 서버
+* Authorization Server(권한 서버) : Client가 Resource Server의 서비스를 사용할 수 있게 인증하고 토큰을 발생해주는 서버
 ```
 * Access Token : 자원 서버에 자원을 요청할 수 있는 토큰
 * Refresh Token : 권한 서버에 접근 토큰을 요청할 수 있는 토큰
 ```
-### 인증 절차 종류
+### OAuth 1.0 인증 과정
+![image](https://user-images.githubusercontent.com/102463200/198916461-0a6901a9-da4f-429b-93db-2bcc72ee1505.png)
+> OAuth2의 프로토콜 흐름
+* (A) (앱 → 사용자) 사용자가 데이터에 접근하기 위해 권한을 요청
+* (B) (사용자 → 앱) 접근에 동의함을 증명하는 권한 부여 동의서를 발급
+* (C) (앱 → 권한 제공기관) **권한 부여 동의서**를 제출
+* (D) (권한 제공기관 → 앱) **권한 부여 동의서**를 확인하여 접근 토큰을 제공
+* (E) (앱 → 데이터 제공기관) 접근 토큰을 제출하여 사용자 데이터를 요청
+* (F) (데이터 제공기관 → 앱) 사용자 데이터를 제공
+### 권한 부여 동의서 정의 4가지
 * Autorization Code Grant 
   *  Client가 다른 사용자 대신 특정 리소스에 접근을 요청할 때 사용
   *  리소스 접근을 위해, Authorization Server에서 받은 권한 코드로 리소스에 대한 액세스 토큰을 받는 방식
@@ -65,7 +74,6 @@
   * Resurce Owner에서 ID, Password를 전달 받아 Resurce Server에 인증하는 방식으로 신뢰할 수 있는 Client인 경우 가능
 * Client Credentials Grant
   * Client가 컨텍스트 외부에서 엑세스 토큰을 얻어 특정 리소스에 접근을 요청할 때 사용하는 방식 
-### OAuth 2.0 인증 과정
 > Autorization Code Grant  
 
 ![image](https://user-images.githubusercontent.com/102463200/198913234-cdf8f073-d2c8-4248-9549-9a6d28e4cc9a.png)
