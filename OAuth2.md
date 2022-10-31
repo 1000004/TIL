@@ -16,7 +16,7 @@
   (인증이 완료된 후에는 Access Token으로 교환)
 * Access Token : 인증 후 Consumer가 Service Provider의 자원에 접근하기 위해 키를 포함한 값.
 ```
-### OAuth 1.0 인증 과정
+### OAuth 2.0 인증 과정
 ![image](https://user-images.githubusercontent.com/102463200/198912658-2e563274-2d5c-4f5d-aebd-9c9bd9cadea4.png)
 
 > **Request Token**의 요청과 발급 → 사용자 인증 페이지 호출 → 사용자 로그인 완료 → 사용자의 권한 요청 및 수락  
