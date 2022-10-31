@@ -4,6 +4,7 @@
 > 간단하게 인증과 권한을 회득
 * third party Application에 아이디와 비밀번호를 제공하고 싶지 않은 요구
 * 개인정보를 여러곳에 입력하면 피싱에 둔감해지고 Application이 안전하다는 보장이 없기 때문에 보안에 취약
+  * Token
 ### Oauth 1.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198908308-c62e06d5-22e4-49a0-bc98-d68c798c10b8.png)
 > Oauth 1.0 참여자  
