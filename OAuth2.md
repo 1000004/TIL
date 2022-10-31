@@ -8,7 +8,7 @@
 ### Oauth 1.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198908308-c62e06d5-22e4-49a0-bc98-d68c798c10b8.png)
 > Oauth 1.0 참여자  
-* **Service provider** : OAuth를 사용하는 Open API를 제공하는 서비스
+* **Service provider** : 	OAuth를 사용하는 Open API를 제공하는 서비스
 * **User** : Service Provider에 계정을 가지고 있으면서, Consumer를 이용하려는 사용자
 * **Consumer** : OAuth 인증을 사용해 Service Provider의 기능을 사용하려는 애플리케이션이나 웹 서비스
 ```
