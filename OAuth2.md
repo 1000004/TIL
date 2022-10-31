@@ -33,7 +33,7 @@
 ![image](https://user-images.githubusercontent.com/102463200/198911779-2fec867e-1117-40cd-9331-5209484aac1c.png)
 ### OAuth 2.0 특징
 * 웹어플리케이션이 아닌 애플리케이션 지원 강화
-* 암호하가 필요 없음 (HTTPS를 사용하고 HMAC을 사용하지 않는다)
+* 암호화가 필요 없음 (HTTPS를 사용하고 HMAC을 사용하지 않는다)
 * Siganature 단순하다 (정렬과 URL 인코딩이 필요 없다)
 * OAuth 2.0에서는 보안 강화를 위해 Access Token의 Life-time을 지정할 수 있다.
 * 기능 단순화, 기능과 규모의 확정성 등을 지원하기 위해 만들어 짐
