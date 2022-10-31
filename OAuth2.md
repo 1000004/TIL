@@ -15,7 +15,7 @@
   (인증이 완료된 후에는 Access Token으로 교환)
 * Access Token : 인증 후 Consumer가 Service Provider의 자원에 접근하기 위해 키를 포함한 값.
 ```
-### OAuth 인증 과정
+### OAuth 1.0 인증 과정
 ![image](https://user-images.githubusercontent.com/102463200/198912658-2e563274-2d5c-4f5d-aebd-9c9bd9cadea4.png)
 
 > **Request Token**의 요청과 발급 → 사용자 인증 페이지 호출 → 사용자 로그인 완료 → 사용자의 권한 요청 및 수락  
@@ -27,14 +27,19 @@
 ## OAuth 2.0
 > OAuth 1.0 단점  
 > 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다  
-> 절차가 복잡하여 OAuth 구현 라이브러리 제작이 어려워 복잡한 절차 때문에 Service Provider에게도 연산 부다밍 발생  
+> 절차가 복잡하여 OAuth 구현 라이브러리 제작이 어렵다  
+> 복잡한 절차로 Service Provider에게도 연산 부담 발생  
 
 ![image](https://user-images.githubusercontent.com/102463200/198911779-2fec867e-1117-40cd-9331-5209484aac1c.png)
 ### OAuth 2.0 특징
 * 웹어플리케이션이 아닌 애플리케이션 지원 강화
 * 암호하가 필요 없음 (HTTPS를 사용하고 HMAC을 사용하지 않는다)
-* Siganature 단순하 (정렬과 URL 인코딩이 필요 없다)
-* Access Token 갱신  
+* Siganature 단순하다 (정렬과 URL 인코딩이 필요 없다)
+* OAuth 2.0에서는 보안 강화를 위해 Access Token의 Life-time을 지정할 수 있다.
+* 기능 단순화, 기능과 규모의 확정성 등을 지원하기 위해 만들어 짐
+* 1.0a는 만들어진 다음 표준아 된 반면 2.0은 처음부터 표준 프로세스로 만들어짐
+* 1.0a는 인증방식이 한가지 였지만 2는 다양한 인증방식을 지원
+* api 서버에서 인증서버를 분리 할 수 있도록 해 놓아다
 ### Oauth 2.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198912837-168d58e5-c504-45f2-9f67-ea37a3a151a6.png)
 
