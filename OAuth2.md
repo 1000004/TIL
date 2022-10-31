@@ -13,7 +13,7 @@
 ```
 * Request Token : Consumer가 Service Provider에게 접근 권한을 인증받기 위해 사용하는 값.   
   (인증이 완료된 후에는 Access Token으로 교환)
-* Access Token : 인증 후 Consumer가 Service Provider의 자원에 접근하기 위해 키를 포함한 값
+* Access Token : 인증 후 Consumer가 Service Provider의 자원에 접근하기 위해 키를 포함한 값.
 ```
 ### OAuth 인증 과정
 ![image](https://user-images.githubusercontent.com/102463200/198912658-2e563274-2d5c-4f5d-aebd-9c9bd9cadea4.png)
