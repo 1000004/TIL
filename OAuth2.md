@@ -56,7 +56,7 @@
 * Access Token : 자원 서버에 자원을 요청할 수 있는 토큰
 * Refresh Token : 권한 서버에 접근 토큰을 요청할 수 있는 토큰
 ```
-### OAuth 1.0 인증 과정
+### OAuth 2.0 인증 과정
 ![image](https://user-images.githubusercontent.com/102463200/198916461-0a6901a9-da4f-429b-93db-2bcc72ee1505.png)
 > OAuth2의 프로토콜 흐름
 * (A) (앱 → 사용자) 사용자가 데이터에 접근하기 위해 권한을 요청
