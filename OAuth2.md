@@ -62,17 +62,17 @@
 * (E) (앱 → 데이터 제공기관) 접근 토큰을 제출하여 사용자 데이터를 요청
 * (F) (데이터 제공기관 → 앱) 사용자 데이터를 제공
 ### 권한 부여 동의서 정의 4가지
-* Autorization Code Grant 
+* Autorization Code Grant(권한 부여 코드 승인) 
   *  Client가 다른 사용자 대신 특정 리소스에 접근을 요청할 때 사용
   *  리소스 접근을 위해, Authorization Server에서 받은 권한 코드로 리소스에 대한 액세스 토큰을 받는 방식
   *  다른 인증 절차에 비해 보안성이 높기 때문에 주로 사용
-* Implicit Grant
+* Implicit Grant(암묵적 승인)
   * Authorization Code Grant과 다르게 권한 코드 교환 단계가 있음
   * 엑세스 토큰을 즉시 반환받아 이를 인증에 사용하는 방식
-* Resurce Owner Passward Credentials Grant
+* Resurce Owner Passward Credentials Grant(리소스 소유자 암호 자격 승인)
   * Client 암호를 사용하여 액세스 토큰에 대한 사용자의 자격 증명을 교화하는 방식
   * Resurce Owner에서 ID, Password를 전달 받아 Resurce Server에 인증하는 방식으로 신뢰할 수 있는 Client인 경우 가능
-* Client Credentials Grant
+* Client Credentials Grant(클라이언트 자격 승인)
   * Client가 컨텍스트 외부에서 엑세스 토큰을 얻어 특정 리소스에 접근을 요청할 때 사용하는 방식 
 > Autorization Code Grant  
 
