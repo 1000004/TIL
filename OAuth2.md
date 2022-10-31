@@ -4,7 +4,7 @@
 > 간단하게 인증과 권한을 회득
 * third party Application에 아이디와 비밀번호를 제공하고 싶지 않은 요구
 * 개인정보를 여러곳에 입력하면 피싱에 둔감해지고 Application이 안전하다는 보장이 없기 때문에 보안에 취약
-  * Token
+  * 컨슈머가 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 안증 토큰 활용
 ### Oauth 1.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198908308-c62e06d5-22e4-49a0-bc98-d68c798c10b8.png)
 > Oauth 1.0 참여자  
@@ -39,9 +39,11 @@
 * Siganature 단순하다 (정렬과 URL 인코딩이 필요 없다)
 * OAuth 2.0에서는 보안 강화를 위해 Access Token의 Life-time을 지정할 수 있다.
 * 기능 단순화, 기능과 규모의 확정성 등을 지원하기 위해 만들어 짐
+  * api 서버에서 인증서버를 분리
+  * 인증서버의 분리와 다중화 등에 대한 고려됨
 * 1.0a는 만들어진 다음 표준이 된 반면 2.0은 처음부터 표준 프로세스로 만들어짐
 * 1.0a는 인증방식이 한가지 였지만 2는 다양한 인증방식을 지원
-* api 서버에서 인증서버를 분리 할 수 있도록 해 놓았다
+  * OAuth 1.0a는 HMAC을 이용한 암호화 인증 방식만 제공
 ### Oauth 2.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198912837-168d58e5-c504-45f2-9f67-ea37a3a151a6.png)
 
