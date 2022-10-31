@@ -22,7 +22,7 @@
 > → **Access Token** 발급 → **Access Token**을 이용해 서비스 정보 요청
 * **Access Token을 가지고 있는 Consumer는 사전에 호출이 허락된 Service Provider의 오픈 API를 호출**
 ### oauth_signature 만들기
-> Request Token 발급 요청시 발급 되는 oauth_signature 매개변수
+> Request Token 발급 요청시 생성되는 oauth_signature 매개변수
 * HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0에서는 oauth_signature를 생성하는 것이 가장 까다롭다
 ## OAuth 2.0
 > OAuth 1.0 단점  
