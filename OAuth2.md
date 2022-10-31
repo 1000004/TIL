@@ -15,7 +15,7 @@
 #### oauth_signature 만들기
 > Request Token 발급 요청시 발급 되는 oauth_signature 매개변수
 * HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0에서는 oauth_signature를 생성하는 것이 가장 까다롭다
-#### OAuth 2.0
+### OAuth 2.0
 > Oauth 1.0 단점  
 > 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다  
 > 절차가 복잡하여 OAuth 구현 라이브러리 제작이 어려워 복잡한 절차 때문에 Service Provider에게도 연산 부다밍 발생  
