@@ -4,7 +4,7 @@
 > 간단하게 인증과 권한을 획득
 * 외부 Application에 아이디와 비밀번호를 제공하고 싶지 않은 요구
 * 개인정보를 여러곳에 입력하면 피싱에 둔감해지고 Application이 안전하다는 보장이 없기 때문에 보안에 취약
-  * Consumer가 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 인증 토큰 활용
+  * 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 인증 토큰 활용
 ### OAuth 1.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198908308-c62e06d5-22e4-49a0-bc98-d68c798c10b8.png)
 > Oauth 1.0 참여자  
@@ -25,7 +25,7 @@
 ### oauth_signature 만들기
 > 권한을 준 행위가 이루어졌음을 프로그램을 통해 증명하는 방식으로 **서명(Signature)** 을 이용  
 > Request Token, Access Token 발급 요청시 생성되는 매개변수 oauth_signature
-* HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0에서는 oauth_signature를 생성하는 것이 가장 까다롭다
+* HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0에서는 가장 까다로운 과정이다.
 ## OAuth 2.0
 > OAuth 1.0 단점  
 > > 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다.  
