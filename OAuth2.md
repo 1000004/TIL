@@ -25,7 +25,7 @@
 ### oauth_signature 만들기
 > 권한을 준 행위가 이루어졌음을 프로그램을 통해 증명하는 방식으로 **서명(Signature)** 을 이용  
 > Request Token, Access Token 발급 요청시 생성되는 매개변수 oauth_signature
-* HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0에서는 가장 까다로운 과정이다.
+* HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0 인증  가장 까다로운 과정이다.
 ## OAuth 2.0
 > OAuth 1.0 단점  
 > > 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다.  
@@ -35,7 +35,7 @@
 ![image](https://user-images.githubusercontent.com/102463200/198911779-2fec867e-1117-40cd-9331-5209484aac1c.png)
 ### OAuth 2.0 특징
 * 웹어플리케이션이 아닌 애플리케이션 지원 강화
-* 암호화가 필요 없음 (HTTPS를 사용하고 HMAC을 사용하지 않는다)
+* 암호화가 필요 없음 (HTTPS를 사용하고 HMAC는 사용하지 않는다)
 * OAuth 2.0에서는 보안 강화를 위해 Access Token의 Life-time을 지정할 수 있다.
 * 기능 단순화, 기능과 규모의 확정성 등을 지원하기 위해 만들어짐
   * 인증서버의 분리와 다중화 등에 대한 고려
