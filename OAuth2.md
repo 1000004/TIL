@@ -7,7 +7,7 @@
   * 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 인증 토큰 활용
 ### OAuth 1.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198908308-c62e06d5-22e4-49a0-bc98-d68c798c10b8.png)
-> Oauth 1.0 참여자  
+> OAuth 1.0 참여자  
 * **Service provider** : 	OAuth를 사용하는 Open API를 제공하는 서비스
 * **User** : Service Provider에 계정을 가지고 있으면서, Consumer를 이용하려는 사용자
 * **Consumer** : OAuth 인증을 사용해 Service Provider의 기능을 사용하려는 애플리케이션이나 웹 서비스
@@ -45,7 +45,7 @@
 ### OAuth 2.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198912837-168d58e5-c504-45f2-9f67-ea37a3a151a6.png)
 
-> Outh 2.0 참여자
+> OAuth 2.0 참여자
 * Resurce Server(자원 서버) : OAuth2.0 서비스를 제공하고, 자원을 관리하는 서버 (보통 gogle, naver 같은 다른 사이트)
 * Resurce Owner(자원 소유자) : Resource Server의 계정을 소유하고 있는 사용자
 * Client : Resource Server의 API를 사용하여 데이터를 가져오려고 하는 사이트 (개발 사이트)
