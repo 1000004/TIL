@@ -36,22 +36,20 @@
 ### OAuth 2.0 특징
 * 웹어플리케이션이 아닌 애플리케이션 지원 강화
 * 암호화가 필요 없음 (HTTPS를 사용하고 HMAC을 사용하지 않는다)
-* Siganature 단순하다 (정렬과 URL 인코딩이 필요 없다)
 * OAuth 2.0에서는 보안 강화를 위해 Access Token의 Life-time을 지정할 수 있다.
 * 기능 단순화, 기능과 규모의 확정성 등을 지원하기 위해 만들어짐
-  * api 서버에서 인증서버를 분리
   * 인증서버의 분리와 다중화 등에 대한 고려
 * 1.0a는 만들어진 다음 표준이 된 반면 2.0은 처음부터 표준 프로세스로 만들어짐
-* 1.0a는 인증방식이 한가지 였지만 2는 다양한 인증방식을 지원
+* 1.0a는 인증방식이 한가지 였지만 2.0는 다양한 인증방식을 지원
   * OAuth 1.0a는 HMAC을 이용한 암호화 인증 방식만 제공
 ### OAuth 2.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198912837-168d58e5-c504-45f2-9f67-ea37a3a151a6.png)
 
 > Outh 2.0 참여자
 * Resurce Server(자원 서버) : OAuth2.0 서비스를 제공하고, 자원을 관리하는 서버 (보통 gogle, naver 같은 다른 사이트)
-* Resurce Owner(자원 소유자) : 자원 소유 Resource Server의 계정을 소유하고 있는 사용자
+* Resurce Owner(자원 소유자) : Resource Server의 계정을 소유하고 있는 사용자
 * Client : Resource Server의 API를 사용하여 데이터를 가져오려고 하는 사이트 (개발 사이트)
-* Authorization Server(권한 서버) : Client가 Resource Server의 서비스를 사용할 수 있게 인증하고 토큰을 발생해주는 서버
+* Authorization Server(권한 서버) : Client가 Resource Server의 서비스를 사용할 수 있게 인증하고 토큰을 생성해주는 서버
 ```
 * Access Token : 자원 서버에 자원을 요청할 수 있는 토큰
 * Refresh Token : 권한 서버에 접근 토큰을 요청할 수 있는 토큰
@@ -93,7 +91,8 @@
 
 ------------
 ### OAuth vs JWT
-* JWT는 토큰의 종류
-* OAuth는 토큰을 발급하고 인증하는 오픈 스탠다드 프로토콜
+> JWT는 토큰의 종류  
+> OAuth는 토큰을 발급하고 인증하는 오픈 스탠다드 프로토콜  
 * JWT는 토큰 자체에 유저 정보를 담고 있기 때문에 HTTP 헤더에 실어 전달함으로써 유저 세션을 유지할 필요가 없고 가볍게 데이터를 주고받을 수 있다는 장점이 있다
-* OAuth에서 주로 bearer라는 토큰 사용 bearer 토큰은 유저 정보와 같은 명확한 정보를 가지고 있지 않은 토큰
+* OAuth에서 주로 bearer라는 토큰 사용
+  * bearer 토큰은 유저 정보와 같은 명확한 정보를 가지고 있지 않은 토큰을 말한다
