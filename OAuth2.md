@@ -25,7 +25,7 @@
 ### oauth_signature 만들기
 > 권한을 준 행위가 이루어졌음을 프로그램을 통해 증명하는 방식으로 **서명(Signature)** 을 이용  
 > Request Token, Access Token 발급 요청시 생성되는 매개변수 oauth_signature
-* HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0 인증  가장 까다로운 과정이다.
+* HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0 인증 과정에서 가장 까다롭다.
 ## OAuth 2.0
 > OAuth 1.0 단점  
 > > 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다.  
