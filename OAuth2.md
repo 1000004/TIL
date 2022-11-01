@@ -45,7 +45,7 @@
 ![image](https://user-images.githubusercontent.com/102463200/198912837-168d58e5-c504-45f2-9f67-ea37a3a151a6.png)
 
 > OAuth 2.0 참여자
-* Resurce Server(자원 서버) : OAuth2.0 서비스를 제공하고, 자원을 관리하는 서버 (보통 gogle, naver 같은 다른 사이트)
+* Resurce Server(자원 서버) : OAuth2.0 서비스를 제공하고, 자원을 관리하는 서버 (보통 gogle, naver 같은 사이트)
 * Resurce Owner(자원 소유자) : Resource Server의 계정을 소유하고 있는 사용자
 * Client : Resource Server의 API를 사용하여 데이터를 가져오려고 하는 사이트 (개발 사이트)
 * Authorization Server(권한 서버) : Client가 Resource Server의 서비스를 사용할 수 있게 인증하고 토큰을 생성해주는 서버
