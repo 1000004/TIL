@@ -1,10 +1,10 @@
 ## OAuth
 * **OAuth**는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대한 웹 사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준
 ### OAuth의 배경
-> 간단하게 인증과 권한을 회득
+> 간단하게 인증과 권한을 획득
 * 외부 Application에 아이디와 비밀번호를 제공하고 싶지 않은 요구
 * 개인정보를 여러곳에 입력하면 피싱에 둔감해지고 Application이 안전하다는 보장이 없기 때문에 보안에 취약
-  * Consumer가 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 안증 토큰 활용
+  * Consumer가 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 인증 토큰 활용
 ### OAuth 1.0 용어
 ![image](https://user-images.githubusercontent.com/102463200/198908308-c62e06d5-22e4-49a0-bc98-d68c798c10b8.png)
 > Oauth 1.0 참여자  
@@ -24,7 +24,7 @@
 * **Access Token을 가지고 있는 Consumer는 사전에 호출이 허락된 Service Provider의 오픈 API를 호출**
 ### oauth_signature 만들기
 > 권한을 준 행위가 이루어졌음을 프로그램을 통해 증명하는 방식으로 **서명(Signature)** 을 이용  
-> Request Token 발급 요청시 생성되는 매개변수 oauth_signature
+> Request Token, Access Token 발급 요청시 생성되는 매개변수 oauth_signature
 * HMAC 암호화 방법을 이용하여 oauth_signature를 생성되는데 OAuth 1.0에서는 oauth_signature를 생성하는 것이 가장 까다롭다
 ## OAuth 2.0
 > OAuth 1.0 단점  
