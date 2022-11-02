@@ -73,8 +73,10 @@
 * Resurce Owner Passward Credentials Grant(리소스 소유자 암호 자격 승인)
   * Client 암호를 사용하여 액세스 토큰에 대한 사용자의 자격 증명을 교환하는 방식
   * Resurce Owner에서 ID, Password를 전달 받아 Resurce Server에 인증하는 방식으로 신뢰할 수 있는 Client인 경우 가능
+  * 자신의 서비스에서 제공하는 어플리케이션일 경우에만 사용되는 인증 방식
 * Client Credentials Grant(클라이언트 자격 승인)
   * Client가 컨텍스트 외부에서 엑세스 토큰을 얻어 특정 리소스에 접근을 요청할 때 사용하는 방식 
+  * OAuth2의 권한 부여 방식 중 가장 간단한 방식으로 클라이언트 자신이 관리하는 리소스 혹은 권한 서버에 해당 클라이언트를 위한 제한된 리소스 접근 권한이 설정되어 있는 경우 사용
 > Autorization Code Grant  
 
 ![image](https://user-images.githubusercontent.com/102463200/198913234-cdf8f073-d2c8-4248-9549-9a6d28e4cc9a.png)
