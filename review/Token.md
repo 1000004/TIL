@@ -28,7 +28,7 @@
  3. **서명** : 헤더와 페이로드를 디코딩한 값을 합치고 서버가 가지고 있는 secret key를 포함해서 암호화
 
 > Access Token, Refresh Token  
-* 본인을 인증할 수 있는 Access Token은 짧은 기간에만 사용할 수 있도록 하고 유효 기간이 지나면 만료된 Access Token과 함께 보내진 Refresh Token으로 새로운 AccessToken을 발급 받는 과정을 거칩니다.
+* 본인을 인증할 수 있는 Access Token은 짧은 기간에만 사용할 수 있도록 하고 유효 기간이 지나면 만료된 Access Token과 함께 보내진 유효한 Refresh Token이 있다면 새로운 AccessToken을 발급 받게 됩니다.
 ### JWT의 장점과 단점
 >장점
 * JSON 코드 언어로 생성된 토큰은 용량이 작아 매우 빠르게 전달
