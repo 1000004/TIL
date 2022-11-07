@@ -89,11 +89,3 @@
 > Client Credentials Grant Type (클라이언트 자격 승인)
 
 ![image](https://user-images.githubusercontent.com/102463200/198929812-1ad5a6e0-dc96-4799-9dc9-95c681b55279.png)
-
-------------
-### OAuth vs JWT
-> JWT는 토큰의 종류  
-> OAuth는 토큰을 발급하고 인증하는 오픈 스탠다드 프로토콜  
-* JWT는 토큰 자체에 유저 정보를 담고 있기 때문에 HTTP 헤더에 실어 전달함으로써 유저 세션을 유지할 필요가 없고 가볍게 데이터를 주고받을 수 있다는 장점이 있다
-* OAuth에서 주로 bearer라는 토큰 사용
-  * bearer 토큰은 유저 정보와 같은 명확한 정보를 가지고 있지 않은 토큰을 말한다
