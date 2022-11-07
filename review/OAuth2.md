@@ -2,7 +2,7 @@
 * **OAuth**는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대한 웹 사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준
 ### OAuth의 배경
 > 간단하게 인증과 권한을 획득
-* 사용자가 외부 Application에 아이디와 비밀번호를 제공하고 싶지 않은 요구
+* 외부 Application에 아이디와 비밀번호를 제공하고 싶지 않은 요구
 * 개인정보를 여러곳에 입력하면 피싱에 둔감해지고 Application이 안전하다는 보장이 없기 때문에 보안에 취약
   * 아이디/패스워드를 가지지 않고 API를 사용할 수 있도록 인증 토큰 활용
 ### OAuth 1.0 용어
@@ -89,3 +89,6 @@
 > Client Credentials Grant Type (클라이언트 자격 승인)
 
 ![image](https://user-images.githubusercontent.com/102463200/198929812-1ad5a6e0-dc96-4799-9dc9-95c681b55279.png)
+
+#### 참고 문서
+OAuth-란-무엇일까 <https://showerbugs.github.io/2017-11-16/OAuth-%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C>
