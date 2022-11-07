@@ -28,9 +28,9 @@
 * HMAC 암호화 방법을 적용하여 oauth_signature가 생성되며 OAuth 1.0 인증에서 가장 까다로운 과정이다.
 ## OAuth 2.0
 > OAuth 1.0 단점  
-> > 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다.  
-> > 절차가 복잡하여 OAuth 구현 라이브러리 제작이 어렵다.  
-> > 복잡한 절차로 Service Provider에게도 연산 부담이 발생한다. 
+> > - 웹 애플리케이션이 아닌 애플리케이션에서는 사용이 곤란하다.  
+> > - 절차가 복잡하여 OAuth 구현 라이브러리 제작이 어렵다.  
+> > - 복잡한 절차로 Service Provider에게도 연산 부담이 발생한다. 
 
 ![image](https://user-images.githubusercontent.com/102463200/198911779-2fec867e-1117-40cd-9331-5209484aac1c.png)
 ### OAuth 2.0 특징
