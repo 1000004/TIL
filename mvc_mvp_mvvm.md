@@ -26,6 +26,7 @@
   4. Model은 View Model에게 요청받은 데이터를 응답
   5. View Model은 응답 받은 데이터를 가공 저장
   6. View View Model과 **Data Binding**하며 화면을 나타남
-* Command Pattern
+# Command Pattern
+* 커맨드 패턴은 객체의 행위(메서드)를 클래스로 만들어 캡슐화 하는 패턴
 # OCP
 * 기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계가 되어야 한다.
