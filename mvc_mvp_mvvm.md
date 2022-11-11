@@ -1,4 +1,4 @@
-#MVC
+# MVC
 * 각각의 역할을 나눠 코드 관리를 하자
 * MVC패턴은 Model+View+Controller를 합친 용어
 * Model : 어플리케이션에서 사용되는 데이터와 그 데이터를 처리하는 부분
@@ -8,13 +8,13 @@
 * (view는 Controller를 알지 못합니다.)
 * MVC 패턴의 단점은 View와 Model 사이의 의존성이 높다
 * View와 Model의 높은 의존성은 어플리케이션이 커질수록 복잡하고 유지보수가 어렵게 만들 수 있습니다.
-#MVP
+# MVP
 * Model+View+Presenter를 합친 용어
 * Controller 대신 Presenter가 존재
 * Presenter : View에서 요청한 정보로 Model을 가공하여 View에 전달해 주는 부분
 * Presenter는 View와 Model의 인스턴스를 가지고 있어 둘을 연결하는 접착제 역할(Presnter와 View는 1:1관계)
 * 어플리케이션이 복잡해 질 수록 View와 Presenter 사이의 의존성이 강해지는 단점
-#MVVM
+# MVVM
 * Model + View + View Model를 합친 용어
 * Model : 어플리케이션에서 사용되는 데이터와 그 데이터를 처리하는 부분
 * View : 사용자에서 보여지는 UI부분
@@ -26,3 +26,6 @@
   4. Model은 View Model에게 요청받은 데이터를 응답
   5. View Model은 응답 받은 데이터를 가공 저장
   6. View View Model과 **Data Binding**하며 화면을 나타남
+* Command Pattern
+# OCP
+* 기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계가 되어야 한다.
