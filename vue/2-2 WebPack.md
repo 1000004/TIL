@@ -35,3 +35,9 @@ module.exports = {
   },
 };
 ```
+## npm
+* npm은 Node Packaged Manager의 약자
+* npm이라는 것은 Node.js로 만들어진 pagkage(module)을 관리해주는 툴
+```JS
+npm run build
+```
