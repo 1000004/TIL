@@ -40,3 +40,7 @@
     });
 </script>
 ```
+* 컴포넌트는 인스턴스보다는 위
+* 스크립트는 div#root보다는 아래
+* compent 중복을 피하고 재사용하기 위해 쓰이지만 달라지는 부분은 props로 넣어 준다
+* Vue는 Kebab-Case 사용 JS에서는 알아서 CamelCase로 변경 (React와 다른점)
