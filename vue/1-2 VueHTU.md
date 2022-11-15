@@ -7,7 +7,8 @@
   * Vue를 이용하여 최소화
 * Vue를 이용한 개발시 모든 화면을 만들어 놓은 상태로 데이터를 바꾼다 → 데이터가 변경되면 화면이 바뀐다
 ```HTML
- <script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+<script>
     const app = new Vue({
       el: '#root',
       data: {
