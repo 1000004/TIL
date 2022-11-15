@@ -6,3 +6,19 @@
 * 어플리케이션이 복잡해지면 데이터 화면이 틀어지는 현상이 발생
   * Vue를 이용하여 최소화
 * Vue를 이용한 개발시 모든 화면을 만들어 놓은 상태로 데이터를 바꾼다 → 데이터가 변경되면 화면이 바뀐다
+```HTML
+ <script>
+    const app = new Vue({
+      el: '#root',
+      data: {
+        value: '',
+      },
+      methods: {
+           onSubmitForm(e) {
+             e.preventDefault();
+           }
+        }
+      }
+    })  
+  </script>
+```
