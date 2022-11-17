@@ -6,6 +6,7 @@
 * node 환경에 require 사용
 * Vue 환경에 import 사용
 ### webpack 설정 파일
+* plugins output으로 나오기전 추가적인 작업
 > webpack.config.js
 ```JS
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
