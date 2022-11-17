@@ -33,6 +33,8 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.join(__dirname, 'dist'),
+    publicPath: '/dist', // webpake dev server 사용 위함
+    
   },
 };
 ```
@@ -41,4 +43,31 @@ module.exports = {
 * npm이라는 것은 Node.js로 만들어진 pagkage(module)을 관리해주는 툴
 ```JS
 npm run build
+webpake dev server // 특징 webpake output을 파일로 저장하는 것이 아니라 메모리에 저장
+```
+## package-lock
+```JS
+{
+  "name": "response-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch",
+    "dev": "webpack-dev-server --hot" // webpake dev server 사용 위함
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.7.14"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.2",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.7.14",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
 ```
