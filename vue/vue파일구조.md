@@ -18,8 +18,8 @@
       },
     },
 </script>
-
-<style scoped> // compent에만 적용 되도록 scoped
+<!-- compent에만 적용 되도록 scoped -->
+<style scoped>
   #computer {
     width: 142px;
     height: 200px;
