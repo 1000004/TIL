@@ -26,5 +26,5 @@
     background-position: 0 0;
   }
 </style>
-```HTML
-* vue의 성능 최적화
+```
+* vue의 성능 최적화 중요
