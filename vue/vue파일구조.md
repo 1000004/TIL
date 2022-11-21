@@ -17,6 +17,9 @@
       onClickButton(choice) {
       },
     },
+    watch: { //감시하는 기능
+      
+    }
 </script>
 <!-- compent에만 적용 되도록 scoped -->
 <style scoped>
