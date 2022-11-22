@@ -32,3 +32,6 @@
 ```
 * vue의 성능 최적화 중요
 * 최대한 watch를 쓰지 않는다 (남용 하면 제어가 어렵다., 무한 반복이 일어 날 수 있다.)
+* computed와 watch
+  * watch는 data나 props가 변경되면 동작 수행
+  * computed는 data나 props가 변경되면 새로운 값을 반환
