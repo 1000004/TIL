@@ -35,3 +35,4 @@
 * computed와 watch
   * watch는 data나 props가 변경되면 동작 수행
   * computed는 data나 props가 변경되면 새로운 값을 반환
+* 화살표 함수에서 this를 못쓰지만 일반 함수에서는 사용 가능
