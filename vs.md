@@ -18,3 +18,7 @@ auto rename tag
 alt  중복 커서
 
 placeholder
+
+Ctrol + Shift + L
+Ctrl + D
+Ctrl + Shif + D
