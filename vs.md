@@ -19,6 +19,11 @@ alt  중복 커서
 
 placeholder
 
-Ctrol + Shift + L
+Ctrl + Shift + L
 Ctrl + D
 Ctrl + Shif + D
+
+한 줄 주석 단축키
+ctrl + /
+여러 줄 주석 단축키
+alt + shift + a
