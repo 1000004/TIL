@@ -31,3 +31,4 @@ alt + shift + a
 * pull 방법
 * commit방법
 * 새 브랜치 따는 법
+* ctrl + shift + p
