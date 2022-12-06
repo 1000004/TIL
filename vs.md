@@ -27,3 +27,7 @@ Ctrl + Shif + D
 ctrl + /
 여러 줄 주석 단축키
 alt + shift + a
+
+* pull 방법
+* commit방법
+* 새 브랜치 따는 법
